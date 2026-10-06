@@ -100,7 +100,7 @@ h3 { font-size: 1.15rem; margin: 0 0 .3em; }
 .facts dt { font-size: .75rem; color: var(--muted); letter-spacing: .2em; }
 .facts dd { margin: 0; font-weight: 600; }
 .facts i { font-family: var(--display); }
-.entry-body > p:first-of-type::first-letter { float: left; font-weight: 900; font-size: 3.4em; line-height: .9; margin: .06em .1em 0 0; color: var(--red); }
+.entry-body > p:first-child::first-letter { float: left; font-weight: 900; font-size: 3.4em; line-height: .9; margin: .06em .1em 0 0; color: var(--red); }
 .entry h2 { font-size: 1.3rem; }
 blockquote { margin: 0 0 24px; padding: 4px 0 4px 18px; border-left: 4px solid var(--red); font-family: var(--hand); font-size: 1.1rem; color: var(--ink-soft); }
 blockquote p { margin: 0; }
@@ -218,3 +218,15 @@ svg.ink.slow path, svg.ink.slow circle, svg.ink.slow ellipse, svg.ink.slow rect 
 
 /* 粗體的小字用思源宋體（仙人掌古典宋只有一種粗細） */
 .masthead nav, .mast-top, .facts dd, .facts dt, th, .more, .dispatch li, .tag, .notice::before, .crop-jump a, .section-label, .byline, .meta { font-family: var(--serif); }
+
+/* ===== 案件照片 ===== */
+.photo { margin: 0; }
+.photo img { display: block; width: 100%; height: auto; object-fit: cover; border: 1px solid var(--rule); background: var(--paper-2); }
+.photo figcaption { font-size: .82rem; color: var(--ink-soft); padding: 5px 0 0; border-top: 0; letter-spacing: .04em; font-family: var(--serif); }
+.photo.wide { margin: 0 0 22px; }
+.photo.wide img { aspect-ratio: 4 / 3; max-height: 70vh; }
+.photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 18px 12px; margin: 0 0 26px; align-items: start; }
+.photo-grid .photo img { aspect-ratio: 3 / 4; }
+.lead-photo { margin: 0 0 14px; }
+.lead-photo img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border: 1px solid var(--rule); filter: sepia(.12) contrast(1.03); }
+.lead-photo figcaption { font-size: .82rem; color: var(--muted); padding-top: 5px; border-bottom: 1px solid var(--rule); padding-bottom: 6px; }

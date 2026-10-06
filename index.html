@@ -9,10 +9,17 @@ title: 頭版
     {% if lead %}
     <h1 class="headline"><a href="{{ lead.url | relative_url }}">{{ lead.title }}</a></h1>
     <p class="dek">{{ lead.crop }}{% if lead.diagnosis %}・{{ lead.diagnosis }}{% endif %}</p>
+    {% if lead.cover %}
+    <figure class="lead-photo">
+      <a href="{{ lead.url | relative_url }}"><img src="{{ lead.cover | relative_url }}" alt="{{ lead.cover_caption | default: lead.title }}"></a>
+      <figcaption>{{ lead.cover_caption | default: lead.title }}</figcaption>
+    </figure>
+    {% else %}
     <figure class="engraving">
       {% include icon.html name='leaf' %}
       <figcaption>圖一　{{ lead.crop }}病徵觀察（示意）</figcaption>
     </figure>
+    {% endif %}
     <p class="byline">{{ lead.date | date: '%Y年%-m月%-d日' }}{% if lead.location %}・{{ lead.location }}{% endif %}</p>
     <div class="columns dropcap">{{ lead.content | strip_html | truncate: 220 }}</div>
     <p class="more"><a href="{{ lead.url | relative_url }}">閱讀全文 →</a></p>
