@@ -116,12 +116,17 @@
     '<button class="lb-prev" aria-label="上一張">‹</button>' +
     '<button class="lb-next" aria-label="下一張">›</button>' +
     '<button class="lb-close" aria-label="關閉">×</button>' +
-    '<p class="lb-hint">雙擊或滾輪放大・拖曳移動・Esc 關閉</p>';
+    '<p class="lb-hint">雙擊、滾輪或雙指捏合放大・拖曳或雙指滑動移動・Esc 關閉</p>';
   document.body.appendChild(box);
   var stage = box.querySelector('.lb-stage'), img = stage.querySelector('img'), cap = box.querySelector('.lb-cap');
   var cur = 0, scale = 1, x = 0, y = 0, lastFocus = null;
 
+  function clamp() {
+    var mx = Math.max(0, (img.offsetWidth * scale - stage.clientWidth) / 2), my = Math.max(0, (img.offsetHeight * scale - stage.clientHeight) / 2);
+    x = Math.min(mx, Math.max(-mx, x)); y = Math.min(my, Math.max(-my, y));
+  }
   function apply(animate) {
+    if (scale > 1.01) clamp();
     img.style.transition = animate ? 'transform .3s cubic-bezier(.2,.7,.2,1)' : 'none';
     img.style.transform = 'translate(' + x + 'px,' + y + 'px) scale(' + scale + ')';
     box.classList.toggle('zoomed', scale > 1.01);
@@ -162,7 +167,14 @@
   box.querySelector('.lb-out').onclick = function () { zoomTo(scale / 1.6); };
   box.querySelector('.lb-fit').onclick = function () { zoomTo(1); };
     stage.addEventListener('dblclick', function (e) { zoomTo(scale > 1.01 ? 1 : 2.5, e.clientX, e.clientY); });
-  stage.addEventListener('wheel', function (e) { e.preventDefault(); zoomTo(scale * (e.deltaY < 0 ? 1.2 : 1 / 1.2), e.clientX, e.clientY); }, { passive: false });
+  // 滾輪：觸控板雙指捏合（ctrlKey）或一般滑鼠滾輪＝縮放；放大後觸控板雙指滑動＝移動照片
+  stage.addEventListener('wheel', function (e) {
+    e.preventDefault();
+    var mouseWheel = e.deltaMode !== 0 || (e.deltaX === 0 && Math.abs(e.deltaY) >= 100 && e.deltaY % 1 === 0);
+    if (e.ctrlKey) zoomTo(scale * Math.exp(-e.deltaY * 0.01), e.clientX, e.clientY);
+    else if (scale > 1.01 && !mouseWheel) { x -= e.deltaX; y -= e.deltaY; apply(false); }
+    else zoomTo(scale * (e.deltaY < 0 ? 1.2 : 1 / 1.2), e.clientX, e.clientY);
+  }, { passive: false });
   document.addEventListener('keydown', function (e) {
     if (!box.classList.contains('open')) return;
     if (e.key === 'Escape') close();

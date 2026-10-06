@@ -198,7 +198,7 @@ svg.ink.slow path, svg.ink.slow circle, svg.ink.slow ellipse, svg.ink.slow rect 
 .lb-stage { position: absolute; inset: 56px 16px 96px; display: grid; place-items: center; overflow: hidden; touch-action: none; cursor: zoom-in; }
 .lightbox.zoomed .lb-stage { cursor: grab; }
 .lightbox.zoomed .lb-stage:active { cursor: grabbing; }
-.lb-stage img { max-width: 100%; max-height: 100%; border-radius: 2px; box-shadow: 0 10px 40px rgba(0,0,0,.45); user-select: none; -webkit-user-drag: none; transform-origin: center; }
+.lb-stage img { position: absolute; inset: 0; margin: auto; max-width: 100%; max-height: 100%; border-radius: 2px; box-shadow: 0 10px 40px rgba(0,0,0,.45); user-select: none; -webkit-user-drag: none; transform-origin: center; }
 .lb-cap { position: absolute; left: 0; right: 0; top: 14px; text-align: center; margin: 0; font-size: 1.1rem; padding: 0 60px; }
 .lb-hint { position: absolute; left: 0; right: 0; bottom: 8px; margin: 0; text-align: center; font-size: .82rem; opacity: .6; }
 .lightbox button { font: inherit; color: #f3ecdc; background: rgba(243,236,220,.12); border: 1.5px solid rgba(243,236,220,.5); border-radius: 999px; cursor: pointer; }
