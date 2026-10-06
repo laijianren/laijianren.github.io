@@ -6,7 +6,7 @@ location: 彰化縣溪州鄉
 diagnosis: 晚疫病（Phytophthora infestans）
 pest: late-blight
 cover: /assets/cases/2026-01-09-xizhou-tomato/09.jpg
-cover_caption: 果實上的褐色病斑
+cover_caption: 果實水浸狀
 ---
 
 <figure class="photo wide"><img src="/assets/cases/2026-01-09-xizhou-tomato/01.jpg" alt="田區現場：植株下位葉枯萎、整體生長勢下降"><figcaption>圖一　田區現場</figcaption></figure>
@@ -21,7 +21,7 @@ cover_caption: 果實上的褐色病斑
 <figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/06.jpg" alt="葉片病斑邊緣的白色黴狀物"><figcaption>病斑邊緣白色黴層</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/07.jpg" alt="莖部分叉處的褐色病斑"><figcaption>莖部褐色病斑</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/08.jpg" alt="莖基部病斑與落果"><figcaption>莖部病斑與落果</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/09.jpg" alt="果實上的褐色病斑"><figcaption>果實褐色病斑</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/09.jpg" alt="果實水浸狀"><figcaption>果實水浸狀</figcaption></figure>
 </div>
 
 ## 病原鑑定
