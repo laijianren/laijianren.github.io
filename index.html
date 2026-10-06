@@ -1,24 +1,82 @@
 ---
-title: 首頁
+title: 頭版
 ---
-<section class="hero">
-  <div class="hero-art">{% include icon.html name='sprig' %}</div>
-  <p class="eyebrow">Plantae ・ Morbi ・ Remedia</p>
-  <h1>{{ site.title }}</h1>
-  <p>{{ site.description }}。這裡記錄我在田間的診斷案件，整理常見病蟲害的辨識與防治重點，並依作物列出核准使用的藥劑。</p>
+{% assign recent = site.cases | sort: 'date' | reverse %}
+{% assign lead = recent | first %}
+<section class="front">
+  <article class="lead-story">
+    <p class="kicker">最新診斷・Field Report</p>
+    {% if lead %}
+    <h1 class="headline"><a href="{{ lead.url | relative_url }}">{{ lead.title }}</a></h1>
+    <p class="dek">{{ lead.crop }}{% if lead.diagnosis %}・{{ lead.diagnosis }}{% endif %}</p>
+    <figure class="engraving">
+      {% include icon.html name='leaf' %}
+      <figcaption>圖一　{{ lead.crop }}病徵觀察（示意）</figcaption>
+    </figure>
+    <p class="byline">{{ lead.date | date: '%Y年%-m月%-d日' }}{% if lead.location %}・{{ lead.location }}{% endif %}</p>
+    <div class="columns dropcap">{{ lead.content | strip_html | truncate: 220 }}</div>
+    <p class="more"><a href="{{ lead.url | relative_url }}">閱讀全文 →</a></p>
+    {% else %}
+    <h1 class="headline">{{ site.title }}</h1>
+    <p class="dek">{{ site.description }}</p>
+    {% endif %}
+  </article>
+
+  <aside class="side">
+    <section class="side-block">
+      <h2 class="section-label">病蟲害圖鑑</h2>
+      {% for p in site.pests limit: 4 %}
+      <article class="brief">
+        <p class="kicker">{{ p.category }}</p>
+        <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+        <p>{{ p.summary }}</p>
+      </article>
+      {% endfor %}
+      <p class="more"><a href="{{ '/pests/' | relative_url }}">全部知識 →</a></p>
+    </section>
+    <section class="side-block">
+      <h2 class="section-label">用藥快報</h2>
+      {% assign cgroups = site.data.charts | group_by: 'crop' %}
+      <ul class="dispatch">
+        {% for g in cgroups %}<li><a href="{{ '/charts/' | relative_url }}#{{ forloop.index }}">{{ g.name }}核准用藥圖</a><span>{{ g.items.first.updated }}</span></li>{% endfor %}
+      </ul>
+      <p class="notice">用藥前請至農藥資訊服務網確認最新登記。</p>
+    </section>
+  </aside>
 </section>
 
-<div class="cards">
-  <a class="card icon-card" href="{{ '/cases/' | relative_url }}">{% include icon.html name='leaf' %}<h3>診斷案件</h3><p>目前 {{ site.cases.size }} 筆田間診斷紀錄</p></a>
-  <a class="card icon-card" href="{{ '/pests/' | relative_url }}">{% include icon.html name='beetle' %}<h3>病蟲害知識</h3><p>目前 {{ site.pests.size }} 篇病害、蟲害與生理障礙整理</p></a>
-  <a class="card icon-card" href="{{ '/pesticides/' | relative_url }}">{% include icon.html name='flask' %}<h3>核准用藥表</h3><p>依作物與病蟲害查詢核准藥劑</p></a>
-  <a class="card icon-card" href="{{ '/charts/' | relative_url }}">{% include icon.html name='plate' %}<h3>用藥圖表</h3><p>{% if site.data.charts %}{{ site.data.charts.size }} 張作物用藥一覽圖{% else %}作物用藥一覽圖{% endif %}</p></a>
-</div>
+<section class="story" aria-label="專題：從田間到處方">
+  <div class="story-stage">
+    <div class="story-art">
+      <div class="story-fig" data-step="0">{% include icon.html name='leaf' %}</div>
+      <div class="story-fig" data-step="1">{% include icon.html name='beetle' %}</div>
+      <div class="story-fig" data-step="2">{% include icon.html name='flask' %}</div>
+    </div>
+    <div class="story-text">
+      <div class="story-step" data-step="0">
+        <p class="kicker">專題 I・Observatio</p>
+        <h2 class="plain">走進田間，<br>先看清楚。</h2>
+        <p>葉片的斑點、莖上的痕跡、蟲子留下的線索，每一個病徵都是植物在說話。</p>
+      </div>
+      <div class="story-step" data-step="1">
+        <p class="kicker">專題 II・Diagnosis</p>
+        <h2 class="plain">找出真正的<br>原因。</h2>
+        <p>是病害、蟲害，還是生理障礙？比對病徵與環境，才能對症下藥。</p>
+      </div>
+      <div class="story-step" data-step="2">
+        <p class="kicker">專題 III・Remedium</p>
+        <h2 class="plain">用對的藥，<br>用對的量。</h2>
+        <p>只選核准登記的藥劑，遵守稀釋倍數與安全採收期，守護作物也守護餐桌。</p>
+      </div>
+    </div>
+    <ol class="story-dots" aria-hidden="true"><li></li><li></li><li></li></ol>
+  </div>
+</section>
 
-<h2>最新診斷案件</h2>
-{% assign recent = site.cases | sort: 'date' | reverse %}
-<ul>
-{% for c in recent limit: 5 %}
-  <li><a href="{{ c.url | relative_url }}">{{ c.title }}</a> <span class="meta">{{ c.date | date: '%Y-%m-%d' }}・{{ c.crop }}</span></li>
-{% endfor %}
-</ul>
+<h2 class="section-label wide">本報導覽</h2>
+<div class="cards index-cards">
+  <a class="card icon-card" href="{{ '/cases/' | relative_url }}">{% include icon.html name='leaf' %}<h3>診斷案件</h3><p>{{ site.cases.size }} 筆田間診斷紀錄</p></a>
+  <a class="card icon-card" href="{{ '/pests/' | relative_url }}">{% include icon.html name='beetle' %}<h3>病蟲害知識</h3><p>{{ site.pests.size }} 篇病害、蟲害整理</p></a>
+  <a class="card icon-card" href="{{ '/pesticides/' | relative_url }}">{% include icon.html name='flask' %}<h3>核准用藥表</h3><p>依作物查詢核准藥劑</p></a>
+  <a class="card icon-card" href="{{ '/charts/' | relative_url }}">{% include icon.html name='plate' %}<h3>用藥圖表</h3><p>{{ site.data.charts.size }} 張作物用藥一覽圖</p></a>
+</div>
