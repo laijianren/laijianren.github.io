@@ -230,3 +230,4 @@ svg.ink.slow path, svg.ink.slow circle, svg.ink.slow ellipse, svg.ink.slow rect 
 .lead-photo { margin: 0 0 14px; }
 .lead-photo img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border: 1px solid var(--rule); filter: sepia(.12) contrast(1.03); }
 .lead-photo figcaption { font-size: .82rem; color: var(--muted); padding-top: 5px; border-bottom: 1px solid var(--rule); padding-bottom: 6px; }
+main img, .lightbox img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }

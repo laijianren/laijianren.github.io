@@ -205,3 +205,7 @@
   box.addEventListener('click', function (e) { if ((e.target === box || e.target === stage) && !downOnImg && !moved && scale === 1) close(); });
   stage.addEventListener('pointercancel', end);
 })();
+
+// 照片防右鍵另存、防拖曳（搭配浮水印的輕度保護）
+document.addEventListener('contextmenu', function (e) { if (e.target.tagName === 'IMG') e.preventDefault(); });
+document.addEventListener('dragstart', function (e) { if (e.target.tagName === 'IMG') e.preventDefault(); });
