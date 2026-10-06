@@ -22,3 +22,9 @@
 
 打開 `_data/pesticides.csv`，按鉛筆圖示編輯。每一列用逗號分隔欄位，欄位順序不要動。
 也可以用 Excel／Google 試算表編輯後「另存為 CSV（UTF-8）」再上傳覆蓋。
+
+## 新增一張用藥圖表
+
+1. 把圖片上傳到 `assets/charts/` 資料夾
+2. 打開 `_data/charts.yml`，照著現有格式加一段（`image:` 要填和檔名一模一樣的名字）
+3. Commit 後網站的「用藥圖表」頁就會多一張

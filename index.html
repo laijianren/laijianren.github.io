@@ -10,6 +10,7 @@ title: 首頁
   <a class="card" href="{{ '/cases/' | relative_url }}"><h3>📋 診斷案件</h3><p>目前 {{ site.cases.size }} 筆田間診斷紀錄</p></a>
   <a class="card" href="{{ '/pests/' | relative_url }}"><h3>🐛 病蟲害知識</h3><p>目前 {{ site.pests.size }} 篇病害、蟲害與生理障礙整理</p></a>
   <a class="card" href="{{ '/pesticides/' | relative_url }}"><h3>🧪 核准用藥表</h3><p>依作物與病蟲害查詢核准藥劑</p></a>
+  <a class="card" href="{{ '/charts/' | relative_url }}"><h3>🖼️ 用藥圖表</h3><p>{% if site.data.charts %}{{ site.data.charts.size }} 張作物用藥一覽圖{% else %}作物用藥一覽圖{% endif %}</p></a>
 </div>
 
 <h2>最新診斷案件</h2>
