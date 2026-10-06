@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }}｜{% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="{{ '/' | relative_url }}">🌿 {{ site.title }}</a>
+      <nav>
+        <a href="{{ '/cases/' | relative_url }}" {% if page.url contains '/cases/' %}class="active"{% endif %}>診斷案件</a>
+        <a href="{{ '/pests/' | relative_url }}" {% if page.url contains '/pests/' %}class="active"{% endif %}>病蟲害知識</a>
+        <a href="{{ '/pesticides/' | relative_url }}" {% if page.url contains '/pesticides/' %}class="active"{% endif %}>核准用藥表</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    {{ content }}
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">© {{ 'now' | date: '%Y' }} {{ site.title }}・用藥資訊請以<a href="https://pesticide.aphia.gov.tw/" target="_blank" rel="noopener">農藥資訊服務網</a>公告為準</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,21 @@
+---
+title: 首頁
+---
+<section class="hero">
+  <h1>{{ site.title }}</h1>
+  <p>{{ site.description }}。這裡記錄我在田間的診斷案件，整理常見病蟲害的辨識與防治重點，並依作物列出核准使用的藥劑。</p>
+</section>
+
+<div class="cards">
+  <a class="card" href="{{ '/cases/' | relative_url }}"><h3>📋 診斷案件</h3><p>目前 {{ site.cases.size }} 筆田間診斷紀錄</p></a>
+  <a class="card" href="{{ '/pests/' | relative_url }}"><h3>🐛 病蟲害知識</h3><p>目前 {{ site.pests.size }} 篇病害、蟲害與生理障礙整理</p></a>
+  <a class="card" href="{{ '/pesticides/' | relative_url }}"><h3>🧪 核准用藥表</h3><p>依作物與病蟲害查詢核准藥劑</p></a>
+</div>
+
+<h2>最新診斷案件</h2>
+{% assign recent = site.cases | sort: 'date' | reverse %}
+<ul>
+{% for c in recent limit: 5 %}
+  <li><a href="{{ c.url | relative_url }}">{{ c.title }}</a> <span class="meta">{{ c.date | date: '%Y-%m-%d' }}・{{ c.crop }}</span></li>
+{% endfor %}
+</ul>

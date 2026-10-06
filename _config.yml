@@ -1,0 +1,24 @@
+# 網站基本設定（改這裡的文字，網站標題就會跟著變）
+title: 植物診療室
+description: 植物病蟲害診斷案件紀錄、知識整理與各作物核准用藥查詢
+lang: zh-Hant-TW
+
+collections:
+  cases:          # 診斷案件，檔案放在 _cases 資料夾
+    output: true
+    permalink: /cases/:name/
+  pests:          # 病蟲害知識，檔案放在 _pests 資料夾
+    output: true
+    permalink: /pests/:name/
+
+defaults:
+  - scope: { path: "", type: cases }
+    values: { layout: case }
+  - scope: { path: "", type: pests }
+    values: { layout: pest }
+  - scope: { path: "" }
+    values: { layout: default }
+
+exclude:
+  - README.md
+  - _templates

@@ -1,0 +1,14 @@
+---
+title: 診斷案件
+---
+<h1>診斷案件</h1>
+{% assign items = site.cases | sort: 'date' | reverse %}
+<div class="cards">
+{% for c in items %}
+  <a class="card" href="{{ c.url | relative_url }}">
+    <h3>{{ c.title }}</h3>
+    <p>{{ c.date | date: '%Y-%m-%d' }}{% if c.location %}・{{ c.location }}{% endif %}</p>
+    <p>{% if c.crop %}<span class="tag">{{ c.crop }}</span>{% endif %}{{ c.diagnosis }}</p>
+  </a>
+{% endfor %}
+</div>

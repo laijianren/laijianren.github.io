@@ -1,0 +1,24 @@
+# 植物診療室網站
+
+網址：https://laijianren.github.io
+
+## 資料放在哪裡
+
+| 想新增的內容 | 放在哪個資料夾 | 範本 |
+|---|---|---|
+| 診斷案件 | `_cases` | `_templates/新案件範本.md` |
+| 病蟲害知識 | `_pests` | `_templates/新病蟲害範本.md` |
+| 核准用藥 | `_data/pesticides.csv`（一列一筆） | — |
+| 照片 | `assets/images` | — |
+
+## 在 GitHub 網頁上新增一筆案件
+
+1. 進入 `_cases` 資料夾，按右上角 **Add file → Create new file**
+2. 檔名用「日期-簡短英文.md」，例如 `2026-10-20-cabbage-moth.md`
+3. 把範本內容貼上、填好
+4. 按 **Commit changes** 儲存，約 1～2 分鐘後網站就會更新
+
+## 修改用藥表
+
+打開 `_data/pesticides.csv`，按鉛筆圖示編輯。每一列用逗號分隔欄位，欄位順序不要動。
+也可以用 Excel／Google 試算表編輯後「另存為 CSV（UTF-8）」再上傳覆蓋。

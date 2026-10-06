@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="entry">
+  <p class="crumb"><a href="{{ '/cases/' | relative_url }}">← 所有診斷案件</a></p>
+  <h1>{{ page.title }}</h1>
+  <dl class="facts">
+    <div><dt>日期</dt><dd>{{ page.date | date: '%Y-%m-%d' }}</dd></div>
+    {% if page.crop %}<div><dt>作物</dt><dd>{{ page.crop }}</dd></div>{% endif %}
+    {% if page.location %}<div><dt>地點</dt><dd>{{ page.location }}</dd></div>{% endif %}
+    {% if page.diagnosis %}<div><dt>診斷結果</dt><dd>{{ page.diagnosis }}</dd></div>{% endif %}
+  </dl>
+  {{ content }}
+</article>
