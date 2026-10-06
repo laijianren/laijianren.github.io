@@ -21,7 +21,7 @@ title: 頭版
     </figure>
     {% endif %}
     <p class="byline">{{ lead.date | date: '%Y年%-m月%-d日' }}{% if lead.location %}・{{ lead.location }}{% endif %}</p>
-    <div class="columns dropcap">{{ lead.content | strip_html | truncate: 220 }}</div>
+    <div class="columns dropcap">{{ lead.content | replace: '<em>', '⟦' | replace: '</em>', '⟧' | strip_html | truncate: 220 | replace: '⟦', '<em>' | replace: '⟧', '</em>' }}</div>
     <p class="more"><a href="{{ lead.url | relative_url }}">閱讀全文 →</a></p>
     {% else %}
     <h1 class="headline">{{ site.title }}</h1>

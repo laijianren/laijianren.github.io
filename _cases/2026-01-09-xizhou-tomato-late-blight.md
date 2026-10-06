@@ -3,7 +3,7 @@ title: 彰化溪州小番茄晚疫病
 date: 2026-01-09
 crop: 小番茄
 location: 彰化縣溪州鄉
-diagnosis: 晚疫病（Phytophthora infestans）
+diagnosis: 晚疫病（<i>Phytophthora infestans</i>）
 pest: late-blight
 cover: /assets/cases/2026-01-09-xizhou-tomato/09.jpg
 cover_caption: 果實水浸狀
