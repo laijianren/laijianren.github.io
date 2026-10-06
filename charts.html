@@ -3,24 +3,29 @@ title: 用藥圖表
 permalink: /charts/
 ---
 <h1>用藥圖表</h1>
-<p>依作物整理的核准用藥一覽圖，點圖可放大。文字版請見<a href="{{ '/pesticides/' | relative_url }}">核准用藥表</a>。</p>
+<p>依作物整理的核准用藥一覽圖，點圖可放大看細節。</p>
 <p class="notice">⚠️ 用藥前請務必到<a href="https://pesticide.aphia.gov.tw/" target="_blank" rel="noopener">農藥資訊服務網</a>確認最新登記內容與標示。</p>
 
 {% assign charts = site.data.charts %}
 {% if charts and charts.size > 0 %}
-<div class="chart-list">
-  {% for c in charts %}
-  <figure class="chart" id="{{ c.crop }}">
-    <figcaption>
-      <h2>{{ c.title | default: c.crop }}</h2>
-      <p class="meta">{% if c.updated %}更新日期 {{ c.updated }}{% endif %}{% if c.note %}・{{ c.note }}{% endif %}</p>
-    </figcaption>
-    <a href="{{ '/assets/charts/' | append: c.image | relative_url }}" target="_blank" rel="noopener">
-      <img src="{{ '/assets/charts/' | append: c.image | relative_url }}" alt="{{ c.title | default: c.crop }}" loading="lazy">
-    </a>
-  </figure>
+  {% assign groups = charts | group_by: 'crop' %}
+  <p class="crop-jump">{% for g in groups %}<a href="#{{ forloop.index }}">{{ g.name }}</a>{% endfor %}</p>
+  {% for g in groups %}
+  <section class="crop-block" id="{{ forloop.index }}">
+    <h2>{{ g.name }}</h2>
+    {% for c in g.items %}
+    <figure class="chart">
+      <figcaption>
+        <h3>{{ c.title | default: c.crop }}</h3>
+        <p class="meta">{% if c.updated %}資料時間 {{ c.updated }}{% endif %}{% if c.note %}・{{ c.note }}{% endif %}</p>
+      </figcaption>
+      <a href="{{ '/assets/charts/' | append: c.image | relative_url }}" target="_blank" rel="noopener">
+        <img src="{{ '/assets/charts/' | append: c.image | relative_url }}" alt="{{ c.title | default: c.crop }}" loading="lazy">
+      </a>
+    </figure>
+    {% endfor %}
+  </section>
   {% endfor %}
-</div>
 {% else %}
 <p class="meta">目前還沒有圖表。把圖片放進 <code>assets/charts/</code>，再到 <code>_data/charts.yml</code> 加一筆就會出現在這裡。</p>
 {% endif %}

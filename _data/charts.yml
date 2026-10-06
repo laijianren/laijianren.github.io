@@ -1,15 +1,23 @@
 # 用藥圖表清單。
-# 新增一張圖：把圖片放進 assets/charts/，再照下面格式加一段（把 # 拿掉）。
-# image 要填和檔案一模一樣的名字。
+# 新增一張圖：把圖片放進 assets/charts/ 資料夾，再照下面格式加一段。
+# image 要填和檔案一模一樣的名字（含 .jpg 或 .png）。
 
-# - crop: 茭白筍
-#   title: 茭白筍核准用藥圖
-#   image: 茭白筍用藥圖.png
-#   updated: 2026-10-06
-#   note: 依農藥資訊服務網公告整理
+- crop: 茭白筍
+  title: 茭白筍病害核准用藥
+  image: jiaobaisun-disease.jpg
+  updated: 2021-05
 
-# - crop: 百香果
-#   title: 百香果核准用藥圖
-#   image: 百香果用藥圖.png
-#   updated: 2026-10-06
-#   note: 依農藥資訊服務網公告整理
+- crop: 茭白筍
+  title: 茭白筍蟲害核准用藥
+  image: jiaobaisun-pest.jpg
+  updated: 2021-05
+
+- crop: 百香果
+  title: 百香果病害核准用藥
+  image: passionfruit-disease.jpg
+  updated: 2026-04
+
+- crop: 百香果
+  title: 百香果蟲害核准用藥
+  image: passionfruit-pest.jpg
+  updated: 2026-04

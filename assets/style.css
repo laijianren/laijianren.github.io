@@ -43,6 +43,13 @@ blockquote { margin: 0 0 20px; padding: 8px 14px; border-left: 4px solid var(--l
 blockquote p { margin: 0; }
 .chart-list { display: grid; gap: 28px; }
 .chart { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
-.chart figcaption h2 { margin: 0; border: 0; padding: 0; }
+.chart figcaption h3 { margin: 0; font-size: 1.05rem; }
 .chart figcaption .meta { margin: 2px 0 12px; }
 .chart img { display: block; width: 100%; border: 1px solid var(--line); }
+
+.crop-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 8px; }
+.crop-jump a { background: var(--green-soft); color: var(--green); border-radius: 999px; padding: 4px 14px; text-decoration: none; }
+.crop-block { margin-bottom: 36px; }
+.crop-block h2 { margin-bottom: 14px; }
+.chart-list { display: grid; gap: 28px; }
+.chart { margin: 0 0 18px; }
