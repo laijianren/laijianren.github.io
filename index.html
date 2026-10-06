@@ -2,15 +2,17 @@
 title: 首頁
 ---
 <section class="hero">
+  <div class="hero-art">{% include icon.html name='sprig' %}</div>
+  <p class="eyebrow">Plantae ・ Morbi ・ Remedia</p>
   <h1>{{ site.title }}</h1>
   <p>{{ site.description }}。這裡記錄我在田間的診斷案件，整理常見病蟲害的辨識與防治重點，並依作物列出核准使用的藥劑。</p>
 </section>
 
 <div class="cards">
-  <a class="card" href="{{ '/cases/' | relative_url }}"><h3>📋 診斷案件</h3><p>目前 {{ site.cases.size }} 筆田間診斷紀錄</p></a>
-  <a class="card" href="{{ '/pests/' | relative_url }}"><h3>🐛 病蟲害知識</h3><p>目前 {{ site.pests.size }} 篇病害、蟲害與生理障礙整理</p></a>
-  <a class="card" href="{{ '/pesticides/' | relative_url }}"><h3>🧪 核准用藥表</h3><p>依作物與病蟲害查詢核准藥劑</p></a>
-  <a class="card" href="{{ '/charts/' | relative_url }}"><h3>🖼️ 用藥圖表</h3><p>{% if site.data.charts %}{{ site.data.charts.size }} 張作物用藥一覽圖{% else %}作物用藥一覽圖{% endif %}</p></a>
+  <a class="card icon-card" href="{{ '/cases/' | relative_url }}">{% include icon.html name='leaf' %}<h3>診斷案件</h3><p>目前 {{ site.cases.size }} 筆田間診斷紀錄</p></a>
+  <a class="card icon-card" href="{{ '/pests/' | relative_url }}">{% include icon.html name='beetle' %}<h3>病蟲害知識</h3><p>目前 {{ site.pests.size }} 篇病害、蟲害與生理障礙整理</p></a>
+  <a class="card icon-card" href="{{ '/pesticides/' | relative_url }}">{% include icon.html name='flask' %}<h3>核准用藥表</h3><p>依作物與病蟲害查詢核准藥劑</p></a>
+  <a class="card icon-card" href="{{ '/charts/' | relative_url }}">{% include icon.html name='plate' %}<h3>用藥圖表</h3><p>{% if site.data.charts %}{{ site.data.charts.size }} 張作物用藥一覽圖{% else %}作物用藥一覽圖{% endif %}</p></a>
 </div>
 
 <h2>最新診斷案件</h2>

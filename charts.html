@@ -4,7 +4,7 @@ permalink: /charts/
 ---
 <h1>用藥圖表</h1>
 <p>依作物整理的核准用藥一覽圖，點圖可放大看細節。</p>
-<p class="notice">⚠️ 用藥前請務必到<a href="https://pesticide.aphia.gov.tw/" target="_blank" rel="noopener">農藥資訊服務網</a>確認最新登記內容與標示。</p>
+<p class="notice">用藥前請務必到<a href="https://pesticide.aphia.gov.tw/" target="_blank" rel="noopener">農藥資訊服務網</a>確認最新登記內容與標示。</p>
 
 {% assign charts = site.data.charts %}
 {% if charts and charts.size > 0 %}
@@ -16,6 +16,7 @@ permalink: /charts/
     {% for c in g.items %}
     <figure class="chart">
       <figcaption>
+        <span class="plate-no">圖版 {{ forloop.index }}</span>
         <h3>{{ c.title | default: c.crop }}</h3>
         <p class="meta">{% if c.updated %}資料時間 {{ c.updated }}{% endif %}{% if c.note %}・{{ c.note }}{% endif %}</p>
       </figcaption>

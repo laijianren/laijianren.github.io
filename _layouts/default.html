@@ -5,12 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }}｜{% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Serif+TC:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap">
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="2.2"/></filter>
+  </svg>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="{{ '/' | relative_url }}">🌿 {{ site.title }}</a>
+      <a class="brand" href="{{ '/' | relative_url }}">{% include icon.html name='sprig' %}<span>{{ site.title }}<small>Herbarium &amp; Clinical Notes</small></span></a>
       <nav>
         <a href="{{ '/cases/' | relative_url }}" {% if page.url contains '/cases/' %}class="active"{% endif %}>診斷案件</a>
         <a href="{{ '/pests/' | relative_url }}" {% if page.url contains '/pests/' %}class="active"{% endif %}>病蟲害知識</a>
