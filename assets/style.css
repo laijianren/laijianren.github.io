@@ -3,14 +3,15 @@
   --paper: #f1ede2; --paper-2: #e7e1d1; --ink: #16130f; --ink-soft: #3f3a32; --muted: #6d665a;
   --red: #b0241b; --rule: #16130f; --hair: #b9b09c;
   --serif: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
-  --hand: "LXGW WenKai TC", "Noto Serif TC", serif;
+  --text: "Cactus Classical Serif", "Noto Serif TC", "Songti TC", serif;
+  --hand: "Iansui", "Noto Serif TC", serif;
   --display: "Playfair Display", Georgia, serif;
   --black: "UnifrakturMaguntia", "Playfair Display", serif;
 }
 * { box-sizing: border-box; }
 html { background: var(--paper); }
 body {
-  margin: 0; color: var(--ink); font-family: var(--serif); font-size: 17px; line-height: 1.8;
+  margin: 0; color: var(--ink); font-family: var(--text); font-size: 17.5px; line-height: 1.85;
   background-color: var(--paper);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .1 0 0 0 0 .08 0 0 0 0 .05 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
@@ -83,7 +84,7 @@ h3 { font-size: 1.15rem; margin: 0 0 .3em; }
 .card:hover h3 { color: var(--red); }
 .card h3 { font-size: 1.3rem; }
 .card p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
-.index-cards { grid-template-columns: repeat(4, minmax(0,1fr)); border-top: 0; }
+.index-cards { grid-template-columns: repeat(3, minmax(0,1fr)); border-top: 0; }
 .index-cards .card { text-align: center; border-bottom: 0; }
 .index-cards .card:last-child { border-right: 0; }
 .icon-card svg { width: 72px; height: 72px; display: block; margin: 0 auto 10px; }
@@ -99,7 +100,7 @@ h3 { font-size: 1.15rem; margin: 0 0 .3em; }
 .facts dt { font-size: .75rem; color: var(--muted); letter-spacing: .2em; }
 .facts dd { margin: 0; font-weight: 600; }
 .facts i { font-family: var(--display); }
-.entry > p:first-of-type::first-letter { float: left; font-weight: 900; font-size: 3.4em; line-height: .9; margin: .06em .1em 0 0; color: var(--red); }
+.entry-body > p:first-of-type::first-letter { float: left; font-weight: 900; font-size: 3.4em; line-height: .9; margin: .06em .1em 0 0; color: var(--red); }
 .entry h2 { font-size: 1.3rem; }
 blockquote { margin: 0 0 24px; padding: 4px 0 4px 18px; border-left: 4px solid var(--red); font-family: var(--hand); font-size: 1.1rem; color: var(--ink-soft); }
 blockquote p { margin: 0; }
@@ -172,9 +173,8 @@ svg.ink.slow path, svg.ink.slow circle, svg.ink.slow ellipse, svg.ink.slow rect 
   .lead-story { padding-right: 0; border-right: 0; }
   .side { padding-left: 0; padding-top: 20px; border-top: 3px solid var(--rule); margin-top: 20px; }
   .columns { column-count: 1; }
-  .index-cards { grid-template-columns: repeat(2, minmax(0,1fr)); }
-  .index-cards .card:nth-child(2n) { border-right: 0; }
-  .index-cards .card:nth-child(-n+2) { border-bottom: 1px solid var(--hair); }
+  .index-cards { grid-template-columns: 1fr; }
+  .index-cards .card { border-right: 0; border-bottom: 1px solid var(--hair); }
   .mast-top .mast-motto { display: none; }
   .masthead nav a { padding: 0 10px; }
 }
@@ -215,3 +215,6 @@ svg.ink.slow path, svg.ink.slow circle, svg.ink.slow ellipse, svg.ink.slow rect 
   .lb-hint { display: none; }
 }
 
+
+/* 粗體的小字用思源宋體（仙人掌古典宋只有一種粗細） */
+.masthead nav, .mast-top, .facts dd, .facts dt, th, .more, .dispatch li, .tag, .notice::before, .crop-jump a, .section-label, .byline, .meta { font-family: var(--serif); }

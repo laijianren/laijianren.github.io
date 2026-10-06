@@ -29,7 +29,7 @@
 
   // 2. 內容隨捲動浮現
   var targets = document.querySelectorAll(
-    'main h1:not(.headline), main h2:not(.plain), .card, .facts, .chart, .notice, .table-scroll, .controls, main > ul, .entry > p, .entry > ul, .entry > ol, blockquote, .crop-jump, .brief, .dispatch, .lead-story .columns, .lead-story .more'
+    'main h1:not(.headline), main h2:not(.plain), .card, .facts, .chart, .notice, .table-scroll, .controls, main > ul, .entry-body > p, .entry-body > ul, .entry-body > ol, blockquote, .crop-jump, .brief, .dispatch, .lead-story .columns, .lead-story .more'
   );
   targets.forEach(function (el, i) { el.classList.add('reveal'); });
   // 同一排的卡片依序出現

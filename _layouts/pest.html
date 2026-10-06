@@ -9,7 +9,7 @@ layout: default
     {% if page.pathogen %}<div><dt>病原／學名</dt><dd><i>{{ page.pathogen }}</i></dd></div>{% endif %}
     {% if page.crops %}<div><dt>常見作物</dt><dd>{{ page.crops | join: '、' }}</dd></div>{% endif %}
   </dl>
-  {{ content }}
+  <div class="entry-body">{{ content }}</div>
   {% assign related = site.cases | where_exp: "c", "c.pest == page.slug" %}
   {% if related.size > 0 %}
   <h2>相關診斷案件</h2>

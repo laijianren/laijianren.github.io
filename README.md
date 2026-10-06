@@ -8,7 +8,7 @@
 |---|---|---|
 | 診斷案件 | `_cases` | `_templates/新案件範本.md` |
 | 病蟲害知識 | `_pests` | `_templates/新病蟲害範本.md` |
-| 核准用藥 | `_data/pesticides.csv`（一列一筆） | — |
+| 用藥圖表 | `assets/charts`＋`_data/charts.yml` | 見下方說明 |
 | 照片 | `assets/images` | — |
 
 ## 在 GitHub 網頁上新增一筆案件
@@ -18,10 +18,6 @@
 3. 把範本內容貼上、填好
 4. 按 **Commit changes** 儲存，約 1～2 分鐘後網站就會更新
 
-## 修改用藥表
-
-打開 `_data/pesticides.csv`，按鉛筆圖示編輯。每一列用逗號分隔欄位，欄位順序不要動。
-也可以用 Excel／Google 試算表編輯後「另存為 CSV（UTF-8）」再上傳覆蓋。
 
 ## 新增一張用藥圖表
 
