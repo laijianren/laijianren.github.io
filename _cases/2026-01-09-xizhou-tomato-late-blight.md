@@ -15,12 +15,12 @@ cover_caption: 果實水浸狀
 
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/02.jpg" alt="棚架上的植株大面積枯萎"><figcaption>植株大面積枯萎</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/03.jpg" alt="葉片邊緣出現褐色壞疽病斑"><figcaption>葉緣褐色病斑</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/04.jpg" alt="葉背病斑處有灰白色黴狀物"><figcaption>葉背灰白色黴狀物</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/05.jpg" alt="葉背的水浸狀病斑"><figcaption>葉背病斑</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/06.jpg" alt="葉片病斑邊緣的白色黴狀物"><figcaption>病斑邊緣白色黴層</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/07.jpg" alt="莖部分叉處的褐色病斑"><figcaption>莖部褐色病斑</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/08.jpg" alt="莖基部病斑與落果"><figcaption>莖部病斑與落果</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/03.jpg" alt="葉片邊緣出現褐色壞疽病斑"><figcaption>葉面水浸狀病徵</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/04.jpg" alt="葉背病斑處有灰白色黴狀物"><figcaption>葉背出現灰白色黴狀物</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/05.jpg" alt="葉背的水浸狀病斑"><figcaption>葉背可同時出現水浸狀病斑</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/06.jpg" alt="葉片病斑邊緣的白色黴狀物"><figcaption>不規則病斑</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/07.jpg" alt="莖部分叉處的褐色病斑"><figcaption>莖部出現褐色水浸狀病徵，俗稱「黑骨」</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/08.jpg" alt="莖基部病斑與落果"><figcaption>小蕃茄大量落果</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-01-09-xizhou-tomato/09.jpg" alt="果實水浸狀"><figcaption>果實水浸狀</figcaption></figure>
 </div>
 
