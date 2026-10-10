@@ -20,7 +20,8 @@
   <header class="masthead">
     <div class="wrap">
       <div class="mast-top">
-        <span>{{ site.time | date: '%Y年%-m月%-d日' }}</span>
+        <span id="today">{{ site.time | date: '%Y年%-m月%-d日' }}</span>
+        <script>(function(){var d=new Date();document.getElementById('today').textContent=d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日';})();</script>
         <span class="mast-motto">{{ site.motto }}</span>
         <span>{{ site.author }}</span>
       </div>
