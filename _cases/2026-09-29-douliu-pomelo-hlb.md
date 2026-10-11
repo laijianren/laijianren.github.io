@@ -29,7 +29,6 @@ cover_caption: 葉片斑駁黃化
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/p2-pcr.jpg" alt="柑橘類樣本黃龍病與菌質體檢測電泳圖"><figcaption>柑橘類樣本檢測電泳圖（參考）</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/p3-pcr.jpg" alt="柑橘類樣本黃龍病與菌質體檢測電泳圖"><figcaption>柑橘類樣本檢測電泳圖（參考）</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/p4-leaf.jpg" alt="柑橘黃龍病葉片病徵"><figcaption>柑橘黃龍病葉片病徵（參考）</figcaption></figure>
 </div>
 
 ## 診斷結果
