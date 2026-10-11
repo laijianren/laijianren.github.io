@@ -52,7 +52,7 @@ cover_caption: 芒果壯蛺普癭蚋
 ### 薊馬危害絲瓜
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/18.jpg" alt="絲瓜果實表面的薊馬危害痕跡"><figcaption>絲瓜果實薊馬危害</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/18.jpg" alt="絲瓜果實有拉鏈狀食痕"><figcaption>絲瓜果實有拉鏈狀食痕</figcaption></figure>
 </div>
 
 ### 蔥薊馬危害
