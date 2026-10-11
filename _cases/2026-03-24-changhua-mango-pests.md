@@ -45,6 +45,8 @@ cover_caption: 芒果壯蛺普癭蚋
 
 ## 埔心芒果園
 
+芒果園周邊也種了絲瓜、洋蔥和百香果，以下一併記錄這些作物的病蟲害。
+
 <figure class="photo wide"><img src="/assets/cases/2026-03-24-changhua-mango/17.jpg" alt="埔心芒果園現場"><figcaption>埔心芒果園</figcaption></figure>
 
 ### 薊馬危害絲瓜
