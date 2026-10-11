@@ -40,7 +40,6 @@ cover_caption: 芒果壯蛺普癭蚋
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/12.jpg" alt="芒果螟蛾危害的新梢"><figcaption>新梢危害</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/13.jpg" alt="新梢褐化"><figcaption>新梢褐化</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/14.jpg" alt="新梢褐化萎凋"><figcaption>新梢萎凋</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/15.jpg" alt="新梢枯萎"><figcaption>新梢枯萎</figcaption></figure>
 </div>
 
