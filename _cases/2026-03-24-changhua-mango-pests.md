@@ -24,7 +24,6 @@ cover_caption: 芒果壯蛺普癭蚋
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/05.jpg" alt="枝條上的芒果輪盾介殼蟲"><figcaption>枝條上的介殼蟲</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/06.jpg" alt="葉片上的芒果輪盾介殼蟲"><figcaption>葉片上的介殼蟲</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/07.jpg" alt="枝條上的芒果輪盾介殼蟲"><figcaption>枝條上的介殼蟲</figcaption></figure>
 </div>
 
 6 到 8 月是產期，大暑八月後的芒果多做成芒果乾。
