@@ -25,7 +25,6 @@ cover_caption: 根部褐色菌絲面
 褐根病菌的菌絲初期為白色，之後轉為褐色，顯微鏡下可見鹿角狀菌絲。以下是參考照片。
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p1.jpg" alt="褐根病菌菌落，初期菌絲白色，之後轉為褐色"><figcaption>菌落（參考）</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p2.jpg" alt="褐根病菌菌落"><figcaption>菌落（參考）</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p3.jpg" alt="褐根病菌的鹿角菌絲（顯微鏡）"><figcaption>鹿角菌絲（參考）</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p4.jpg" alt="褐根病菌的鹿角菌絲（顯微鏡）"><figcaption>鹿角菌絲（參考）</figcaption></figure>
