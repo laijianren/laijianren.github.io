@@ -27,7 +27,6 @@ cover_caption: 葉片斑駁黃化
 黃龍病是由韌皮部細菌 *Candidatus* Liberibacter asiaticus 引起，無法在培養基上分離，需要用 PCR 分子檢測確認。以下是過去檢測的參考照片。
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/p1-pcr.jpg" alt="黃龍病 PCR 檢測電泳膠圖"><figcaption>黃龍病 PCR 檢測結果（參考）</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/p2-pcr.jpg" alt="柑橘類樣本黃龍病與菌質體檢測電泳圖"><figcaption>柑橘類樣本檢測電泳圖（參考）</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/p3-pcr.jpg" alt="柑橘類樣本黃龍病與菌質體檢測電泳圖"><figcaption>柑橘類樣本檢測電泳圖（參考）</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/p4-leaf.jpg" alt="柑橘黃龍病葉片病徵"><figcaption>柑橘黃龍病葉片病徵（參考）</figcaption></figure>
