@@ -10,14 +10,14 @@ cover_caption: 芒果壯蛺普癭蚋
 
 <figure class="photo wide"><img src="/assets/cases/2026-03-24-changhua-mango/02.jpg" alt="芒果園現場"><figcaption>圖一　員林芒果園</figcaption></figure>
 
-## 腹勾薊馬
+## 腹鉤薊馬
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/03.jpg" alt="腹勾薊馬危害的葉片"><figcaption>葉片危害</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/04.jpg" alt="腹勾薊馬危害，葉背黑黑的"><figcaption>葉背變黑</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/03.jpg" alt="腹鉤薊馬危害的葉片"><figcaption>葉片危害</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/04.jpg" alt="腹鉤薊馬危害，葉背黑黑的"><figcaption>葉背變黑</figcaption></figure>
 </div>
 
-腹勾薊馬危害，葉背黑黑的。
+腹鉤薊馬危害狀，葉背危害處會形成暗褐色銹斑。
 
 ## 芒果輪盾介殼蟲
 
@@ -82,7 +82,7 @@ cover_caption: 芒果壯蛺普癭蚋
 
 ## 診斷結果
 
-薊馬（腹勾薊馬、蔥薊馬）、芒果輪盾介殼蟲、芒果壯蛺普癭蚋、芒果螟蛾、果實蠅危害，以及白粉病。
+薊馬（腹鉤薊馬、蔥薊馬）、芒果輪盾介殼蟲、芒果壯蛺普癭蚋、芒果螟蛾、果實蠅危害，以及白粉病。
 
 ## 建議處理
 
