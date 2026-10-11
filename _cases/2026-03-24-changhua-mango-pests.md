@@ -63,7 +63,7 @@ cover_caption: 芒果壯蛺普癭蚋
 ### 果實蠅危害
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/21.jpg" alt="果實蠅危害的芒果果實"><figcaption>果實蠅危害</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/21.jpg" alt="果實蠅危害百香果"><figcaption>果實蠅危害百香果</figcaption></figure>
 </div>
 
 ### 白粉病
