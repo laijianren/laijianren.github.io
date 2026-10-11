@@ -56,7 +56,7 @@ cover_caption: 芒果壯蛺普癭蚋
 ### 蔥薊馬危害
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/19.jpg" alt="蔥類作物上的蔥薊馬危害"><figcaption>蔥薊馬危害</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/19.jpg" alt="蔥薊馬危害洋蔥"><figcaption>蔥薊馬危害洋蔥</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/20.jpg" alt="蔥類葉片上的白色食痕"><figcaption>葉片白色食痕</figcaption></figure>
 </div>
 
