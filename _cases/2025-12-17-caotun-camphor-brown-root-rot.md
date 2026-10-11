@@ -30,7 +30,6 @@ cover_caption: 根部褐色菌絲面
 <figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p4.jpg" alt="褐根病菌的鹿角菌絲（顯微鏡）"><figcaption>鹿角菌絲（參考）</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p5.jpg" alt="褐根病菌的鹿角菌絲（顯微鏡）"><figcaption>鹿角菌絲（參考）</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p6.jpg" alt="褐根病菌的鹿角菌絲（顯微鏡）"><figcaption>鹿角菌絲（參考）</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p7.jpg" alt="樹幹基部的褐根病病徵"><figcaption>樹幹基部病徵（參考）</figcaption></figure>
 </div>
 
 ## 診斷結果
