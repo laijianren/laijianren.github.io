@@ -31,7 +31,6 @@ cover_caption: 芒果壯蛺普癭蚋
 ## 芒果壯蛺普癭蚋
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/08.jpg" alt="葉片上的蟲癭"><figcaption>葉片蟲癭</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/09.jpg" alt="葉片上的蟲癭"><figcaption>葉片蟲癭</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/10.jpg" alt="葉片上的蟲癭"><figcaption>葉片蟲癭</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/11.jpg" alt="葉片上的蟲癭"><figcaption>葉片蟲癭</figcaption></figure>
