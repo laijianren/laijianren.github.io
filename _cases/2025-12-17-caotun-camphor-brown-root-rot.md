@@ -16,7 +16,7 @@ cover_caption: 根部褐色菌絲面
 <figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/02.jpg" alt="樟樹樹冠稀疏、落葉"><figcaption>樹冠稀疏</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/03.jpg" alt="樹基部土壤與根部"><figcaption>樹基部</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/04.jpg" alt="根部表面的褐色菌絲面"><figcaption>根部褐色菌絲面</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/06.jpg" alt="分離培養的菌落"><figcaption>分離培養</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/06.jpg" alt="於PDA分離培養"><figcaption>於 PDA 分離培養</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/07.jpg" alt="分離培養的菌落，菌絲轉為褐色"><figcaption>菌落轉褐色</figcaption></figure>
 </div>
 
