@@ -62,10 +62,10 @@ cover_caption: 芒果壯蛺普癭蚋
 <figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/20.jpg" alt="蔥類葉片上的白色食痕"><figcaption>葉片白色食痕</figcaption></figure>
 </div>
 
-### 果實蠅危害
+### 果實蠅危害百香果
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/21.jpg" alt="果實蠅危害百香果"><figcaption>果實蠅危害百香果</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/21.jpg" alt="果實蠅危害百香果"><figcaption>雌蟲產卵管危害，果實會凸起，且中間可看到產卵管的小孔洞</figcaption></figure>
 </div>
 
 ### 白粉病
