@@ -15,10 +15,8 @@ cover_caption: 番茄葉片褐色病斑
 
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/cases/2026-01-28-chunyuan-tomato/03.jpg" alt="南瓜葉片黃化與嵌紋"><figcaption>葉片黃化嵌紋</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-01-28-chunyuan-tomato/04.jpg" alt="南瓜葉片黃化、皺縮"><figcaption>葉片黃化皺縮</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-01-28-chunyuan-tomato/05.jpg" alt="南瓜整株葉片黃化"><figcaption>整株黃化</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-01-28-chunyuan-tomato/06.jpg" alt="南瓜植株生長勢衰弱"><figcaption>植株衰弱</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-01-28-chunyuan-tomato/07.jpg" alt="南瓜葉片黃化"><figcaption>葉片黃化</figcaption></figure>
 </div>
 
 ## 番茄：晚疫病病徵
