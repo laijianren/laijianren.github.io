@@ -32,7 +32,6 @@ cover_caption: 番茄葉片褐色病斑
 <figure class="photo"><img src="/assets/cases/2026-01-28-chunyuan-tomato/15.jpg" alt="番茄田區植株枯萎"><figcaption>植株枯萎</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-01-28-chunyuan-tomato/16.jpg" alt="番茄莖部褐化"><figcaption>莖部褐化</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-01-28-chunyuan-tomato/17.jpg" alt="番茄莖部病斑"><figcaption>莖部病斑</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-01-28-chunyuan-tomato/18.jpg" alt="番茄莖部病斑"><figcaption>莖部病斑</figcaption></figure>
 </div>
 
 ## 病原鑑定
