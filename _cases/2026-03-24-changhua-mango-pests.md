@@ -47,10 +47,10 @@ cover_caption: 芒果壯蛺普癭蚋
 
 <figure class="photo wide"><img src="/assets/cases/2026-03-24-changhua-mango/17.jpg" alt="埔心芒果園現場"><figcaption>埔心芒果園</figcaption></figure>
 
-### 薊馬危害
+### 薊馬危害絲瓜
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/18.jpg" alt="果實表面的薊馬危害痕跡"><figcaption>果實薊馬危害</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-03-24-changhua-mango/18.jpg" alt="絲瓜果實表面的薊馬危害痕跡"><figcaption>絲瓜果實薊馬危害</figcaption></figure>
 </div>
 
 ### 蔥薊馬危害
