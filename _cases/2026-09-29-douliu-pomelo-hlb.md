@@ -17,7 +17,7 @@ cover_caption: 葉片斑駁黃化
 <figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/04.jpg" alt="葉片葉脈間斑駁黃化"><figcaption>葉脈間斑駁</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/05.jpg" alt="葉片斑駁黃化"><figcaption>葉片斑駁黃化</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/06.jpg" alt="多片葉片出現不對稱斑駁"><figcaption>不對稱斑駁</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/07.jpg" alt="成熟葉片斑駁黃化近照"><figcaption>斑駁近照</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/07.jpg" alt="葉脈木栓化"><figcaption>葉脈木栓化</figcaption></figure>
 </div>
 
 葉片出現左右不對稱的斑駁黃化，是黃龍病的典型病徵。
