@@ -3,7 +3,7 @@ title: 彰化純園番茄晚疫病與南瓜病毒病
 date: 2026-01-28
 crop: 番茄、南瓜
 location: 彰化縣溪州鄉
-diagnosis: 番茄晚疫病（<i>Phytophthora infestans</i>）、南瓜病毒病
+diagnosis: 番茄晚疫病（<i>Phytophthora infestans</i>）、疑似南瓜捲葉病毒（待檢測確認）
 pest: late-blight
 cover: /assets/cases/2026-01-28-chunyuan-tomato/08.jpg
 cover_caption: 番茄葉片褐色病斑
@@ -52,7 +52,7 @@ cover_caption: 番茄葉片褐色病斑
 
 ## 診斷結果
 
-番茄晚疫病（*Phytophthora infestans*）；南瓜病毒病。
+番茄晚疫病（*Phytophthora infestans*）；疑似南瓜捲葉病毒（待檢測確認）。
 
 ## 建議處理
 
