@@ -16,7 +16,7 @@ cover_caption: 葉片斑駁黃化
 <figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/03.jpg" alt="枝條上的葉片黃化"><figcaption>葉片黃化</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/04.jpg" alt="葉片葉脈間斑駁黃化"><figcaption>葉脈間斑駁</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/05.jpg" alt="葉片斑駁黃化"><figcaption>葉片斑駁黃化</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/06.jpg" alt="多片葉片出現不對稱斑駁"><figcaption>不對稱斑駁</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/06.jpg" alt="葉片不均勻黃化"><figcaption>葉片不均勻黃化</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-29-douliu-pomelo/07.jpg" alt="葉脈木栓化"><figcaption>葉脈木栓化</figcaption></figure>
 </div>
 
