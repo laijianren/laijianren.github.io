@@ -25,7 +25,7 @@ cover_caption: 薊馬危害草莓
 ### 葉枯病與炭疽病
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/09.jpg" alt="草莓葉枯病"><figcaption>葉枯病</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/09.jpg" alt="草莓葉枯病"><figcaption>草莓葉枯病（<em>Neopestalotiopsis rosae</em>）</figcaption></figure>
 </div>
 
 豐香品種炭疽病嚴重，現在多改種香水或美姬。農友會使用亞磷酸，葉面至少噴一次；噴藥時利用風把葉片吹起，更容易噴到葉背。
