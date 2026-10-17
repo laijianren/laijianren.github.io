@@ -10,8 +10,6 @@ cover_caption: 果實蠅幼蟲危害狀
 
 <figure class="photo wide"><img src="/assets/cases/2022-08-26-yujing-carambola/07.jpg" alt="三個楊桃品種果實"><figcaption>圖一　左到右：紅龍、馬來西亞、水晶</figcaption></figure>
 
-楊桃採收期從 8 月中旬到隔年 4 月。
-
 ## 果實蠅
 
 <div class="photo-grid">
