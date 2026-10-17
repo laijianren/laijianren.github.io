@@ -16,8 +16,6 @@ cover_caption: 果實蠅幼蟲危害狀
 <figure class="photo"><img src="/assets/cases/2022-08-26-yujing-carambola/06.jpg" alt="果實蠅幼蟲危害楊桃果實"><figcaption>果實蠅幼蟲危害狀</figcaption></figure>
 </div>
 
-果實蠅危害約占四成。
-
 ## 楊桃鳥羽蛾
 
 <div class="photo-grid">
