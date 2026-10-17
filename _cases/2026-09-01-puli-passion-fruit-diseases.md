@@ -35,7 +35,7 @@ cover_caption: 疫病果實病斑
 <figure class="photo"><img src="/assets/cases/2026-09-01-puli-passion-fruit/13.jpg" alt="果實上的圓形病斑"><figcaption>果實病斑</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-01-puli-passion-fruit/14.jpg" alt="果實上的病斑"><figcaption>果實病斑</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-01-puli-passion-fruit/15.jpg" alt="果實上的黑褐色圓形病斑"><figcaption>病斑擴大</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-09-01-puli-passion-fruit/16.jpg" alt="果實上的褐色小斑點"><figcaption>果實小斑點</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-09-01-puli-passion-fruit/16.jpg" alt="果實上的褐色小斑點"><figcaption>炭疽病初期病斑，為褐色小斑點</figcaption></figure>
 </div>
 
 ## 頸腐病
