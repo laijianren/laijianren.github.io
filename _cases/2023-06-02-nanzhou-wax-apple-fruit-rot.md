@@ -3,7 +3,7 @@ title: 屏東南州蓮霧果腐病與黑腐病
 date: 2023-06-02
 crop: 蓮霧
 location: 屏東縣南州鄉
-diagnosis: 果腐病（<i>Pestalotiopsis</i> sp.、<i>Lasiodiplodia</i> sp.）、黑腐病（<i>Lasiodiplodia</i> sp.）、蓮霧細蛾
+diagnosis: 果腐病（<i>Pestalotiopsis</i> sp.）、黑腐病（<i>Lasiodiplodia</i> sp.）、蓮霧細蛾
 cover: /assets/cases/2023-06-02-nanzhou-wax-apple/06.jpg
 cover_caption: 果腐病果實
 ---
@@ -56,7 +56,7 @@ cover_caption: 果腐病果實
 
 ## 診斷結果
 
-蓮霧果腐病（*Pestalotiopsis* sp.、*Lasiodiplodia* sp.）、黑腐病（*Lasiodiplodia* sp.），以及蓮霧細蛾危害。
+蓮霧果腐病（*Pestalotiopsis* sp.）、黑腐病（*Lasiodiplodia* sp.），以及蓮霧細蛾危害。
 
 ## 建議處理
 
