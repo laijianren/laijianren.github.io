@@ -41,7 +41,7 @@ cover_caption: 疫病果實病斑
 ## 頸腐病
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-09-01-puli-passion-fruit/17.jpg" alt="莖基部樹皮褐化龜裂"><figcaption>莖基部病斑</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-09-01-puli-passion-fruit/17.jpg" alt="莖基部樹皮褐化龜裂"><figcaption>莖基部病斑，上面有 <em>Fusarium</em> sp. 紅色子囊殼</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-01-puli-passion-fruit/19.jpg" alt="植株莖基部病斑"><figcaption>植株莖基部</figcaption></figure>
 </div>
 
