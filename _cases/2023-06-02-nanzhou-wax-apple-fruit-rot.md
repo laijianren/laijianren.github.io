@@ -21,7 +21,7 @@ cover_caption: 果腐病果實
 ### 病原鑑定
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/07.jpg" alt="顯微鏡下的分生孢子"><figcaption>顯微鏡下的分生孢子</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/07.jpg" alt="顯微鏡下的分生孢子"><figcaption><em>Pestalotiopsis</em> sp. 分生孢子</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/08.jpg" alt="培養皿上的白色菌落"><figcaption>分離培養菌落</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/09.jpg" alt="培養皿上的白色菌落"><figcaption>分離培養菌落</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/10.jpg" alt="PCA 培養基上產生黑色孢子堆"><figcaption>長在 PCA 上</figcaption></figure>
