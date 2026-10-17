@@ -50,7 +50,7 @@ cover_caption: 果腐病果實
 
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/03.jpg" alt="葉片上的褐色潛食痕"><figcaption>蓮霧細蛾危害</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/18.jpg" alt="花梗上的蓮霧細蛾"><figcaption>蓮霧細蛾</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/18.jpg" alt="蓮霧細蛾危害新芽"><figcaption>蓮霧細蛾危害新芽</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/19.jpg" alt="葉片上的蓮霧細蛾危害與幼蟲"><figcaption>蓮霧細蛾</figcaption></figure>
 </div>
 
