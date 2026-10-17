@@ -14,7 +14,7 @@ cover_caption: 薊馬危害草莓
 
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/05.jpg" alt="薊馬警戒費洛蒙"><figcaption>薊馬警戒費洛蒙（標示效期半年，農友約 4 個月更換一次）</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/06.jpg" alt="薊馬危害草莓"><figcaption>薊馬危害狀</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/06.jpg" alt="薊馬危害草莓"><figcaption>薊馬危害葉片狀。葉片會有明顯拉鍊狀暗褐色食痕</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/07.jpg" alt="薊馬危害草莓"><figcaption>薊馬危害狀</figcaption></figure>
 </div>
 
