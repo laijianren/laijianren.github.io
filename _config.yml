@@ -12,12 +12,17 @@ collections:
   pests:          # 病蟲害知識，檔案放在 _pests 資料夾
     output: true
     permalink: /pests/:name/
+  visits:         # 參訪筆記（觀摩會、田間參訪），檔案放在 _visits 資料夾
+    output: true
+    permalink: /visits/:name/
 
 defaults:
   - scope: { path: "", type: cases }
     values: { layout: case }
   - scope: { path: "", type: pests }
     values: { layout: pest }
+  - scope: { path: "", type: visits }
+    values: { layout: visit }
   - scope: { path: "" }
     values: { layout: default }
 

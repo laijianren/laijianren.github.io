@@ -1,0 +1,18 @@
+---
+title: 參訪筆記
+---
+<h1>參訪筆記</h1>
+<p>參加觀摩會、田間參訪時記下的農友經驗與防治做法。</p>
+{% assign items = site.visits | sort: 'date' | reverse %}
+<div class="case-cards">
+{% for c in items %}
+  <a class="case-card" href="{{ c.url | relative_url }}">
+    {% if c.cover %}<div class="case-thumb"><img src="{{ c.cover | relative_url }}" alt="{{ c.cover_caption | default: c.title }}"></div>{% endif %}
+    <div class="case-body">
+      <p class="case-meta">{% if c.crop %}<span class="tag">{{ c.crop }}</span>{% endif %}{{ c.date | date: '%Y.%m.%d' }}</p>
+      <h3>{{ c.title }}</h3>
+      {% if c.location %}<p class="case-loc">{{ c.location }}</p>{% endif %}
+    </div>
+  </a>
+{% endfor %}
+</div>
