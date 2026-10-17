@@ -37,7 +37,7 @@ cover_caption: 茂谷柑果實日燒
 ### 日燒
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-09-02-dongshi-citrus/11.jpg" alt="果實向陽面黃褐色日燒"><figcaption>果實日燒</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-09-02-dongshi-citrus/11.jpg" alt="果實向陽面黃褐色日燒"><figcaption>果實日燒：向陽面會出現面狀黃化</figcaption></figure>
 </div>
 
 ## 潰瘍病（東勢）
