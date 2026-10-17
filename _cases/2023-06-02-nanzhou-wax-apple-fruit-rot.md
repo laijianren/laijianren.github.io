@@ -39,7 +39,7 @@ cover_caption: 果腐病果實
 
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/13.jpg" alt="顯微鏡下的孢子"><figcaption>分生孢子</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/14.jpg" alt="顯微鏡下的孢子"><figcaption>顯微鏡下的孢子</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/14.jpg" alt="顯微鏡下的孢子"><figcaption>分生孢子</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/15.jpg" alt="培養皿上的灰色菌落"><figcaption>分離培養菌落</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/16.jpg" alt="培養皿上的灰色菌落"><figcaption>分離培養菌落（背面）</figcaption></figure>
 </div>
