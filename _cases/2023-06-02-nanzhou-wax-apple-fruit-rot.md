@@ -8,7 +8,7 @@ cover: /assets/cases/2023-06-02-nanzhou-wax-apple/06.jpg
 cover_caption: 果腐病果實
 ---
 
-<figure class="photo wide"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/01.jpg" alt="蓮霧試驗區現場"><figcaption>圖一　試驗區</figcaption></figure>
+<figure class="photo wide"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/01.jpg" alt="蓮霧園區現場"><figcaption>圖一、園區照</figcaption></figure>
 
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/04.jpg" alt="蓋黑網的蓮霧植株"><figcaption>蓋黑網 15–25 天，等葉片下垂後掀起</figcaption></figure>
