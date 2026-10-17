@@ -15,7 +15,6 @@ cover_caption: 疫病果實病斑
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/cases/2026-09-01-puli-passion-fruit/02.jpg" alt="果實水浸狀褐色病斑"><figcaption>果實水浸狀病斑</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-01-puli-passion-fruit/03.jpg" alt="果實下方褐色病斑"><figcaption>果實病斑</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-09-01-puli-passion-fruit/04.jpg" alt="棚架上多顆果實出現病斑"><figcaption>多顆果實發病</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-01-puli-passion-fruit/05.jpg" alt="果實圓形褐色病斑"><figcaption>果實病斑</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-01-puli-passion-fruit/10.jpg" alt="果實上多個大型褐色病斑"><figcaption>果實病斑擴大</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-01-puli-passion-fruit/07.jpg" alt="葉片褐色病斑"><figcaption>葉片病斑</figcaption></figure>
