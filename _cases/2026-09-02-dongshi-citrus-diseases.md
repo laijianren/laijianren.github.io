@@ -44,7 +44,6 @@ cover_caption: 茂谷柑果實日燒
 
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/cases/2026-09-02-dongshi-citrus/13.jpg" alt="柑橘園現場"><figcaption>柑橘園</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-09-02-dongshi-citrus/14.jpg" alt="葉片上周圍有黃暈的褐色病斑"><figcaption>葉片潰瘍病斑</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-09-02-dongshi-citrus/15.jpg" alt="葉片上周圍有黃暈的褐色病斑"><figcaption>葉片潰瘍病斑</figcaption></figure>
 </div>
 
