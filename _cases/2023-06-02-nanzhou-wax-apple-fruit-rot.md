@@ -32,7 +32,6 @@ cover_caption: 果腐病果實
 ## 黑腐病
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/11.jpg" alt="黑褐色腐爛的蓮霧果實"><figcaption>黑腐病果實</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/12.jpg" alt="黑褐色腐爛的蓮霧果實"><figcaption>黑腐病果實</figcaption></figure>
 </div>
 
