@@ -37,11 +37,11 @@ cover_caption: 甜菜夜蛾危害狀
 
 | 病害 | 學名 | 好發時期 |
 |---|---|---|
-| 青蔥疫病 | *Phytophthora nicotianae* | 好發於高濕度環境，尤其夏秋季颱風時 |
-| 白絹病 | *Sclerotium rolfsii* | 4–10 月高溫多濕（超過 26 度農友會施藥），病原常從稻草來 |
-| 黑腐病 | （待確認） | 10 月到隔年 2 月 |
-| 紫斑病 | *Alternaria porri* | 10 月到隔年 2 月 |
-| 小粒菌核病 | *Botrytis squamosa* | 10 月到隔年 2 月 |
-| 青蔥銹病 | *Puccinia allii* | 2–5 月 |
+| 青蔥疫病 | *Phytophthora nicotianae* Breda de Haan | 好發於高濕度環境，尤其夏秋季颱風時 |
+| 青蔥白絹病 | *Athelia rolfsii* (Curzi) Tu & Kimbr. | 4–10 月高溫多濕（超過 26 度農友會施藥），病原常從稻草來 |
+| 青蔥黑腐病 | *Stemphylium herbarum* Simmons | 10 月到隔年 2 月 |
+| 青蔥紫斑病 | *Alternaria porri* (Ell.) Cif. | 10 月到隔年 2 月 |
+| 小綠菌核病 | （待確認） | 10 月到隔年 2 月 |
+| 青蔥銹病 | *Puccinia allii* (DC.) Rud. | 2–5 月 |
 
 疫病防治可用達滅芬、滅達樂或木黴菌搭配亞磷酸。亞磷酸最多連續使用三次後停一次，農友認為用太多可能影響口感。
