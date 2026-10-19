@@ -29,7 +29,6 @@ cover_caption: 甜菜夜蛾危害狀
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/02.jpg" alt="甜菜夜蛾危害青蔥"><figcaption>甜菜夜蛾危害狀</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/03.jpg" alt="甜菜夜蛾危害青蔥"><figcaption>甜菜夜蛾危害狀</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/04.jpg" alt="甜菜夜蛾危害青蔥"><figcaption>甜菜夜蛾危害狀</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/05.jpg" alt="甜菜夜蛾危害青蔥"><figcaption>甜菜夜蛾危害狀</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/06.jpg" alt="甜菜夜蛾危害青蔥"><figcaption>甜菜夜蛾危害狀</figcaption></figure>
 </div>
