@@ -4,7 +4,7 @@ date: 2021-10-25
 crop: 青蔥
 location: 宜蘭縣三星鄉
 topics: 甜菜夜蛾、疫病、白絹病、種苗處理、病害發生季節
-cover: /assets/visits/2021-10-25-sanxing-scallion/02.jpg
+cover: /assets/visits/2021-10-25-sanxing-scallion/03.jpg
 cover_caption: 甜菜夜蛾危害狀
 ---
 
@@ -27,9 +27,7 @@ cover_caption: 甜菜夜蛾危害狀
 ## 甜菜夜蛾
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/02.jpg" alt="甜菜夜蛾危害青蔥"><figcaption>甜菜夜蛾危害狀</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/03.jpg" alt="甜菜夜蛾危害青蔥"><figcaption>甜菜夜蛾危害狀</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/05.jpg" alt="甜菜夜蛾危害青蔥"><figcaption>甜菜夜蛾危害狀</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/06.jpg" alt="甜菜夜蛾危害青蔥"><figcaption>甜菜夜蛾危害狀</figcaption></figure>
 </div>
 
