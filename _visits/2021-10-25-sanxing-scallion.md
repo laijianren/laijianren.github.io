@@ -42,7 +42,7 @@ cover_caption: 甜菜夜蛾危害狀
 | 青蔥黑腐病 | *Stemphylium herbarum* Simmons | 10 月到隔年 2 月 |
 | 青蔥紫斑病 | *Alternaria porri* (Ell.) Cif. | 10 月到隔年 2 月 |
 | 小綠菌核病 | （待確認） | 10 月到隔年 2 月 |
-| 青蔥銹病 | *Puccinia allii* (DC.) Rud. | 2–5 月 |
+| 青蔥銹病 | *Puccinia allii* (DC.) Rud. | 涼冷無雨的季節易發生，臺灣約每年 11 月至翌年 4 月 |
 {: .season}
 
 疫病防治可用達滅芬、滅達樂或木黴菌搭配亞磷酸。亞磷酸最多連續使用三次後停一次，農友認為用太多可能影響口感。
