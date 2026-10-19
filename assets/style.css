@@ -250,3 +250,4 @@ main img, .lightbox img { -webkit-user-drag: none; -webkit-touch-callout: none; 
   .case-meta, .case-loc { font-size: .78rem; }
   .case-meta .tag { display: table; margin: 0 0 3px; }
 }
+.season td:first-child, .season th:first-child { white-space: nowrap; }
