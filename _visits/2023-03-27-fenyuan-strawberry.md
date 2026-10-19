@@ -41,6 +41,5 @@ cover_caption: 薊馬危害草莓
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/13.jpg" alt="咖啡果實"><figcaption>咖啡需要人工採收，很費工，而且果實不會同時轉色</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/15.jpg" alt="自製誘引器"><figcaption>使用甲醇＋乙醇 1:1 混合配成誘引劑，誘引咖啡果小蠹雌成蟲</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/16.jpg" alt="咖啡葉片"><figcaption>咖啡葉片</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/17.jpg" alt="咖啡園"><figcaption>咖啡園</figcaption></figure>
 </div>
