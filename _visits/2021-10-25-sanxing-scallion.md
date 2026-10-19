@@ -41,7 +41,6 @@ cover_caption: 甜菜夜蛾危害狀
 | 青蔥白絹病 | *Athelia rolfsii* (Curzi) Tu & Kimbr. | 4–10 月高溫多濕（超過 26 度農友會施藥），病原常從稻草來 |
 | 青蔥黑腐病 | *Stemphylium herbarum* Simmons | 10 月到隔年 2 月 |
 | 青蔥紫斑病 | *Alternaria porri* (Ell.) Cif. | 10 月到隔年 2 月 |
-| 小綠菌核病 | （待確認） | 10 月到隔年 2 月 |
 | 青蔥銹病 | *Puccinia allii* (DC.) Rud. | 涼冷無雨的季節易發生，臺灣約每年 11 月至翌年 4 月 |
 {: .season}
 
