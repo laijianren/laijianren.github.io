@@ -44,4 +44,6 @@ cover_caption: 甜菜夜蛾危害狀
 | 青蔥銹病 | *Puccinia allii* (DC.) Rud. | 涼冷無雨的季節易發生，臺灣約每年 11 月至翌年 4 月 |
 {: .season}
 
+<p class="source">資料來源：學名及青蔥疫病、銹病的好發時期參考農業試驗所病蟲害資料（黃晋興 編）：<a href="https://azai.tari.gov.tw/search/bug/detail?id=827">青蔥疫病</a>、<a href="https://azai.tari.gov.tw/search/bug/detail?id=833">青蔥白絹病</a>、<a href="https://azai.tari.gov.tw/search/bug/detail?id=831">青蔥黑腐病</a>、<a href="https://azai.tari.gov.tw/search/bug/detail?id=830">青蔥紫斑病</a>、<a href="https://azai.tari.gov.tw/search/bug/detail?id=832">青蔥銹病</a>；其餘為參訪時農友分享的經驗。</p>
+
 疫病防治可用達滅芬、滅達樂或木黴菌搭配亞磷酸。亞磷酸最多連續使用三次後停一次，農友認為用太多可能影響口感。
