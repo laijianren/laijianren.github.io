@@ -23,7 +23,7 @@ cover_caption: 可採收的杭菊花朵
 ## 栽培管理
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/11.jpg" alt="生長較差的杭菊田"><figcaption>種植差</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/11.jpg" alt="生長較差的杭菊田"><figcaption>種植較差的田區，缺株嚴重</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/10.jpg" alt="被颱風吹斷的植株"><figcaption>被颱風吹斷</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/16.jpg" alt="生殖生長期葉片"><figcaption>生殖生長葉</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/17.jpg" alt="營養生長期葉片"><figcaption>營養生長葉</figcaption></figure>
