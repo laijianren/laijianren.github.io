@@ -1,8 +1,8 @@
 ---
-title: 台南玉井楊桃病蟲害
+title: 臺南玉井楊桃病蟲害
 date: 2022-08-26
 crop: 楊桃
-location: 台南市玉井區
+location: 臺南市玉井區
 diagnosis: 果實蠅、楊桃鳥羽蛾、青蛾蠟蟬、松鼠危害、熱傷害
 cover: /assets/cases/2022-08-26-yujing-carambola/06.jpg
 cover_caption: 果實蠅幼蟲危害狀
