@@ -3,7 +3,7 @@ title: 台南麻豆文旦病蟲害
 date: 2026-10-02
 crop: 文旦
 location: 台南市麻豆區
-diagnosis: 油斑病、潰瘍病、潛葉蛾、硬介殼蟲、流膠病、日燒
+diagnosis: 油斑病、潰瘍病、潛葉蛾、褐圓盾介殼蟲、流膠病、日燒
 cover: /assets/cases/2026-10-02-madou-pomelo/10-07.jpg
 cover_caption: 文旦葉片油斑病
 ---
@@ -37,10 +37,10 @@ cover_caption: 文旦葉片油斑病
 <figure class="photo"><img src="/assets/cases/2026-10-02-madou-pomelo/10-11.jpg" alt="潛葉蛾危害新梢"><figcaption>潛葉蛾危害（10 月）</figcaption></figure>
 </div>
 
-## 硬介殼蟲
+## 褐圓盾介殼蟲
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-10-02-madou-pomelo/10-10.jpg" alt="葉片上的硬介殼蟲"><figcaption>硬介殼蟲</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-10-02-madou-pomelo/10-10.jpg" alt="葉片上的硬介殼蟲"><figcaption>褐圓盾介殼蟲</figcaption></figure>
 </div>
 
 ## 流膠病
@@ -65,7 +65,7 @@ cover_caption: 文旦葉片油斑病
 
 ## 診斷結果
 
-文旦油斑病、潰瘍病、潛葉蛾、硬介殼蟲危害、流膠病，以及果實日燒。
+文旦油斑病、潰瘍病、潛葉蛾、褐圓盾介殼蟲危害、流膠病，以及果實日燒。
 
 ## 建議處理
 
