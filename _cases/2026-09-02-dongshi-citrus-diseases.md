@@ -1,8 +1,8 @@
 ---
-title: 台中東勢柑橘黑點病、日燒與潰瘍病
+title: 臺中東勢柑橘黑點病、日燒與潰瘍病
 date: 2026-09-02
 crop: 椪柑、茂谷柑
-location: 台中市東勢區、苗栗縣卓蘭鎮
+location: 臺中市東勢區、苗栗縣卓蘭鎮
 diagnosis: 黑點病、薊馬、日燒、潰瘍病
 cover: /assets/cases/2026-09-02-dongshi-citrus/11.jpg
 cover_caption: 茂谷柑果實日燒

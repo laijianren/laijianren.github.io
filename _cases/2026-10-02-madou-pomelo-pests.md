@@ -1,8 +1,8 @@
 ---
-title: 台南麻豆文旦病蟲害
+title: 臺南麻豆文旦病蟲害
 date: 2026-10-02
 crop: 文旦
-location: 台南市麻豆區
+location: 臺南市麻豆區
 diagnosis: 油斑病、潰瘍病、潛葉蛾、褐圓盾介殼蟲、流膠病、日燒
 cover: /assets/cases/2026-10-02-madou-pomelo/10-07.jpg
 cover_caption: 文旦葉片油斑病

@@ -12,7 +12,7 @@ cover_caption: 可採收的杭菊花朵
 
 ## 品種與產地
 
-- 台灣一號白雪是銅鑼主要種植的品種，黃菊多種在台東。
+- 臺灣一號白雪是銅鑼主要種植的品種，黃菊多種在臺東。
 - 白菊養肝，黃菊明目。
 - 通常建議水旱輪作。
 
@@ -48,7 +48,7 @@ cover_caption: 可採收的杭菊花朵
 
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/13.jpg" alt="可採收的花朵"><figcaption>可採收（中間綠色部分小於 0.5 公分）</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/09.jpg" alt="盛開的白菊"><figcaption>台灣一號白雪</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/09.jpg" alt="盛開的白菊"><figcaption>臺灣一號白雪</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/08.jpg" alt="採收的花朵"><figcaption>採收後的花朵</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/05.jpg" alt="烘乾設備"><figcaption>烘乾設備</figcaption></figure>
 </div>
