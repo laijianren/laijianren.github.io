@@ -21,7 +21,6 @@ title: 頭版
     </figure>
     {% endif %}
     <p class="byline">{{ lead.date | date: '%Y年%-m月%-d日' }}{% if lead.location %}・{{ lead.location }}{% endif %}</p>
-    <div class="columns dropcap">{{ lead.content | replace: '<em>', '⟦' | replace: '</em>', '⟧' | strip_html | truncate: 220 | replace: '⟦', '<em>' | replace: '⟧', '</em>' }}</div>
     <p class="more"><a href="{{ lead.url | relative_url }}">閱讀全文 →</a></p>
     {% else %}
     <h1 class="headline">{{ site.title }}</h1>
@@ -92,34 +91,6 @@ title: 頭版
 ]</script>
   <script type="application/json" id="map-towns">{{ site.data.towns | jsonify }}</script>
   <script src="{{ '/assets/field-map.js' | relative_url }}" defer></script>
-</section>
-
-<section class="story" aria-label="專題：從田間到處方">
-  <div class="story-stage">
-    <div class="story-art">
-      <div class="story-fig" data-step="0">{% include icon.html name='leaf' %}</div>
-      <div class="story-fig" data-step="1">{% include icon.html name='beetle' %}</div>
-      <div class="story-fig" data-step="2">{% include icon.html name='flask' %}</div>
-    </div>
-    <div class="story-text">
-      <div class="story-step" data-step="0">
-        <p class="kicker">專題 I・Observatio</p>
-        <h2 class="plain">走進田間，<br>先看清楚。</h2>
-        <p>葉片的斑點、莖上的痕跡、蟲子留下的線索，每一個病徵都是植物在說話。</p>
-      </div>
-      <div class="story-step" data-step="1">
-        <p class="kicker">專題 II・Diagnosis</p>
-        <h2 class="plain">找出真正的<br>原因。</h2>
-        <p>是病害、蟲害，還是生理障礙？比對病徵與環境，才能對症下藥。</p>
-      </div>
-      <div class="story-step" data-step="2">
-        <p class="kicker">專題 III・Remedium</p>
-        <h2 class="plain">用對的藥，<br>用對的量。</h2>
-        <p>只選核准登記的藥劑，遵守稀釋倍數與安全採收期，守護作物也守護餐桌。</p>
-      </div>
-    </div>
-    <ol class="story-dots" aria-hidden="true"><li></li><li></li><li></li></ol>
-  </div>
 </section>
 
 <h2 class="section-label wide">本報導覽</h2>
