@@ -13,7 +13,7 @@ cover_caption: 百香果果實炭疽病
 ## 果實蠅
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-07-22-puli-passion-fruit/02.jpg" alt="果實蠅產卵痕"><figcaption>果實蠅危害果實</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-07-22-puli-passion-fruit/02.jpg" alt="果實蠅產卵痕"><figcaption>果實蠅雌蟲以產卵管刺入果實，造成果實組織不正常增生而突起</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-07-22-puli-passion-fruit/04.jpg" alt="果實蠅產卵痕"><figcaption>果實蠅危害果實</figcaption></figure>
 </div>
 
