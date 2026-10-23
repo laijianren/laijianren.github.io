@@ -301,3 +301,7 @@ svg.tw-map .pin.visit text { fill: var(--ink); }
   .map-list { max-height: none; }
 }
 @media (prefers-reduced-motion: reduce) { svg.tw-map .pin { opacity: 1; animation: none !important; } }
+
+/* 頭版側欄：全球疫情週報 */
+.dispatch.wire li { display: block; font-weight: 400; line-height: 1.6; font-size: .95rem; }
+.dispatch.wire b { color: var(--red); font-weight: 700; }

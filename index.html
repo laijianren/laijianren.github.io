@@ -41,6 +41,17 @@ title: 頭版
       {% endfor %}
       <p class="more"><a href="{{ '/pests/' | relative_url }}">全部知識 →</a></p>
     </section>
+    {% assign gw = site.data.global_weekly %}
+    {% if gw %}
+    <section class="side-block global-weekly">
+      <h2 class="section-label">全球疫情週報</h2>
+      <p class="kicker">{{ gw.issue }}・{{ gw.date }}</p>
+      <ul class="dispatch wire">
+        {% for it in gw.items %}<li><a href="{{ gw.url }}" target="_blank" rel="noopener"><b>{{ it.region }}</b>　{{ it.title }}{% if it.sci %}（<em>{{ it.sci }}</em>）{% endif %}</a></li>{% endfor %}
+      </ul>
+      <p class="more"><a href="{{ gw.url }}" target="_blank" rel="noopener">閱讀全球植物病蟲害週報 →</a></p>
+    </section>
+    {% endif %}
     <section class="side-block">
       <h2 class="section-label">用藥快報</h2>
       {% assign cgroups = site.data.charts | group_by: 'crop' %}
