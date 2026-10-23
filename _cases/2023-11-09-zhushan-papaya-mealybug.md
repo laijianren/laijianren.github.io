@@ -42,13 +42,11 @@ cover_caption: 葉背的木瓜秀粉介殼蟲
 <figure class="photo"><img src="/assets/cases/2023-11-09-zhushan-papaya/27.jpg" alt="葉片黃化與介殼蟲"><figcaption>葉片黃化，葉柄基部有介殼蟲</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2023-11-09-zhushan-papaya/33.jpg" alt="葉背介殼蟲群聚"><figcaption>葉背介殼蟲群聚</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2023-11-09-zhushan-papaya/34.jpg" alt="木瓜秀粉介殼蟲近照"><figcaption>木瓜秀粉介殼蟲近照</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-11-09-zhushan-papaya/19.jpg" alt="果實黑褐色斑點"><figcaption>果實病斑（待確認）</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-11-09-zhushan-papaya/26.jpg" alt="畸形果"><figcaption>畸形果（待確認）</figcaption></figure>
 </div>
 
 ## 診斷結果
 
-木瓜秀粉介殼蟲危害；果實病斑待確認。
+木瓜秀粉介殼蟲危害。
 
 ## 建議處理
 
