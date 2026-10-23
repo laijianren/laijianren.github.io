@@ -25,10 +25,12 @@ cover_caption: 可採收的杭菊花朵
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/11.jpg" alt="生長較差的杭菊田"><figcaption>種植較差的田區，缺株嚴重</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/10.jpg" alt="被颱風吹斷的植株"><figcaption>杭菊植株被颱風吹斷</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/16.jpg" alt="生殖生長期葉片"><figcaption>生殖生長葉</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/17.jpg" alt="營養生長期葉片"><figcaption>營養生長葉</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/16.jpg" alt="生殖生長期葉片"><figcaption>生殖生長期葉片：花苞附近的葉片變小、窄長，缺刻淺或近全緣</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/17.jpg" alt="營養生長期葉片"><figcaption>營養生長期葉片：葉片寬大，羽狀缺刻深，裂片邊緣有鋸齒</figcaption></figure>
 <figure class="photo"><img src="/assets/visits/2025-11-17-tongluo-chrysanthemum/15.jpg" alt="帶粉紅色的花朵"><figcaption>天氣冷時花瓣會因花青素帶紅色</figcaption></figure>
 </div>
+
+杭菊從營養生長轉為生殖生長（花芽分化）後，葉形會跟著改變。營養生長期的葉片較大、較寬，羽狀缺刻明顯；進入生殖生長後，花莖上的葉片逐漸變小、變窄，缺刻變淺，越靠近花苞的葉片越小、越簡單。田間可以藉由觀察枝條上段葉形的變化，判斷植株是否已進入開花階段。
 
 ## 炭疽病
 
