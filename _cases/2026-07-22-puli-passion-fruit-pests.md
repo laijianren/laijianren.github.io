@@ -30,6 +30,8 @@ cover_caption: 百香果果實炭疽病
 <figure class="photo"><img src="/assets/cases/2026-07-22-puli-passion-fruit/09.jpg" alt="果實褐斑病"><figcaption>褐斑病（<em>Alternaria</em> sp.）</figcaption></figure>
 </div>
 
+褐斑病病斑周圍會有綠色暈圈，與炭疽病不同，但是病斑初期與炭疽病類似，不易區別。
+
 ## 薊馬
 
 <div class="photo-grid">
