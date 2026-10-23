@@ -42,7 +42,7 @@ cover_caption: 柑橘潛葉蛾危害葉片
 ## 大黑星龜金花蟲
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-07-24-wufeng-kumquat/17.jpg" alt="大黑星龜金花蟲"><figcaption>金柑園內的金柑有旋花科雜草，雜草上發現大黑星龜金花蟲</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-07-24-wufeng-kumquat/17.jpg" alt="大黑星龜金花蟲"><figcaption>有幾棵金柑樹被旋花科雜草包覆，雜草上發現大黑星龜金花蟲</figcaption></figure>
 </div>
 
 ## 診斷結果
