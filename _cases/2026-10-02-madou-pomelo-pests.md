@@ -50,10 +50,10 @@ cover_caption: 文旦葉片油斑病
 <figure class="photo"><img src="/assets/cases/2026-10-02-madou-pomelo/06-16.jpg" alt="樹幹流膠近照"><figcaption>流膠病近照</figcaption></figure>
 </div>
 
-## 天牛防治
+## 柑橘窄胸天牛防治
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-10-02-madou-pomelo/06-19.jpg" alt="樹幹天牛防治"><figcaption>天牛防治</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-10-02-madou-pomelo/06-19.jpg" alt="樹幹天牛防治"><figcaption>柑橘窄胸天牛防治</figcaption></figure>
 </div>
 
 ## 日燒
