@@ -26,7 +26,7 @@ cover_caption: 文旦葉片油斑病
 
 <div class="photo-grid">
 <figure class="photo"><img src="/assets/cases/2026-10-02-madou-pomelo/06-09.jpg" alt="葉片潰瘍病斑"><figcaption>潰瘍病</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2026-10-02-madou-pomelo/06-10.jpg" alt="葉片同時有潰瘍病與油斑病"><figcaption>潰瘍病及油斑病</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-10-02-madou-pomelo/06-10.jpg" alt="葉片同時有潰瘍病與油斑病"><figcaption>潰瘍病及油斑病複合感染</figcaption></figure>
 </div>
 
 ## 潛葉蛾
