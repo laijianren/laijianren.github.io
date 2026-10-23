@@ -1,8 +1,8 @@
 ---
-title: 台中霧峰金柑病蟲害
+title: 臺中霧峰金柑病蟲害
 date: 2026-07-24
 crop: 金柑
-location: 台中市霧峰區
+location: 臺中市霧峰區
 diagnosis: 緣椿、褐圓盾介殼蟲、柑橘潛葉蛾、油斑病、大黑星龜金花蟲
 cover: /assets/cases/2026-07-24-wufeng-kumquat/08.jpg
 cover_caption: 柑橘潛葉蛾危害葉片
