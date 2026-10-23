@@ -27,7 +27,7 @@ cover_caption: 百香果果實炭疽病
 ## 褐斑病
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-07-22-puli-passion-fruit/09.jpg" alt="果實褐斑病"><figcaption>褐斑病</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-07-22-puli-passion-fruit/09.jpg" alt="果實褐斑病"><figcaption>褐斑病（<em>Alternaria</em> sp.）</figcaption></figure>
 </div>
 
 ## 薊馬
