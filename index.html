@@ -52,6 +52,37 @@ title: 頭版
   </aside>
 </section>
 
+<section class="field-map" aria-label="田野地圖">
+  <h2 class="section-label wide">田野地圖・Field Map</h2>
+  <div class="map-layout">
+    <div class="map-col">
+      {% include taiwan-map.svg %}
+      <div class="map-tip" hidden></div>
+      <p class="map-legend"><span class="pin-key case"></span>診斷案件　<span class="pin-key visit"></span>參訪筆記</p>
+    </div>
+    <div class="map-side">
+      <p class="kicker">足跡・Vestigia</p>
+      <p class="map-stats"></p>
+      <div class="map-filters" role="group" aria-label="篩選">
+        <button type="button" data-kind="all" aria-pressed="true">全部</button>
+        <button type="button" data-kind="case" aria-pressed="false">診斷案件</button>
+        <button type="button" data-kind="visit" aria-pressed="false">參訪筆記</button>
+        <select class="map-crop" aria-label="依作物篩選"><option value="">所有作物</option></select>
+      </div>
+      <p class="map-place"></p>
+      <ol class="map-list" aria-live="polite"></ol>
+    </div>
+  </div>
+  <script type="application/json" id="map-records">[
+{%- assign recs = site.cases | concat: site.visits | sort: 'date' | reverse -%}
+{%- for r in recs -%}
+{"title":{{ r.title | jsonify }},"url":{{ r.url | relative_url | jsonify }},"date":{{ r.date | date: '%Y-%m-%d' | jsonify }},"crop":{{ r.crop | jsonify }},"location":{{ r.location | jsonify }},"cover":{{ r.cover | relative_url | jsonify }},"kind":"{% if r.collection == 'visits' %}visit{% else %}case{% endif %}"}{% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+]</script>
+  <script type="application/json" id="map-towns">{{ site.data.towns | jsonify }}</script>
+  <script src="{{ '/assets/field-map.js' | relative_url }}" defer></script>
+</section>
+
 <section class="story" aria-label="專題：從田間到處方">
   <div class="story-stage">
     <div class="story-art">
