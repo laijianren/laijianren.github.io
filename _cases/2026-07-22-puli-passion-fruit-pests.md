@@ -33,7 +33,7 @@ cover_caption: 百香果果實炭疽病
 ## 薊馬
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2026-07-22-puli-passion-fruit/10.jpg" alt="台農一號試驗田"><figcaption>台農一號試驗田</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2026-07-22-puli-passion-fruit/10.jpg" alt="臺農一號試驗田"><figcaption>臺農一號試驗田</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-07-22-puli-passion-fruit/11.jpg" alt="薊馬危害新梢"><figcaption>薊馬危害新梢</figcaption></figure>
 <figure class="photo"><img src="/assets/cases/2026-07-22-puli-passion-fruit/12.jpg" alt="薊馬危害新梢"><figcaption>薊馬危害新梢</figcaption></figure>
 </div>
