@@ -34,14 +34,6 @@ cover_caption: 葉背的木瓜秀粉介殼蟲
 
 幾乎每棵木瓜都有木瓜秀粉介殼蟲（調查 10 棵，10 棵都有），雖然發生率高，但目前危害程度不嚴重。
 
-### 果實病斑
-
-<div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2023-11-09-zhushan-papaya/09.jpg" alt="幼果病斑"><figcaption>幼果病斑（待確認）</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-11-09-zhushan-papaya/10.jpg" alt="幼果病斑近照"><figcaption>幼果病斑近照（待確認）</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-11-09-zhushan-papaya/06.jpg" alt="果實橘色病斑"><figcaption>果實病斑（待確認）</figcaption></figure>
-</div>
-
 ## 第二區（鹿谷）
 
 <div class="photo-grid">
