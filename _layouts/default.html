@@ -34,7 +34,6 @@
       <nav>
         <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>頭版</a>
         <a href="{{ '/cases/' | relative_url }}" {% if page.url contains '/cases/' %}class="active"{% endif %}>診斷案件</a>
-        <a href="{{ '/gallery/' | relative_url }}" {% if page.url contains '/gallery/' %}class="active"{% endif %}>照片牆</a>
         <a href="{{ '/calendar/' | relative_url }}" {% if page.url contains '/calendar/' %}class="active"{% endif %}>田間月曆</a>
         <a href="{{ '/pests/' | relative_url }}" {% if page.url contains '/pests/' %}class="active"{% endif %}>病蟲害知識</a>
         <a href="{{ '/visits/' | relative_url }}" {% if page.url contains '/visits/' %}class="active"{% endif %}>參訪筆記</a>
