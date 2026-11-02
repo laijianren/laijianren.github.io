@@ -1,0 +1,23 @@
+---
+title: 田間月曆
+---
+<p class="kicker">Calendarium・田間月曆</p>
+<h1>田間月曆</h1>
+<p class="dek">依每篇紀錄的日期，整理一年十二個月在田間看到的病蟲害。想知道這個月該注意什麼，從這裡開始。</p>
+{%- assign docs = site.cases | concat: site.visits | sort: 'date' -%}
+<div class="cal">
+{%- for m in (1..12) -%}
+  {%- assign mm = m | prepend: '0' | slice: -2, 2 -%}
+  <section class="cal-month" data-month="{{ m }}">
+    <h2 class="cal-head"><span class="cal-no">{{ m }}</span>月</h2>
+    {%- assign n = 0 -%}
+    <ul>
+    {%- for d in docs -%}{%- assign dm = d.date | date: '%m' -%}{%- if dm == mm -%}{%- assign n = n | plus: 1 -%}
+      <li><a href="{{ d.url | relative_url }}"><span class="tag">{{ d.crop | split: '（' | first }}</span>{{ d.diagnosis | default: d.topics | replace: '、', '・' }}</a><span class="cal-meta">{{ d.date | date: '%Y' }}・{{ d.location | split: '、' | first }}</span></li>
+    {%- endif -%}{%- endfor -%}
+    </ul>
+    {%- if n == 0 -%}<p class="cal-empty">尚無紀錄</p>{%- endif -%}
+  </section>
+{%- endfor -%}
+</div>
+<script>(function(){var m=new Date().getMonth()+1;var s=document.querySelector('.cal-month[data-month="'+m+'"]');if(s){s.classList.add('now');}})();</script>

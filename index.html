@@ -3,6 +3,7 @@ title: 頭版
 ---
 {% assign recent = site.cases | sort: 'date' | reverse %}
 {% assign lead = recent | first %}
+{% include cover.html %}
 <section class="front">
   <article class="lead-story">
     <p class="kicker">最新診斷・Field Report</p>
@@ -22,6 +23,27 @@ title: 頭版
     {% endif %}
     <p class="byline">{{ lead.date | date: '%Y年%-m月%-d日' }}{% if lead.location %}・{{ lead.location }}{% endif %}</p>
     <p class="more"><a href="{{ lead.url | relative_url }}">閱讀全文 →</a></p>
+    <figure class="week-photo" hidden>
+      <p class="section-label">本週照片・Imago Hebdomadis</p>
+      <a class="week-link" href="#"><img alt=""></a>
+      <figcaption><span class="week-cap"></span><span class="week-src"></span></figcaption>
+    </figure>
+    <script>
+    (function () {
+      var f = document.querySelector('.week-photo'); if (!f || !window.fetch) return;
+      fetch('{{ '/assets/photos.json' | relative_url }}').then(function (r) { return r.json(); }).then(function (list) {
+        if (!list.length) return;
+        // 依「第幾週」輪流挑一張，同一週大家看到的都一樣
+        var d = new Date(), week = Math.floor((d - new Date(2026, 0, 5)) / 6048e5);
+        var p = list[((week * 37) % list.length + list.length) % list.length];
+        f.querySelector('img').src = p.src; f.querySelector('img').alt = p.cap.replace(/<[^>]+>/g, '');
+        f.querySelector('.week-link').href = p.url;
+        f.querySelector('.week-cap').innerHTML = p.cap;
+        f.querySelector('.week-src').textContent = '　出自〈' + p.title + '〉' + (p.loc ? '・' + p.loc.split('、')[0] : '');
+        f.hidden = false;
+      }).catch(function () {});
+    })();
+    </script>
     {% else %}
     <h1 class="headline">{{ site.title }}</h1>
     <p class="dek">{{ site.description }}</p>
@@ -62,7 +84,7 @@ title: 頭版
   </aside>
 </section>
 
-<section class="field-map" aria-label="田野地圖">
+<section class="field-map" id="field-map" aria-label="田野地圖">
   <h2 class="section-label wide">田野地圖・Field Map</h2>
   <div class="map-layout">
     <div class="map-col">

@@ -3,9 +3,11 @@ title: 診斷案件
 ---
 <h1>診斷案件</h1>
 {% assign items = site.cases | sort: 'date' | reverse %}
+{%- assign allcrops = '' -%}{%- for c in items -%}{%- assign allcrops = allcrops | append: c.crop | append: '、' -%}{%- endfor -%}
+<div class="crop-filter" role="group" aria-label="依作物篩選"><button type="button" data-crop="" aria-pressed="true">全部 <small>{{ items.size }}</small></button></div>
 <div class="case-cards">
 {% for c in items %}
-  <a class="case-card" href="{{ c.url | relative_url }}">
+  <a class="case-card" href="{{ c.url | relative_url }}" data-crop="{{ c.crop | escape }}">
     {% if c.cover %}<div class="case-thumb"><img src="{{ c.cover | relative_url }}" alt="{{ c.cover_caption | default: c.title }}"></div>{% endif %}
     <div class="case-body">
       <p class="case-meta">{% if c.crop %}<span class="tag">{{ c.crop }}</span>{% endif %}{{ c.date | date: '%Y.%m.%d' }}</p>
@@ -15,3 +17,20 @@ title: 診斷案件
   </a>
 {% endfor %}
 </div>
+<script>
+(function () {
+  var cards = [].slice.call(document.querySelectorAll('.case-card')), box = document.querySelector('.crop-filter');
+  function cropsOf(a) { return (a.dataset.crop || '').split(/[、,，]/).map(function (c) { return c.replace(/（.*?）/g, '').trim(); }).filter(Boolean); }
+  var counts = {};
+  cards.forEach(function (a) { cropsOf(a).forEach(function (c) { counts[c] = (counts[c] || 0) + 1; }); });
+  Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a] || a.localeCompare(b, 'zh-Hant'); }).forEach(function (c) {
+    var b = document.createElement('button'); b.type = 'button'; b.dataset.crop = c; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = c + ' <small>' + counts[c] + '</small>'; box.appendChild(b);
+  });
+  box.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return; var c = b.dataset.crop;
+    cards.forEach(function (a) { a.hidden = c && cropsOf(a).indexOf(c) < 0; });
+    box.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+  });
+})();
+</script>

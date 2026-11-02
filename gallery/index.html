@@ -1,0 +1,44 @@
+---
+title: 病徵照片牆
+---
+<p class="kicker">Atlas・田間實拍</p>
+<h1>病徵照片牆</h1>
+<p class="dek wall-dek">所有診斷案件與參訪筆記裡的田間照片，依病蟲害分類。點照片可回到原本的紀錄。</p>
+<div class="wall-filters" role="group" aria-label="依病蟲害篩選"><button type="button" data-term="" aria-pressed="true">全部</button></div>
+<p class="wall-count"></p>
+<div class="wall">{% include photo-items.html format="html" %}</div>
+<script type="application/json" id="wall-terms">[
+{%- assign docs = site.cases | concat: site.visits -%}
+{%- assign terms = '' -%}
+{%- for d in docs -%}{%- assign t = d.diagnosis | default: d.topics -%}{%- if t -%}{%- assign terms = terms | append: t | append: '、' -%}{%- endif -%}{%- endfor -%}
+{%- assign list = terms | split: '、' | uniq -%}
+{%- for t in list -%}{{ t | strip | jsonify }}{% unless forloop.last %},{% endunless %}{%- endfor -%}
+]</script>
+<script>
+(function () {
+  var items = [].slice.call(document.querySelectorAll('.wall-item'));
+  var raw = JSON.parse(document.getElementById('wall-terms').textContent);
+  // 診斷名稱去掉作物前綴與括號，只留病蟲害名，例如「青蔥疫病」→「疫病」
+  var crops = items.map(function (a) { return a.dataset.crop || ''; }).join('、').split(/[、（）()]/);
+  var terms = {};
+  raw.forEach(function (t) {
+    t = t.replace(/（.*?）|\(.*?\)/g, '').trim();
+    crops.forEach(function (c) { if (c && t.indexOf(c) === 0 && t.length > c.length + 1) t = t.slice(c.length); });
+    if (t.length >= 2) terms[t] = 0;
+  });
+  Object.keys(terms).forEach(function (t) { items.forEach(function (a) { if (a.dataset.cap.indexOf(t) >= 0) terms[t]++; }); });
+  var box = document.querySelector('.wall-filters'), count = document.querySelector('.wall-count');
+  Object.keys(terms).filter(function (t) { return terms[t] >= 2; }).sort(function (a, b) { return terms[b] - terms[a]; }).forEach(function (t) {
+    var b = document.createElement('button'); b.type = 'button'; b.dataset.term = t; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = t + ' <small>' + terms[t] + '</small>'; box.appendChild(b);
+  });
+  function apply(term) {
+    var n = 0;
+    items.forEach(function (a) { var on = !term || a.dataset.cap.indexOf(term) >= 0; a.hidden = !on; if (on) n++; });
+    count.textContent = (term ? '「' + term + '」' : '全部') + '・' + n + ' 張照片';
+    box.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.term === term); });
+  }
+  box.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) apply(b.dataset.term); });
+  apply('');
+})();
+</script>

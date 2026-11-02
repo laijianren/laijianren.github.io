@@ -1,0 +1,85 @@
+{%- comment -%} 進站開頭畫面：每次開啟網站只出現一次，選一個分類進入 {%- endcomment -%}
+{%- assign c_cases = site.cases | sort: 'date' | reverse -%}
+{%- assign c_visits = site.visits | sort: 'date' | reverse -%}
+{%- assign c_case = c_cases | first -%}
+{%- assign c_visit = c_visits | first -%}
+{%- assign c_towns = c_cases | concat: site.visits | map: 'location' | uniq | size -%}
+<div class="cover" id="cover" role="dialog" aria-modal="true" aria-label="歡迎來到{{ site.title }}" hidden>
+  <div class="cover-inner">
+    <header class="cover-head">
+      <p class="cover-date" id="cover-date">{{ site.time | date: '%Y年%-m月%-d日' }}</p>
+      <div class="cover-title">
+        <span class="mast-art left">{% include icon.html name='sprig' %}</span>
+        <h1>{{ site.title }}</h1>
+        <span class="mast-art right">{% include icon.html name='sprig' %}</span>
+      </div>
+      <p class="cover-latin">The Plant Doctor's Journal</p>
+      <p class="cover-lede">植物診療師 賴建任的田間筆記。<br>從臺灣各地果園、菜園帶回來的病蟲害診斷紀錄。</p>
+      <p class="cover-ask">今天想看什麼？</p>
+    </header>
+    <nav class="cover-grid" aria-label="選擇分類">
+      <a class="cover-tile photo" href="{{ '/cases/' | relative_url }}" style="--i:0">
+        <img src="{{ c_case.cover | relative_url }}" alt="" loading="eager">
+        <span class="tile-no">I</span><strong>診斷案件</strong><em>{{ site.cases.size }} 篇田間診斷紀錄</em>
+      </a>
+      <a class="cover-tile photo" href="{{ '/visits/' | relative_url }}" style="--i:1">
+        <img src="{{ c_visit.cover | relative_url }}" alt="" loading="eager">
+        <span class="tile-no">II</span><strong>參訪筆記</strong><em>{{ site.visits.size }} 篇觀摩與參訪</em>
+      </a>
+      <a class="cover-tile ink-tile" href="#field-map" data-close style="--i:2">
+        <span class="tile-art tile-map">{% include taiwan-map.svg %}</span>
+        <span class="tile-no">III</span><strong>田野地圖</strong><em>走過 {{ c_towns }} 個地方</em>
+      </a>
+      <a class="cover-tile photo" href="{{ '/gallery/' | relative_url }}" style="--i:3">
+        <img src="{{ '/assets/cases/2026-07-24-wufeng-kumquat/17.jpg' | relative_url }}" alt="" loading="eager">
+        <span class="tile-no">IV</span><strong>病徵照片牆</strong><em>依病蟲害看田間實拍</em>
+      </a>
+      <a class="cover-tile ink-tile" href="{{ '/calendar/' | relative_url }}" style="--i:4">
+        <span class="tile-art">{% include icon.html name='sprig' %}</span>
+        <span class="tile-no">V</span><strong>田間月曆</strong><em>這個月該注意什麼</em>
+      </a>
+      <a class="cover-tile ink-tile" href="{{ '/pests/' | relative_url }}" style="--i:5">
+        <span class="tile-art">{% include icon.html name='beetle' %}</span>
+        <span class="tile-no">VI</span><strong>病蟲害知識</strong><em>病害、蟲害整理</em>
+      </a>
+      <a class="cover-tile ink-tile" href="{{ '/charts/' | relative_url }}" style="--i:6">
+        <span class="tile-art">{% include icon.html name='flask' %}</span>
+        <span class="tile-no">VII</span><strong>用藥圖表</strong><em>{{ site.data.charts.size }} 張作物用藥一覽圖</em>
+      </a>
+      {%- if site.data.global_weekly %}
+      <a class="cover-tile ink-tile" href="{{ site.data.global_weekly.url }}" target="_blank" rel="noopener" style="--i:7">
+        <span class="tile-art">{% include icon.html name='plate' %}</span>
+        <span class="tile-no">VIII</span><strong>全球疫情週報</strong><em>{{ site.data.global_weekly.issue }}・{{ site.data.global_weekly.date }}</em>
+      </a>
+      {%- endif %}
+      <a class="cover-tile ink-tile" href="{{ '/contact/' | relative_url }}" style="--i:8">
+        <span class="tile-art">{% include icon.html name='leaf' %}</span>
+        <span class="tile-no">IX</span><strong>聯絡我</strong><em>田間診斷・問題諮詢</em>
+      </a>
+    </nav>
+    <button type="button" class="cover-enter" data-close>翻開今日頭版 ↓</button>
+  </div>
+</div>
+<script>
+(function () {
+  var c = document.getElementById('cover'); if (!c) return;
+  var seen = false;
+  try { seen = sessionStorage.getItem('coverSeen') === '1'; } catch (e) {}
+  if (seen && location.search.indexOf('cover') < 0) return;
+  var d = new Date(); document.getElementById('cover-date').textContent = d.getFullYear() + '年' + (d.getMonth() + 1) + '月' + d.getDate() + '日';
+  c.hidden = false; document.documentElement.classList.add('cover-open');
+  requestAnimationFrame(function () { requestAnimationFrame(function () { c.classList.add('in'); }); });
+  function close(hash) {
+    try { sessionStorage.setItem('coverSeen', '1'); } catch (e) {}
+    c.classList.add('out'); document.documentElement.classList.remove('cover-open');
+    setTimeout(function () { c.hidden = true; if (hash) { var t = document.querySelector(hash); if (t) t.scrollIntoView({ behavior: 'smooth' }); } }, 600);
+  }
+  c.querySelectorAll('[data-close]').forEach(function (el) {
+    el.addEventListener('click', function (e) { e.preventDefault(); close(el.getAttribute('href')); });
+  });
+  c.querySelectorAll('a:not([data-close])').forEach(function (el) {
+    el.addEventListener('click', function () { try { sessionStorage.setItem('coverSeen', '1'); } catch (e) {} });
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !c.hidden) close(); });
+})();
+</script>

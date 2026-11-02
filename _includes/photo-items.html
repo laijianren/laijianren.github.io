@@ -1,0 +1,20 @@
+{%- comment -%} 從所有案例與參訪頁面的 <figure> 取出照片、圖說。用法：include photo-items.html format="json" 或 "html" {%- endcomment -%}
+{%- assign docs = site.cases | concat: site.visits | sort: 'date' | reverse -%}
+{%- assign first = true -%}
+{%- for d in docs -%}
+  {%- assign kind = 'case' -%}{%- if d.collection == 'visits' -%}{%- assign kind = 'visit' -%}{%- endif -%}
+  {%- assign parts = d.content | split: '<figure' -%}
+  {%- for part in parts offset: 1 -%}
+    {%- assign src = part | split: 'src="' | slice: 1 | first | split: '"' | first -%}
+    {%- assign cap = part | split: '<figcaption>' | slice: 1 | first | split: '</figcaption>' | first -%}
+    {%- assign capText = cap | strip_html | strip -%}
+    {%- if src == nil or capText == '' -%}{%- continue -%}{%- endif -%}
+    {%- if capText contains '圖一' -%}{%- continue -%}{%- endif -%}
+    {%- if include.format == 'json' -%}
+      {%- unless first -%},{%- endunless -%}{%- assign first = false -%}
+      {"src":{{ src | relative_url | jsonify }},"cap":{{ cap | strip | jsonify }},"title":{{ d.title | jsonify }},"url":{{ d.url | relative_url | jsonify }},"date":{{ d.date | date: '%Y-%m-%d' | jsonify }},"crop":{{ d.crop | jsonify }},"loc":{{ d.location | jsonify }},"kind":"{{ kind }}"}
+    {%- else -%}
+      <a class="wall-item" href="{{ d.url | relative_url }}" data-cap="{{ capText | escape }}" data-crop="{{ d.crop | escape }}"><img src="{{ src | relative_url }}" alt="{{ capText | escape }}" loading="lazy"><span class="wall-cap">{{ cap | strip }}</span><span class="wall-src">{{ d.title }}</span></a>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
