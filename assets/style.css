@@ -724,3 +724,11 @@ button.bdg { font: inherit; background: none; border: 0; padding: 0; cursor: poi
 .ny-frame img.on { animation: none; }
 .ny-thumb { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; margin-bottom: 12px; background: #e9e3d3; }
 .ny-thumb img { position: absolute !important; inset: 0; width: 100%; height: 100% !important; aspect-ratio: auto !important; object-fit: contain; margin: 0 !important; }
+/* 分類徽章：病害圓形、蟲害六角形 */
+.bdg.disc svg, .bdg.hex svg { stroke: none; fill: none; }
+.bdg svg text { stroke: none; }
+.bdg.disc svg circle:first-child, .bdg.hex svg circle:first-child { fill: revert-layer; }
+.np-book-sub { display: flex; justify-content: space-between; font-family: var(--serif); font-weight: 700; font-size: .78rem; letter-spacing: .15em; color: #5c5246; margin: 6px 0 4px !important; padding-left: 8px; border-left: 3px solid #1d150b; }
+.np-book-sub span { font-weight: 400; letter-spacing: 0; }
+.np-book-detail .grp { display: inline-block; margin-left: 6px; font-size: .72rem; color: #5c5246; }
+.np-book-detail .big { flex: none; }

@@ -63,7 +63,7 @@
       o += '<ellipse cx="50" cy="54" rx="25" ry="28" fill="' + T.pf + '"/><path d="M50 26 A25 28 0 0 1 50 82 A17 28 0 0 0 50 26Z" fill="url(#h' + id + ')" stroke="none"/>';
       o += stip(R, 50, 54, 22, 25, 46, .55, '#eef2d8');
       var x = 54 + (R() - .5) * 6, y = 60 + (R() - .5) * 6;
-      o += '<circle cx="' + f(x) + '" cy="' + f(y) + '" r="17" fill="url(#y' + id + ')" stroke="none"/><circle cx="' + f(x) + '" cy="' + f(y) + '" r="10.5" fill="none" stroke-width=".7" stroke-dasharray="1.5 1.5" opacity=".8"/>';
+      o += '<circle cx="' + f(x) + '" cy="' + f(y) + '" r="17" fill="url(#y' + id + ')" stroke="none"/>';
       o += '<circle cx="36" cy="40" r="6" fill="url(#y' + id + ')" stroke="none"/>';
       o += '<ellipse cx="50" cy="54" rx="25" ry="28" fill="none"/><path d="M36 38 q3 -8 10 -10" stroke="#fff" stroke-width="2" opacity=".75"/>';
       return o; },
@@ -97,7 +97,8 @@
     ['半翅目', 'bug', /椿象|介殼蟲|蠟蟬|蚜|粉蝨|木蝨|葉蟬/], ['鱗翅目', 'bug', /蛾|螟|蝶/], ['雙翅目', 'bug', /蠅|蚋/], ['鞘翅目', 'bug', /金花蟲|象鼻蟲|天牛|甲蟲/], ['纓翅目', 'bug', /薊馬/], ['蜱蟎目', 'bug', /蟎/]
   ];
   window.PDJ_GROUPS = GROUPS.map(function (g) { return g[0]; });
-  window.PDJ_GROUP = function (n) { for (var i = 0; i < GROUPS.length; i++) if (GROUPS[i][2].test(n)) return { g: GROUPS[i][0], type: GROUPS[i][1], i: i }; return isBug(n) ? { g: '其他昆蟲', type: 'bug', i: 98 } : { g: '真菌', type: 'dis', i: 4 }; };
+  var ORDER = ['真菌', '細菌', '病毒', '線蟲', '卵菌', '半翅目', '鱗翅目', '雙翅目', '鞘翅目', '纓翅目', '蜱蟎目'];
+  window.PDJ_GROUP = function (n) { for (var i = 0; i < GROUPS.length; i++) if (GROUPS[i][2].test(n)) return { g: GROUPS[i][0], type: GROUPS[i][1], i: ORDER.indexOf(GROUPS[i][0]) }; return isBug(n) ? { g: '其他昆蟲', type: 'bug', i: 98 } : { g: '真菌', type: 'dis', i: 0 }; };
   window.PDJ_ART = function (name, R, ink, id, clip) {
     var fn = ART[name];
     if (!fn) { for (var k in ART) if (name.indexOf(k) >= 0 || k.indexOf(name) >= 0) { fn = ART[k]; break; } }
