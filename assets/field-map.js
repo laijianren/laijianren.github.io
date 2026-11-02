@@ -8,7 +8,7 @@
   var list = root.querySelector('.map-list'), place = root.querySelector('.map-place');
   var tip = root.querySelector('.map-tip'), cropSel = root.querySelector('.map-crop');
   var NS = 'http://www.w3.org/2000/svg';
-  var state = { kind: 'all', crop: '', town: '' };
+  var state = { kind: root.getAttribute('data-kind') || 'all', crop: '', town: '' };
 
   // 「臺中市東勢區、苗栗縣卓蘭鎮」「南投縣竹山鎮、鹿谷鄉」→ 鄉鎮清單
   function placesOf(loc) {

@@ -2,6 +2,8 @@
 title: 診斷案件
 ---
 <h1>診斷案件</h1>
+{% include field-map.html kind="case" %}
+<h2 class="section-label wide">全部案件</h2>
 {% assign items = site.cases | sort: 'date' | reverse %}
 {%- assign allcrops = '' -%}{%- for c in items -%}{%- assign allcrops = allcrops | append: c.crop | append: '、' -%}{%- endfor -%}
 <div class="crop-filter" role="group" aria-label="依作物篩選"><button type="button" data-crop="" aria-pressed="true">全部 <small>{{ items.size }}</small></button></div>
