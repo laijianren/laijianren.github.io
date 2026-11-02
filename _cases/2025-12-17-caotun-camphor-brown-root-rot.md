@@ -4,8 +4,8 @@ date: 2025-12-17
 crop: 樟樹
 location: 南投縣草屯鎮
 diagnosis: 褐根病（<i>Phellinus noxius</i>）
-cover: /assets/cases/2025-12-17-caotun-camphor/04.jpg
-cover_caption: 根部褐色菌絲面
+cover: /assets/cases/2025-12-17-caotun-camphor/05.jpg
+cover_caption: 罹病樟樹（左）樹冠稀疏，右為健康樹
 ---
 
 <figure class="photo wide"><img src="/assets/cases/2025-12-17-caotun-camphor/05.jpg" alt="樟樹現場，樹冠稀疏"><figcaption>圖一　現場</figcaption></figure>

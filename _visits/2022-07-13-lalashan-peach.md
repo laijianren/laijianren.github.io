@@ -4,8 +4,8 @@ date: 2022-07-13
 crop: 水蜜桃
 location: 桃園市復興區
 topics: 吸果夜蛾、旋轉式避蛾燈、套袋
-cover: /assets/visits/2022-07-13-lalashan-peach/05.jpg
-cover_caption: 旋轉式避蛾燈
+cover: /assets/visits/2022-07-13-lalashan-peach/03.jpg
+cover_caption: 吸果夜蛾危害果實
 ---
 
 拉拉山水蜜桃採收期為 6 月底到 7 月底。桃子要透光透氣，套袋不能太小，否則容易燒傷。

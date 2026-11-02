@@ -56,7 +56,17 @@
     '枝條黑點病': function (R, id) { var o = branch(16, 74, 84, 30, 6, id) + leaf(56, 50, 34, 11, -80, T.leaf2, id); o += stip(R, 40, 59, 14, 6, 40, .9); return o; },
     '流膠病': function (R, id) { var o = branch(14, 70, 86, 38, 9, id); for (var i = 0; i < 4; i++) { var x = 30 + i * 14, y = 62 - i * 6.5 + 7; o += '<path d="M' + f(x) + ' ' + f(y) + ' c-4 6 -4 11 0 12 c4 -1 4 -6 0 -12Z" fill="' + T.amber + '"/><path d="M' + f(x - 1) + ' ' + f(y + 7) + ' q.5 -2 1.5 -3" stroke="#fff" stroke-width=".9"/>'; } return o; },
     '褐斑病': function (R, id) { var o = '<g>' + leaf(50, 74, 36, 12, -150, T.leaf, id) + leaf(50, 74, 40, 13, -90, T.leaf, id) + leaf(50, 74, 36, 12, -30, T.leaf, id) + '</g><path d="M50 74 L50 92" />'; [[34, 58], [52, 44], [66, 56], [48, 60]].forEach(function (p) { o += '<circle cx="' + f(p[0] + R() * 3) + '" cy="' + f(p[1] + R() * 3) + '" r="5.5" fill="#cfe08a" stroke="none"/><circle cx="' + f(p[0] + R() * 1) + '" cy="' + f(p[1] + R() * 1) + '" r="3.4" fill="#8a5a2e" stroke-width=".7"/>'; }); return o; },
-    '疫病': function (R, id) { var o = '<path d="M50 22 q-2 -8 4 -12" fill="none"/>' + fruit(50, 52, 27, T.pf, id); o += blot(R, 58, 60, 13, '#5f6e3e', 11) + '<path d="M50 66 q6 -2 10 -8 M54 70 q6 -1 10 -7" stroke-width=".6"/>' + stip(R, 56, 60, 9, 8, 14, .5); return o; },
+    '疫病': function (R, id) {
+      // 百香果果實：表皮細白點，上有水浸狀、邊緣模糊的褐色圓形病斑，另一個小病斑剛形成
+      var o = '<defs><radialGradient id="y' + id + '"><stop offset="0" stop-color="#9a7340"/><stop offset=".62" stop-color="#7a5a32"/><stop offset=".82" stop-color="#6d6a3a" stop-opacity=".85"/><stop offset="1" stop-color="#7d8a44" stop-opacity="0"/></radialGradient></defs>';
+      o += '<path d="M50 24 C50 16 54 10 62 8 M56 12 c6 -4 12 -2 12 4 c0 4 -4 5 -6 3" fill="none"/>';
+      o += '<ellipse cx="50" cy="54" rx="25" ry="28" fill="' + T.pf + '"/><path d="M50 26 A25 28 0 0 1 50 82 A17 28 0 0 0 50 26Z" fill="url(#h' + id + ')" stroke="none"/>';
+      o += stip(R, 50, 54, 22, 25, 46, .55, '#eef2d8');
+      var x = 54 + (R() - .5) * 6, y = 60 + (R() - .5) * 6;
+      o += '<circle cx="' + f(x) + '" cy="' + f(y) + '" r="17" fill="url(#y' + id + ')" stroke="none"/><circle cx="' + f(x) + '" cy="' + f(y) + '" r="10.5" fill="none" stroke-width=".7" stroke-dasharray="1.5 1.5" opacity=".8"/>';
+      o += '<circle cx="36" cy="40" r="6" fill="url(#y' + id + ')" stroke="none"/>';
+      o += '<ellipse cx="50" cy="54" rx="25" ry="28" fill="none"/><path d="M36 38 q3 -8 10 -10" stroke="#fff" stroke-width="2" opacity=".75"/>';
+      return o; },
     '果實炭疽病': function (R, id) { var o = '<path d="M50 22 q-2 -8 4 -12" fill="none"/>' + fruit(50, 52, 27, T.pf, id), x = 56, y = 58; for (var i = 4; i >= 1; i--) o += '<circle cx="' + x + '" cy="' + y + '" r="' + f(i * 3.2) + '" fill="' + (i % 2 ? '#6a4a2a' : '#a8784a') + '" stroke-width=".6"/>'; o += stip(R, x, y, 9, 9, 16, .6, '#e9c870'); return o; },
     '果腐病': function (R, id) { var o = '<path d="M30 30 Q50 22 70 30 Q78 62 66 78 Q50 86 34 78 Q22 62 30 30Z" fill="' + T.wax + '"/><path d="M50 26 Q70 30 72 56 Q74 72 66 78 Q60 60 50 26Z" fill="url(#h' + id + ')" stroke="none"/><path d="M30 30 Q50 22 70 30 Q78 62 66 78 Q50 86 34 78 Q22 62 30 30Z" fill="none"/><path d="M36 80 q4 4 8 1 q4 4 6 0 q4 4 8 -1" />'; o += blot(R, 44, 62, 12, '#7a4a30', 10) + stip(R, 44, 62, 10, 9, 26, .8, T.mold); return o; },
     '草莓葉枯病': function (R, id) { var o = '<path d="M50 90 L50 62" />' + leaf(50, 62, 30, 13, -150, T.leaf, id) + leaf(50, 62, 34, 14, -90, T.leaf, id) + leaf(50, 62, 30, 13, -30, T.leaf, id); o += '<path d="M48 28 l4 0 l6 8 l-8 4 l-8 -4Z" fill="#8a5a2e" stroke-width=".7"/><path d="M24 44 l3 -4 l7 6 l-6 5Z" fill="#8a5a2e" stroke-width=".7"/>' + stip(R, 50, 34, 5, 4, 8, .5); return o; },
@@ -80,12 +90,20 @@
   var GENERIC_BUG = function (R, id) { return '<path d="M44 28 l-6 -12 M56 28 l6 -12" fill="none"/>' + legs(50, 52, 10, 18) + '<ellipse cx="50" cy="54" rx="14" ry="22" fill="' + T.bug + '"/><path d="M50 32 A14 22 0 0 1 50 76Z" fill="url(#h' + id + ')" stroke="none"/><ellipse cx="50" cy="54" rx="14" ry="22" fill="none"/><path d="M50 36 V76 M38 40 H62" stroke-width=".8"/><circle cx="50" cy="30" r="6" fill="' + T.brown + '"/>'; };
   var GENERIC_DIS = function (R, id) { return leaf(14, 60, 72, 25, -20, T.leaf, id) + stip(R, 50, 50, 18, 8, 10, 2.2, '#8a5a2e'); };
   function isBug(n) { return /(蟲|蝨|蛾|蟎|椿象|蠅|蚜|螟)$/.test(n); }
-  window.PDJ_ART = function (name, R, ink, id) {
+  // 分類：病害依病原（真菌、細菌、病毒、線蟲、卵菌），蟲害依「目」
+  var GROUPS = [
+    ['卵菌', 'dis', /疫病|流膠病|露菌病|頸腐病/], ['細菌', 'dis', /潰瘍病|黃龍病|青枯病|軟腐病|細菌/], ['病毒', 'dis', /病毒|嵌紋/], ['線蟲', 'dis', /線蟲/],
+    ['真菌', 'dis', /病$/],
+    ['半翅目', 'bug', /椿象|介殼蟲|蠟蟬|蚜|粉蝨|木蝨|葉蟬/], ['鱗翅目', 'bug', /蛾|螟|蝶/], ['雙翅目', 'bug', /蠅|蚋/], ['鞘翅目', 'bug', /金花蟲|象鼻蟲|天牛|甲蟲/], ['纓翅目', 'bug', /薊馬/], ['蜱蟎目', 'bug', /蟎/]
+  ];
+  window.PDJ_GROUPS = GROUPS.map(function (g) { return g[0]; });
+  window.PDJ_GROUP = function (n) { for (var i = 0; i < GROUPS.length; i++) if (GROUPS[i][2].test(n)) return { g: GROUPS[i][0], type: GROUPS[i][1], i: i }; return isBug(n) ? { g: '其他昆蟲', type: 'bug', i: 98 } : { g: '真菌', type: 'dis', i: 4 }; };
+  window.PDJ_ART = function (name, R, ink, id, clip) {
     var fn = ART[name];
     if (!fn) { for (var k in ART) if (name.indexOf(k) >= 0 || k.indexOf(name) >= 0) { fn = ART[k]; break; } }
     if (!fn) fn = isBug(name) ? GENERIC_BUG : GENERIC_DIS;
     var rot = (R() - .5) * 24;
-    return '<defs><pattern id="h' + id + '" width="2.6" height="2.6" patternUnits="userSpaceOnUse" patternTransform="rotate(' + f(35 + R() * 20) + ')"><path d="M0 0 V2.6" stroke="' + ink + '" stroke-width=".8" opacity=".55"/></pattern><clipPath id="c' + id + '"><circle cx="50" cy="50" r="35"/></clipPath></defs>' +
-      '<g clip-path="url(#c' + id + ')"><circle cx="50" cy="50" r="35" fill="#f7f0dc" stroke="none"/><g transform="rotate(' + f(rot) + ' 50 50)" stroke="' + ink + '" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" style="color:' + ink + '">' + fn(R, id) + '</g></g>';
+    return '<defs><pattern id="h' + id + '" width="2.6" height="2.6" patternUnits="userSpaceOnUse" patternTransform="rotate(' + f(35 + R() * 20) + ')"><path d="M0 0 V2.6" stroke="' + ink + '" stroke-width=".8" opacity=".55"/></pattern><clipPath id="c' + id + '">' + clip + '</clipPath></defs>' +
+      '<g clip-path="url(#c' + id + ')"><rect width="100" height="100" fill="#f7f0dc"/><g transform="rotate(' + f(rot) + ' 50 50)" stroke="' + ink + '" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" style="color:' + ink + '">' + fn(R, id) + '</g></g>';
   };
 })();

@@ -4,8 +4,8 @@ date: 2023-06-02
 crop: 蓮霧
 location: 屏東縣南州鄉
 diagnosis: 果腐病（<i>Pestalotiopsis</i> sp.）、黑腐病（<i>Lasiodiplodia</i> sp.）、蓮霧細蛾
-cover: /assets/cases/2023-06-02-nanzhou-wax-apple/06.jpg
-cover_caption: 果腐病果實
+cover: /assets/cases/2023-06-02-nanzhou-wax-apple/05.jpg
+cover_caption: 蓮霧果實腐爛並長出菌絲
 ---
 
 <figure class="photo wide"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/01.jpg" alt="蓮霧園區現場"><figcaption>圖一、園區照</figcaption></figure>

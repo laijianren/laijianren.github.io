@@ -705,11 +705,11 @@ button.bdg { font: inherit; background: none; border: 0; padding: 0; cursor: poi
 /* 雜誌風封面改用照片：整張不裁切 */
 .ny-photo { margin: 0; }
 .ny-frame { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; }
-.ny-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.6s ease; }
+.ny-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 1.6s ease; }
 .ny-frame img.on { opacity: 1; animation: ny-breathe 11s ease-in-out infinite alternate; }
 @keyframes ny-breathe { from { transform: scale(1); } to { transform: scale(1.025); } }
 .ny-photo figcaption { font-size: .78rem; font-style: italic; color: #5c5246; margin-top: 8px; text-align: right; }
-.ny-card img { object-fit: cover; aspect-ratio: 4 / 3; }
+
 .ny .ny-lead > * { transition-delay: .3s !important; }
 @media (prefers-reduced-motion: reduce) { .ny-frame img.on { animation: none; } }
 /* 精緻版徽章：銅版畫插圖 */
@@ -718,3 +718,9 @@ button.bdg { font: inherit; background: none; border: 0; padding: 0; cursor: poi
 .quiz-sec .bdg small { font-size: .68rem; }
 .np-book-detail .big .bdg { width: 150px; } .np-book-detail .big .bdg svg { width: 144px; height: 144px; }
 .bdg .spark { transform-origin: 32px 11px; }
+/* 照片完整顯示：空白處以同張照片模糊放大填滿 */
+.ny-blur { position: absolute; inset: -20px; background-size: cover; background-position: center; filter: blur(18px) saturate(.9) brightness(.92); transition: background-image 1.6s; }
+.ny-frame { background: #e9e3d3; }
+.ny-frame img.on { animation: none; }
+.ny-thumb { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; margin-bottom: 12px; background: #e9e3d3; }
+.ny-thumb img { position: absolute !important; inset: 0; width: 100%; height: 100% !important; aspect-ratio: auto !important; object-fit: contain; margin: 0 !important; }
