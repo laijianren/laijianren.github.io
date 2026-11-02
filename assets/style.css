@@ -605,3 +605,38 @@ html.cover-open, html.cover-open body { overflow: hidden; }
   .cv-menu li:nth-child(odd) { border-left: 0; }
   .cv-menu a { padding: 16px 6px; }
 }
+/* 獨一無二的徽章：稀有度、花紋、顏色、編號 */
+button.bdg { font: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+.quiz-sec .bdg { width: 60px; }
+.quiz-sec .bdg svg { width: 50px; height: 50px; }
+.bdg.off svg circle:first-child { fill: #ddd0b0; stroke: #a3977c; }
+.bdg small { color: #1d150b; }
+.bdg:hover svg { transform: translateY(-2px) rotate(-4deg); }
+.bdg svg { transition: transform .25s; }
+.bdg.t1 svg { filter: drop-shadow(0 1px 1px rgba(60,70,80,.35)); }
+.bdg.t2 svg { filter: drop-shadow(0 0 3px rgba(220,170,40,.7)); }
+.bdg.t3 svg { animation: bdg-foil 4s linear infinite; filter: drop-shadow(0 0 4px rgba(150,90,200,.6)); }
+@keyframes bdg-foil { to { filter: hue-rotate(360deg) drop-shadow(0 0 4px rgba(150,90,200,.6)); } }
+.bdg .spark { transform-origin: 32px 11px; animation: bdg-spark 1.6s ease-in-out infinite; }
+@keyframes bdg-spark { 50% { transform: scale(.3); opacity: .3; } }
+.rar { display: inline-block; font: 700 .7rem var(--serif); letter-spacing: .1em; padding: 0 6px; margin-left: 4px; border: 1px solid; vertical-align: 1px; }
+.rar.t0 { color: #6d5a3a; } .rar.t1 { color: #4d5a66; background: #e4e7ea; }
+.rar.t2 { color: #7a5508; background: #f1d98a; } .rar.t3 { color: #fff; border-color: #5b3a6b; background: linear-gradient(90deg, #c86aa8, #5a8ad0, #d0b040, #9a6ad0); }
+.np-prize-msg { display: block; margin-top: 2px; color: #7a2018; }
+.np-book-detail { display: flex; gap: 12px; align-items: center; margin: 8px 0; padding: 10px; border: 1px solid #1d150b; background: rgba(255,250,235,.8); font-size: .8rem; line-height: 1.7; }
+.np-book-detail .big .bdg { width: 90px; } .np-book-detail .big .bdg svg { width: 84px; height: 84px; } .np-book-detail .big small { display: none; }
+.np-book-detail b { font-family: var(--serif); font-size: 1rem; }
+.np-book-detail i { color: #6d5a3a; }
+.np-book-detail[hidden] { display: none; }
+.np-book-all { display: block; max-height: 420px; }
+.np-book-sec { font-family: var(--serif); font-weight: 900; letter-spacing: .2em; font-size: .82rem; margin: 4px 0 6px !important; border-bottom: 1px solid #1d150b; }
+.bdg-grid { display: flex; flex-wrap: wrap; gap: 8px 6px; margin-bottom: 10px; }
+.ach { display: inline-flex; flex-direction: column; align-items: center; width: 64px; text-align: center; }
+.ach svg { width: 42px; height: 46px; fill: none; stroke: #a3977c; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.ach .sh { fill: #ddd0b0; }
+.ach.on svg { stroke: #f4e7c0; } .ach.on .sh { fill: #1d150b; stroke: #8a6410; stroke-width: 2; }
+.ach small { font-size: .66rem; font-weight: 700; color: #1d150b; }
+.ach em { font-style: normal; font-size: .58rem; line-height: 1.3; color: #6d5a3a; }
+.quiz-sec .np-book-rank b { letter-spacing: .1em; }
+.quiz-sec .np-prize { grid-template-columns: 190px minmax(0, 1fr); }
+@media (max-width: 820px) { .quiz-sec .np-prize { grid-template-columns: minmax(0, 1fr); } }

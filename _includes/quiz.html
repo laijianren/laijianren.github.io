@@ -28,6 +28,7 @@
           <p class="np-book-rank"></p>
           <div class="np-book-recent"></div>
           <button type="button" class="np-book-open">翻開標本冊 ▸</button>
+          <div class="np-book-detail" hidden></div>
           <div class="np-book-all" hidden></div>
         </div>
         </div>
@@ -50,30 +51,112 @@
     if (up) { el.classList.remove('grow'); void el.offsetWidth; el.classList.add('grow'); }
   }
   drawPlant(false);
-  // 病蟲害徽章標本冊：每答對一種病蟲害就收集一枚，存在讀者自己的瀏覽器
-  var got = [], ALL = [];
-  try { got = JSON.parse(localStorage.getItem('pdjBadges') || '[]'); } catch (e) {}
+  // 病蟲害徽章標本冊：每枚徽章在取得時隨機決定稀有度、花紋、顏色、編號，所以每位讀者的收藏都不一樣。
+  // 紀錄只存在讀者自己的瀏覽器（localStorage），不需註冊。
+  var ALL = [], book = {}, me = {}, streak = 0;
+  try { book = JSON.parse(localStorage.getItem('pdjBook') || '{}'); me = JSON.parse(localStorage.getItem('pdjMe') || '{}'); } catch (e) {}
+  if (!me.id) { var A = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789', id = ''; for (var i = 0; i < 6; i++) id += A.charAt(Math.floor(Math.random() * A.length)); me = { id: id, since: today(), ach: {}, days: [] }; }
+  me.ach = me.ach || {}; me.days = me.days || [];
+  if (me.days.indexOf(today()) < 0) me.days.push(today());
+  function today() { var d = new Date(); return d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate(); }
+  function save() { try { localStorage.setItem('pdjBook', JSON.stringify(book)); localStorage.setItem('pdjMe', JSON.stringify(me)); } catch (e) {} }
+  save();
+  var RAR = [['普通', 0], ['稀有', .55], ['珍藏', .82], ['傳說', .96]];
+  try { var old = JSON.parse(localStorage.getItem('pdjBadges') || '[]'); if (Array.isArray(old)) old.forEach(function (n) { if (!book[n]) book[n] = roll(n); }); localStorage.removeItem('pdjBadges'); } catch (e) {}
+  save();
+  function roll(n) {
+    var r = Math.random(), t = 0; RAR.forEach(function (x, i) { if (r >= x[1]) t = i; });
+    return { t: t, s: Math.floor(Math.random() * 1e9), no: 1 + Math.floor(Math.random() * 9999), d: today(), c: 1 };
+  }
+  function rng(seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  var INKS = ['#7a2018', '#2f4a26', '#23415e', '#5b3a6b', '#7a5a12', '#36312a', '#8a3a12', '#1f5a5a'];
   var RANKS = [[0, '尚未入門'], [1, '見習生'], [5, '田間助手'], [10, '診療師學徒'], [20, '植物診療師'], [30, '病蟲害博士']];
   var BUG = '<path d="M20 13 c-5 0 -7 5 -7 9 s3 8 7 8 7 -4 7 -8 -2 -9 -7 -9 Z M20 13 V30 M16 11 q4 -4 8 0 M13 18 l-5 -2 M13 23 h-5 M14 27 l-4 3 M27 18 l5 -2 M27 23 h5 M26 27 l4 3 M18 9 l-2 -4 M22 9 l2 -4"/>';
+  var BUG2 = '<path d="M20 12 c-4 0 -6 4 -6 9 c0 6 3 9 6 9 s6 -3 6 -9 c0 -5 -2 -9 -6 -9 Z M14 18 c-4 -6 -8 -4 -8 0 c0 3 4 4 8 3 M26 18 c4 -6 8 -4 8 0 c0 3 -4 4 -8 3 M18 10 l-3 -4 M22 10 l3 -4 M20 15 v12"/>';
   var LEAF = '<path d="M11 29 C11 17 19 10 30 10 C30 22 23 29 11 29 Z M11 29 L24 16 M16 24 l-1 -4 M20 20 l-1 -4 M18 25 l4 0"/><circle cx="23" cy="22" r="1.6" fill="currentColor"/><circle cx="17" cy="19" r="1.2" fill="currentColor"/>';
+  var SPORE = '<circle cx="20" cy="20" r="6"/><circle cx="20" cy="20" r="2" fill="currentColor"/><path d="M20 14 V8 M20 26 V32 M14 20 H8 M26 20 H32 M15.8 15.8 l-4 -4 M24.2 24.2 l4 4 M24.2 15.8 l4 -4 M15.8 24.2 l-4 4"/><circle cx="20" cy="7" r="1.5"/><circle cx="20" cy="33" r="1.5"/><circle cx="7" cy="20" r="1.5"/><circle cx="33" cy="20" r="1.5"/>';
+  var FRUIT = '<path d="M20 14 c-7 -3 -12 2 -12 8 c0 6 5 10 12 10 s12 -4 12 -10 c0 -6 -5 -11 -12 -8 Z M20 14 c0 -3 1 -5 3 -6 M20 14 c2 -3 6 -3 7 -1"/><circle cx="16" cy="22" r="1.8" fill="currentColor"/><circle cx="24" cy="25" r="1.3" fill="currentColor"/><circle cx="22" cy="19" r="1" fill="currentColor"/>';
   function isBug(n) { return /(蟲|蝨|蛾|蟎|椿象|蠅|蚜|螟)$/.test(n); }
-  function badge(n, on) {
-    return '<span class="bdg ' + (on ? (isBug(n) ? 'bug' : 'dis') : 'off') + '" title="' + (on ? n : '尚未收集') + '"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5"/><circle cx="20" cy="20" r="15.5" stroke-dasharray="1.5 2"/><g transform="translate(0 -1) scale(.82) translate(4.4 4.4)">' + (on ? (isBug(n) ? BUG : LEAF) : '<text x="20" y="27" text-anchor="middle" font-size="18" stroke="none" fill="currentColor">？</text>') + '</g></svg><small>' + (on ? n : '？？') + '</small></span>';
+  function ring(R, k, ink) {
+    var o = '', j, a, n;
+    if (k === 0) return '<circle cx="20" cy="20" r="15.6" stroke-dasharray="1.4 2"/>';
+    if (k === 1) { for (j = 0; j < 36; j++) { a = j * Math.PI / 18; o += 'M' + (20 + 15 * Math.cos(a)).toFixed(2) + ' ' + (20 + 15 * Math.sin(a)).toFixed(2) + 'L' + (20 + 17 * Math.cos(a)).toFixed(2) + ' ' + (20 + 17 * Math.sin(a)).toFixed(2); } return '<path d="' + o + '" stroke-width=".8"/>'; }
+    if (k === 2) { for (j = 0; j < 18; j++) { a = j * Math.PI / 9; o += '<circle cx="' + (20 + 16 * Math.cos(a)).toFixed(2) + '" cy="' + (20 + 16 * Math.sin(a)).toFixed(2) + '" r=".9" fill="' + ink + '" stroke="none"/>'; } return o; }
+    if (k === 3) { n = 10 + Math.floor(R() * 6); for (j = 0; j < n; j++) { a = j * 2 * Math.PI / n; o += 'M' + (20 + 14.5 * Math.cos(a)).toFixed(2) + ' ' + (20 + 14.5 * Math.sin(a)).toFixed(2) + 'Q' + (20 + 17.5 * Math.cos(a + Math.PI / n)).toFixed(2) + ' ' + (20 + 17.5 * Math.sin(a + Math.PI / n)).toFixed(2) + ' ' + (20 + 14.5 * Math.cos(a + 2 * Math.PI / n)).toFixed(2) + ' ' + (20 + 14.5 * Math.sin(a + 2 * Math.PI / n)).toFixed(2); } return '<path d="' + o + '" stroke-width=".9"/>'; }
+    for (j = 0; j < 8; j++) { a = j * Math.PI / 4; o += '<path d="M0 -2 q2 2 0 4 q-2 -2 0 -4" transform="translate(' + (20 + 16 * Math.cos(a)).toFixed(2) + ' ' + (20 + 16 * Math.sin(a)).toFixed(2) + ') rotate(' + (j * 45 + 90) + ')" fill="' + ink + '" stroke="none"/>'; } return o;
+  }
+  var uid = 0;
+  function badge(n, b) {
+    if (!b) return '<span class="bdg off" title="尚未收集"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5"/><text x="20" y="25.5" text-anchor="middle" font-size="14" stroke="none" fill="currentColor">？</text></svg><small>？？</small></span>';
+    var R = rng(b.s), ink = INKS[Math.floor(R() * INKS.length)], k = Math.floor(R() * 5), rot = Math.floor(R() * 41) - 20, id = 'g' + (uid++);
+    var bug = isBug(n), icon = bug ? (R() < .5 ? BUG : BUG2) : (R() < .34 ? LEAF : R() < .5 ? SPORE : FRUIT);
+    var FILL = ['#efe3c4', '#e4e7ea', '#f1d98a', 'url(#' + id + ')'][b.t], EDGE = [ink, '#6f7a86', '#8a6410', '#5b3a6b'][b.t];
+    var defs = b.t === 3 ? '<defs><linearGradient id="' + id + '" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6d8e8"/><stop offset=".35" stop-color="#d8ecf6"/><stop offset=".65" stop-color="#f6f0c8"/><stop offset="1" stop-color="#e0d0f4"/></linearGradient></defs>' : '';
+    var rays = '';
+    if (b.t >= 2) { for (var j = 0; j < 16; j++) { var a = j * Math.PI / 8; rays += 'M' + (20 + 18.5 * Math.cos(a)).toFixed(2) + ' ' + (20 + 18.5 * Math.sin(a)).toFixed(2) + 'L' + (20 + 20 * Math.cos(a + Math.PI / 16)).toFixed(2) + ' ' + (20 + 20 * Math.sin(a + Math.PI / 16)).toFixed(2) + 'L' + (20 + 18.5 * Math.cos(a + Math.PI / 8)).toFixed(2) + ' ' + (20 + 18.5 * Math.sin(a + Math.PI / 8)).toFixed(2); } rays = '<path d="' + rays + '" fill="' + EDGE + '" stroke="none"/>'; }
+    return '<button type="button" class="bdg t' + b.t + '" data-n="' + n + '" title="' + n + '・' + RAR[b.t][0] + '" style="color:' + ink + '"><svg viewBox="-1 -1 42 42" aria-hidden="true">' + defs + rays +
+      '<circle cx="20" cy="20" r="18.5" style="fill:' + FILL + ';stroke:' + EDGE + ';stroke-width:' + (b.t ? 2 : 1.6) + '"/>' + (b.t === 1 ? '<circle cx="20" cy="20" r="17" fill="none" stroke="#fff" stroke-width=".6"/>' : '') +
+      ring(R, k, ink) + '<g transform="rotate(' + rot + ' 20 20) translate(3.6 3.6) scale(.82)">' + icon + '</g>' + (b.t === 3 ? '<path class="spark" d="M31 7 l1 3 3 1 -3 1 -1 3 -1 -3 -3 -1 3 -1 Z" fill="#fff" stroke="#5b3a6b" stroke-width=".4"/>' : '') +
+      '</svg><small>' + n + '</small></button>';
+  }
+  // 特別成就徽章
+  var ACH = [
+    ['first', '初次診斷', '答對第一題'], ['s5', '五連勝', '連續答對 5 題'], ['s10', '十全十美', '連續答對 10 題'],
+    ['c10', '小小藏家', '收集 10 種'], ['dis', '病害通', '收集全部病害徽章'], ['bug', '昆蟲通', '收集全部蟲害徽章'],
+    ['leg', '傳說的運氣', '抽到一枚傳說徽章'], ['owl', '夜貓子', '晚上 10 點到清晨 5 點答對'], ['sun', '早起的鳥兒', '清晨 5 點到 8 點答對'],
+    ['ret', '老讀者', '在 3 個不同的日子回來答題']
+  ];
+  var ACH_IC = { first: 'M20 11 v18 M14 17 l6 -6 6 6', s5: 'M12 26 l5 -12 3 8 3 -8 5 12', s10: 'M11 20 l6 6 12 -12', c10: 'M12 14 h16 v14 h-16 Z M12 18 h16 M18 14 v-3 h4 v3', dis: LEAF, bug: BUG, leg: 'M20 10 l3 7 7 .5 -5.5 4.5 2 7 -6.5 -4 -6.5 4 2 -7 -5.5 -4.5 7 -.5 Z', owl: 'M13 14 l3 3 M27 14 l-3 3 M13 22 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M19 22 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M18 28 l2 2 2 -2', sun: 'M20 14 a6 6 0 1 0 0.01 0 M20 8 v-3 M20 35 v-3 M8 20 h-3 M35 20 h-3 M11 11 l-2 -2 M29 29 l2 2 M29 11 l2 -2 M11 29 l-2 2', ret: 'M12 20 a8 8 0 1 0 3 -6 M12 10 v5 h5' };
+  function achBadge(a, on) {
+    var ic = ACH_IC[a[0]], g = ic.charAt(0) === '<' ? ic : '<path d="' + ic + '"/>';
+    return '<span class="ach' + (on ? ' on' : '') + '" title="' + a[1] + '：' + a[2] + (on ? '（' + on + ' 取得）' : '') + '"><svg viewBox="0 0 40 44" aria-hidden="true"><path d="M20 1 L37 8 V22 C37 33 29 40 20 43 C11 40 3 33 3 22 V8 Z" class="sh"/><g transform="translate(0 1)">' + g + '</g></svg><small>' + (on ? a[1] : '？？') + '</small><em>' + a[2] + '</em></span>';
+  }
+  function earn(k) { if (!me.ach[k]) { me.ach[k] = today(); return k; } return ''; }
+  function checkAch(rare) {
+    var got = Object.keys(book), h = new Date().getHours(), out = [];
+    out.push(earn('first'));
+    if (streak >= 5) out.push(earn('s5')); if (streak >= 10) out.push(earn('s10'));
+    if (got.length >= 10) out.push(earn('c10'));
+    var dis = ALL.filter(function (n) { return !isBug(n); }), bug = ALL.filter(isBug);
+    if (dis.length && dis.every(function (n) { return book[n]; })) out.push(earn('dis'));
+    if (bug.length && bug.every(function (n) { return book[n]; })) out.push(earn('bug'));
+    if (rare === 3) out.push(earn('leg'));
+    if (h >= 22 || h < 5) out.push(earn('owl')); if (h >= 5 && h < 8) out.push(earn('sun'));
+    if (me.days.length >= 3) out.push(earn('ret'));
+    return out.filter(Boolean).map(function (k) { return ACH.filter(function (a) { return a[0] === k; })[0][1]; });
   }
   function drawBook(fresh) {
-    var el = document.getElementById('np-book'), n = got.length, rank = RANKS[0][1];
+    var el = document.getElementById('np-book'), names = Object.keys(book), n = names.length, rank = RANKS[0][1];
     RANKS.forEach(function (r) { if (n >= r[0]) rank = r[1]; });
+    var cnt = [0, 0, 0, 0]; names.forEach(function (x) { cnt[book[x].t]++; });
     el.querySelector('.np-book-count').textContent = '收集 ' + n + (ALL.length ? ' / ' + ALL.length : '') + ' 種';
-    el.querySelector('.np-book-rank').textContent = '稱號：' + rank;
-    el.querySelector('.np-book-recent').innerHTML = got.length ? got.slice(-4).reverse().map(function (x) { return badge(x, true); }).join('') : '<em>答對第一題，就能收集第一枚徽章。</em>';
+    el.querySelector('.np-book-rank').innerHTML = '藏家編號 <b>' + me.id + '</b>・稱號：' + rank + '<br>普通 ' + cnt[0] + '・稀有 ' + cnt[1] + '・珍藏 ' + cnt[2] + '・傳說 ' + cnt[3];
+    var recent = names.sort(function (x, y) { return (book[y].at || 0) - (book[x].at || 0); }).slice(0, 5);
+    el.querySelector('.np-book-recent').innerHTML = n ? recent.map(function (x) { return badge(x, book[x]); }).join('') : '<em>答對第一題，就能收集第一枚徽章。</em>';
     if (fresh) { var f = el.querySelector('.np-book-recent .bdg'); if (f) f.classList.add('new'); }
     var all = el.querySelector('.np-book-all');
-    if (!all.hidden) all.innerHTML = ALL.map(function (x) { return badge(x, got.indexOf(x) >= 0); }).join('');
+    if (!all.hidden) all.innerHTML = '<p class="np-book-sec">病蟲害徽章</p><div class="bdg-grid">' + ALL.map(function (x) { return badge(x, book[x]); }).join('') + '</div>' +
+      '<p class="np-book-sec">特別成就（' + Object.keys(me.ach).length + ' / ' + ACH.length + '）</p><div class="bdg-grid">' + ACH.map(function (a) { return achBadge(a, me.ach[a[0]]); }).join('') + '</div>';
   }
+  document.getElementById('np-book').addEventListener('click', function (e) {
+    var t = e.target.closest('.bdg[data-n]'); if (!t) return;
+    var n = t.getAttribute('data-n'), b = book[n], d = this.querySelector('.np-book-detail');
+    d.hidden = false;
+    d.innerHTML = '<div class="big">' + badge(n, b) + '</div><div><b>' + n + '</b><span class="rar t' + b.t + '">' + RAR[b.t][0] + '</span><br>No. ' + ('000' + b.no).slice(-4) + '・' + b.d + ' 取得<br>答對 ' + b.c + ' 次・藏家 ' + me.id + (b.t < 3 ? '<br><i>再答對這一題，有機會升級成更稀有的徽章</i>' : '') + '</div>';
+  });
   document.querySelector('.np-book-open').onclick = function () {
     var all = document.querySelector('.np-book-all'); all.hidden = !all.hidden;
     this.textContent = all.hidden ? '翻開標本冊 ▸' : '闔上標本冊 ▴'; drawBook(false);
   };
+  // 答對時呼叫：新徽章抽稀有度；已有的徽章有機會升級
+  function collect(n) {
+    var msg = '', b = book[n], r = roll(n);
+    if (!b) { r.at = Date.now(); book[n] = r; msg = '獲得新徽章「' + n + '」<span class="rar t' + r.t + '">' + RAR[r.t][0] + '</span>'; }
+    else { b.c++; b.at = Date.now(); if (r.t > b.t) { b.t = r.t; b.s = r.s; msg = '徽章「' + n + '」升級為<span class="rar t' + r.t + '">' + RAR[r.t][0] + '</span>！'; } }
+    var ach = checkAch(book[n].t); save(); drawBook(true);
+    if (ach.length) msg += (msg ? '<br>' : '') + '解鎖特別成就：' + ach.map(function (x) { return '「' + x + '」'; }).join('');
+    return msg;
+  }
   drawBook(false);
   function nameOf(cap) {
     var t = cap.replace(/<[^>]*>/g, '').replace(/（[^）]*）|\([^)]*\)/g, '').split(/[，。、：；\s]/)[0].trim();
@@ -94,9 +177,9 @@
       opts.forEach(function (o) {
         var b = document.createElement('button'); b.type = 'button'; b.textContent = o;
         b.onclick = function () {
-          tries++; var isNew = false; if (o === q.n) { score++; var before = Math.floor(grown / PER); grown++; try { localStorage.setItem('pdjPlant', grown); } catch (e) {} drawPlant(Math.floor(grown / PER) > before); if (got.indexOf(q.n) < 0) { got.push(q.n); isNew = true; try { localStorage.setItem('pdjBadges', JSON.stringify(got)); } catch (e) {} drawBook(true); } }
+          tries++; var prize = ''; if (o === q.n) { score++; streak++; var before = Math.floor(grown / PER); grown++; try { localStorage.setItem('pdjPlant', grown); } catch (e) {} drawPlant(Math.floor(grown / PER) > before); prize = collect(q.n); } else streak = 0;
           box.querySelectorAll('button').forEach(function (x) { x.disabled = true; if (x.textContent === q.n) x.className = 'ok'; else if (x === b) x.className = 'no'; });
-          var m = qz.querySelector('.np-quiz-msg'); m.innerHTML = (o === q.n ? (isNew ? '答對了！獲得新徽章「' + q.n + '」。' : '答對了！') : '可惜，答案是「' + q.n + '」。') + ' <a href="' + q.p.url + '" data-go>看案件</a>・<button type="button" class="np-next">下一題 ▸</button>';
+          var m = qz.querySelector('.np-quiz-msg'); m.innerHTML = (o === q.n ? '答對了！' + (prize ? '<span class="np-prize-msg">' + prize + '</span>' : '') : '可惜，答案是「' + q.n + '」。') + ' <a href="' + q.p.url + '" data-go>看案件</a>・<button type="button" class="np-next">下一題 ▸</button>';
           m.querySelector('.np-next').onclick = ask;
           qz.querySelector('.np-quiz-score').textContent = '本次成績：' + score + ' / ' + tries;
         };
