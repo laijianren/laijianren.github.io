@@ -15,30 +15,8 @@
     </header>
 
     <section class="ny-hero">
-      <a class="ny-art" href="{{ c_case.url | relative_url }}" data-go aria-label="{{ c_case.title }}">
-        {%- comment -%} 原創手繪封面：放大鏡下的病斑葉片與小甲蟲 {%- endcomment -%}
-        <svg viewBox="0 0 600 460" role="img" aria-label="封面插畫：放大鏡檢視葉片病斑">
-          <rect class="ny-sky" x="0" y="0" width="600" height="460"/>
-          <circle class="ny-sun" cx="470" cy="96" r="46"/>
-          <g class="ln">
-            <path pathLength="1" d="M0 360 C90 330 170 350 250 335 S420 300 600 325"/>
-            <path pathLength="1" d="M0 392 C120 372 220 388 330 372 S500 350 600 366"/>
-            <path pathLength="1" d="M60 460 C120 330 190 250 300 205 C360 180 410 150 452 108"/>
-            <path class="lf" pathLength="1" d="M190 262 C150 235 95 238 62 262 C100 292 160 292 190 262 Z M190 262 L70 262"/>
-            <path class="lf" pathLength="1" d="M248 222 C250 170 290 128 342 116 C346 170 306 214 248 222 Z M248 222 L336 124"/>
-            <path class="lf" pathLength="1" d="M352 176 C400 192 430 236 426 290 C376 272 348 228 352 176 Z M352 176 L422 284"/>
-            <path pathLength="1" d="M300 205 C312 228 316 252 308 276"/>
-            <circle class="fr" pathLength="1" cx="306" cy="304" r="30"/>
-            <path pathLength="1" d="M300 274 C304 266 312 262 320 262"/>
-          </g>
-          <g class="ny-spots"><circle cx="120" cy="252" r="6"/><circle cx="146" cy="270" r="4"/><circle cx="98" cy="270" r="3.5"/><circle cx="296" cy="168" r="5"/><circle cx="318" cy="150" r="3"/><circle cx="392" cy="236" r="5"/></g>
-          <g class="ny-lens">
-            <circle class="glass" cx="300" cy="166" r="70"/>
-            <g class="ln"><circle pathLength="1" cx="300" cy="166" r="70"/><circle pathLength="1" cx="300" cy="166" r="78"/><path pathLength="1" d="M355 221 L430 296 M370 210 L445 285 M430 296 C440 306 455 300 445 285"/></g>
-            <g class="ny-zoom"><circle cx="286" cy="150" r="13"/><circle cx="318" cy="182" r="9"/><circle cx="270" cy="190" r="6"/><circle cx="326" cy="140" r="5"/></g>
-          </g>
-          <g class="ny-bug"><g class="ln"><path pathLength="1" d="M500 380 c-14 0 -22 10 -22 22 s10 22 22 22 22 -10 22 -22 -8 -22 -22 -22 Z M500 380 V424 M486 390 l-12 -6 M484 404 h-14 M488 416 l-10 8 M514 390 l12 -6 M516 404 h14 M512 416 l10 8 M494 378 l-6 -10 M506 378 l6 -10"/></g><circle class="dot" cx="492" cy="396" r="3"/><circle class="dot" cx="508" cy="410" r="3"/></g>
-        </svg>
+      <a class="ny-art" href="{{ c_case.url | relative_url }}" data-go>
+        <figure class="ny-photo" data-url="{{ c_case.url | relative_url }}"><div class="ny-frame"><img class="on" src="{{ c_case.cover | relative_url }}" style="object-position: {{ c_case.cover_pos | default: '50% 50%' }}" alt="{{ c_case.cover_caption | default: c_case.title }}"></div><figcaption>{{ c_case.cover_caption | default: c_case.title }}</figcaption></figure>
       </a>
       <div class="ny-lead">
         <p class="ny-k">本期頭條</p>
@@ -57,7 +35,7 @@
       <div class="ny-grid">
         {%- for r in c_all offset: 1 limit: 3 %}
         <a class="ny-card" href="{{ r.url | relative_url }}" data-go>
-          {%- if r.cover %}<img src="{{ r.cover | relative_url }}" alt="" loading="lazy">{% endif %}
+          {%- if r.cover %}<img src="{{ r.cover | relative_url }}" alt="" loading="lazy" style="object-position: {{ r.cover_pos | default: '50% 50%' }}">{% endif %}
           <p class="ny-k">{% if r.collection == 'visits' %}參訪筆記{% else %}診斷案件{% endif %}</p>
           <h3>{{ r.title }}</h3>
           <p class="ny-dek">{% if r.diagnosis %}{{ r.diagnosis }}{% else %}{{ r.topics }}{% endif %}</p>
@@ -76,6 +54,20 @@
   if (seen && location.search.indexOf('cover') < 0) return;
   var d = new Date();
   document.getElementById('cv-date').textContent = d.getFullYear() + '年' + (d.getMonth() + 1) + '月' + d.getDate() + '日・星期' + '日一二三四五六'.charAt(d.getDay());
+  // 頭條照片：裁成統一的 4:3 畫框（保留病斑與植物主體），在同案幾張照片間慢慢淡入淡出
+  var ph = c.querySelector('.ny-photo'), fr = ph.querySelector('.ny-frame'), first = fr.querySelector('img');
+  fetch('{{ "/assets/photos.json" | relative_url }}').then(function (r) { return r.json(); }).then(function (list) {
+    var mine = list.filter(function (p) { return p.url === ph.getAttribute('data-url'); }).slice(0, 5);
+    if (mine.length < 2) return;
+    var cap = ph.querySelector('figcaption'), ok = [], left = mine.length;
+    mine.forEach(function (p, i) { var im = new Image(); im.alt = ''; im.onload = im.onerror = function () { if (im.naturalWidth) ok[i] = { im: im, cap: p.cap }; if (--left === 0) start(); }; im.src = p.src; });
+    function start() {
+      var list2 = ok.filter(Boolean); if (list2.length < 2) return;
+      var k = 0; list2.forEach(function (x) { fr.appendChild(x.im); }); first.remove();
+      list2[0].im.classList.add('on'); cap.innerHTML = list2[0].cap;
+      setInterval(function () { list2[k].im.classList.remove('on'); k = (k + 1) % list2.length; list2[k].im.classList.add('on'); cap.innerHTML = list2[k].cap; }, 5500);
+    }
+  }).catch(function () {});
   var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('seen'); io.unobserve(e.target); } });
   }, { root: c, threshold: .15 }) : null;

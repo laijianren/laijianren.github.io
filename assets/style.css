@@ -702,3 +702,13 @@ button.bdg { font: inherit; background: none; border: 0; padding: 0; cursor: poi
 .ny .ln .lf { fill: #d5e0b5; fill-opacity: 0; transition: fill-opacity 1.2s ease 1.6s; }
 .ny .ln .fr { fill: #ecc35a; fill-opacity: 0; transition: fill-opacity 1.2s ease 1.6s; }
 .ny.in .ln .lf, .ny.in .ln .fr { fill-opacity: 1; transition: stroke-dashoffset 2.2s ease .2s, fill-opacity 1.2s ease 1.6s; }
+/* 雜誌風封面改用照片：整張不裁切 */
+.ny-photo { margin: 0; }
+.ny-frame { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; }
+.ny-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.6s ease; }
+.ny-frame img.on { opacity: 1; animation: ny-breathe 11s ease-in-out infinite alternate; }
+@keyframes ny-breathe { from { transform: scale(1); } to { transform: scale(1.025); } }
+.ny-photo figcaption { font-size: .78rem; font-style: italic; color: #5c5246; margin-top: 8px; text-align: right; }
+.ny-card img { object-fit: cover; aspect-ratio: 4 / 3; }
+.ny .ny-lead > * { transition-delay: .3s !important; }
+@media (prefers-reduced-motion: reduce) { .ny-frame img.on { animation: none; } }

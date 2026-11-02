@@ -5,6 +5,7 @@ crop: 番茄、南瓜
 location: 彰化縣溪州鄉
 diagnosis: 番茄晚疫病（<i>Phytophthora infestans</i>）、疑似南瓜捲葉病毒（待檢測確認）
 pest: late-blight
+cover_pos: 50% 62%
 cover: /assets/cases/2026-01-28-chunyuan-tomato/08.jpg
 cover_caption: 番茄葉片褐色病斑
 ---
