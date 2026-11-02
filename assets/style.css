@@ -732,3 +732,9 @@ button.bdg { font: inherit; background: none; border: 0; padding: 0; cursor: poi
 .np-book-sub span { font-weight: 400; letter-spacing: 0; }
 .np-book-detail .grp { display: inline-block; margin-left: 6px; font-size: .72rem; color: #5c5246; }
 .np-book-detail .big { flex: none; }
+/* 畫框跟著照片方向：直式照片用直式框、橫式用橫式框，不裁切也不填滿 */
+.ny-frame { background: none; margin: 0 auto; }
+.ny-thumb { aspect-ratio: auto; background: none; }
+.ny-thumb img { position: static !important; height: auto !important; width: 100%; }
+.ny-grid { align-items: start; }
+.ny-photo figcaption { text-align: center; }

@@ -16,7 +16,7 @@
 
     <section class="ny-hero">
       <a class="ny-art" href="{{ c_case.url | relative_url }}" data-go>
-        <figure class="ny-photo" data-url="{{ c_case.url | relative_url }}"><div class="ny-frame"><div class="ny-blur" style="background-image:url({{ c_case.cover | relative_url }})"></div><img class="on" src="{{ c_case.cover | relative_url }}" alt="{{ c_case.cover_caption | default: c_case.title }}"></div><figcaption>{{ c_case.cover_caption | default: c_case.title }}</figcaption></figure>
+        <figure class="ny-photo" data-url="{{ c_case.url | relative_url }}"><div class="ny-frame"><img class="on" src="{{ c_case.cover | relative_url }}" alt="{{ c_case.cover_caption | default: c_case.title }}"></div><figcaption>{{ c_case.cover_caption | default: c_case.title }}</figcaption></figure>
       </a>
       <div class="ny-lead">
         <p class="ny-k">本期頭條</p>
@@ -35,7 +35,7 @@
       <div class="ny-grid">
         {%- for r in c_all offset: 1 limit: 3 %}
         <a class="ny-card" href="{{ r.url | relative_url }}" data-go>
-          {%- if r.cover %}<span class="ny-thumb"><span class="ny-blur" style="background-image:url({{ r.cover | relative_url }})"></span><img src="{{ r.cover | relative_url }}" alt="" loading="lazy"></span>{% endif %}
+          {%- if r.cover %}<span class="ny-thumb"><img src="{{ r.cover | relative_url }}" alt="" loading="lazy"></span>{% endif %}
           <p class="ny-k">{% if r.collection == 'visits' %}參訪筆記{% else %}診斷案件{% endif %}</p>
           <h3>{{ r.title }}</h3>
           <p class="ny-dek">{% if r.diagnosis %}{{ r.diagnosis }}{% else %}{{ r.topics }}{% endif %}</p>
@@ -54,18 +54,20 @@
   if (seen && location.search.indexOf('cover') < 0) return;
   var d = new Date();
   document.getElementById('cv-date').textContent = d.getFullYear() + '年' + (d.getMonth() + 1) + '月' + d.getDate() + '日・星期' + '日一二三四五六'.charAt(d.getDay());
-  // 頭條照片：整張完整顯示（不切到葉片、果實），空白處用同一張照片的模糊放大填滿；在同案幾張照片間慢慢淡入淡出
-  var ph = c.querySelector('.ny-photo'), fr = ph.querySelector('.ny-frame'), first = fr.querySelector('img'), blur = fr.querySelector('.ny-blur');
+  // 頭條照片：整張完整顯示（不切到葉片、果實），畫框跟著照片方向變成直式或橫式；只輪播同方向的照片，畫框才不會跳動
+  var ph = c.querySelector('.ny-photo'), fr = ph.querySelector('.ny-frame'), first = fr.querySelector('img');
+  function fit(im) { var r = im.naturalWidth / im.naturalHeight; fr.style.aspectRatio = im.naturalWidth + ' / ' + im.naturalHeight; fr.style.width = 'min(100%, ' + (72 * r).toFixed(1) + 'vh)'; }
+  if (first.complete && first.naturalWidth) fit(first); else first.addEventListener('load', function () { fit(first); });
   fetch('{{ "/assets/photos.json" | relative_url }}').then(function (r) { return r.json(); }).then(function (list) {
     var mine = list.filter(function (p) { return p.url === ph.getAttribute('data-url'); }).slice(0, 5);
     if (mine.length < 2) return;
     var cap = ph.querySelector('figcaption'), ok = [], left = mine.length;
-    mine.forEach(function (p, i) { var im = new Image(); im.alt = ''; im.onload = im.onerror = function () { if (im.naturalWidth) ok[i] = { im: im, cap: p.cap }; if (--left === 0) start(); }; im.src = p.src; });
+    mine.forEach(function (p, i) { var im = new Image(); im.alt = ''; im.onload = im.onerror = function () { if (im.naturalWidth && first.naturalWidth && (im.naturalWidth >= im.naturalHeight) === (first.naturalWidth >= first.naturalHeight)) ok[i] = { im: im, cap: p.cap }; if (--left === 0) start(); }; im.src = p.src; });
     function start() {
       var list2 = ok.filter(Boolean); if (list2.length < 2) return;
       var k = 0; list2.forEach(function (x) { fr.appendChild(x.im); }); first.remove();
-      list2[0].im.classList.add('on'); cap.innerHTML = list2[0].cap; blur.style.backgroundImage = 'url(' + list2[0].im.src + ')';
-      setInterval(function () { list2[k].im.classList.remove('on'); k = (k + 1) % list2.length; list2[k].im.classList.add('on'); cap.innerHTML = list2[k].cap; blur.style.backgroundImage = 'url(' + list2[k].im.src + ')'; }, 5500);
+      list2[0].im.classList.add('on'); cap.innerHTML = list2[0].cap;
+      setInterval(function () { list2[k].im.classList.remove('on'); k = (k + 1) % list2.length; list2[k].im.classList.add('on'); cap.innerHTML = list2[k].cap; }, 5500);
     }
   }).catch(function () {});
   var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) {
