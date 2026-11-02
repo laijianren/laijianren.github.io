@@ -1,63 +1,96 @@
-{%- comment -%} 進站開頭畫面：每次開啟網站只出現一次，選一個分類進入 {%- endcomment -%}
+{%- comment -%} 進站開頭畫面：仿老報紙頭版。每次開啟網站只出現一次，選一個版面進入 {%- endcomment -%}
 {%- assign c_cases = site.cases | sort: 'date' | reverse -%}
 {%- assign c_visits = site.visits | sort: 'date' | reverse -%}
 {%- assign c_case = c_cases | first -%}
+{%- assign c_case2 = c_cases[1] -%}
 {%- assign c_visit = c_visits | first -%}
-{%- assign c_towns = c_cases | concat: site.visits | map: 'location' | uniq | size -%}
+{%- assign c_total = site.cases.size | plus: site.visits.size -%}
+{%- assign gw = site.data.global_weekly -%}
 <div class="cover" id="cover" role="dialog" aria-modal="true" aria-label="歡迎來到{{ site.title }}" hidden>
-  <div class="cover-inner">
-    <header class="cover-head">
-      <p class="cover-date" id="cover-date">{{ site.time | date: '%Y年%-m月%-d日' }}</p>
-      <div class="cover-title">
-        <span class="mast-art left">{% include icon.html name='sprig' %}</span>
-        <h1>{{ site.title }}</h1>
-        <span class="mast-art right">{% include icon.html name='sprig' %}</span>
+  <div class="np">
+    <header class="np-head">
+      <div class="np-ear left">
+        <p class="np-ear-k">本報宗旨</p>
+        <p>田間診斷<br>病蟲害圖鑑<br>核准用藥</p>
       </div>
-      <p class="cover-latin">The Plant Doctor's Journal</p>
-      <p class="cover-lede">植物診療師 Lai 的田間筆記。<br>從臺灣各地果園、菜園帶回來的病蟲害診斷紀錄。</p>
-      <p class="cover-ask">今天想看什麼？</p>
+      <div class="np-mast">
+        <span class="np-extra" aria-hidden="true">號外</span>
+        <svg class="np-orn" viewBox="0 0 640 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+          <path d="M20 20 H250 M390 20 H620"/><path d="M250 20 c10 -14 26 -14 30 0 c4 14 -14 18 -18 6 M390 20 c-10 -14 -26 -14 -30 0 c-4 14 14 18 18 6"/>
+          <path d="M60 20 c14 -12 30 -12 44 0 M60 20 c14 12 30 12 44 0 M580 20 c-14 -12 -30 -12 -44 0 M580 20 c-14 12 -30 12 -44 0"/>
+          <path d="M320 4 c-12 8 -12 24 0 32 c12 -8 12 -24 0 -32 Z M320 6 V34 M320 14 l-6 -4 M320 22 l6 -4 M320 28 l-6 -4"/>
+          <circle cx="20" cy="20" r="3" fill="currentColor"/><circle cx="620" cy="20" r="3" fill="currentColor"/></g></svg>
+        <h1 class="np-latin-big">The Plant Doctor's Journal</h1>
+        <p class="np-cn">{{ site.title }}・臺灣田間病蟲害日報</p>
+      </div>
+      <div class="np-ear right">
+        <p class="np-ear-k">今日節氣</p>
+        <p class="np-term" id="np-term">—</p>
+        <p class="np-term-sub" id="np-term-sub"></p>
+      </div>
     </header>
-    <nav class="cover-grid" aria-label="選擇分類">
-      <a class="cover-tile photo" href="{{ '/cases/' | relative_url }}" style="--i:0">
-        <img src="{{ c_case.cover | relative_url }}" alt="" loading="eager">
-        <span class="tile-no">I</span><strong>診斷案件</strong><em>{{ site.cases.size }} 篇田間診斷紀錄</em>
+    <p class="np-dateline"><span>第一卷・第 {{ c_total }} 號</span><span id="np-date">{{ site.time | date: '%Y年%-m月%-d日' }}</span><span>臺灣田間版</span><span>植物診療師 Lai 主筆</span></p>
+
+    <div class="np-body">
+      <div class="np-main" style="--i:0">
+      <a class="np-lead" href="{{ c_case.url | relative_url }}" data-go>
+        <p class="np-kicker">甲版・診斷案件</p>
+        <h2>{{ c_case.title }}</h2>
+        <figure class="np-live" data-url="{{ c_case.url | relative_url }}"><img class="on" src="{{ c_case.cover | relative_url }}" alt="{{ c_case.cover_caption | default: c_case.title }}"><figcaption>{{ c_case.cover_caption | default: c_case.title }}・{{ c_case.location }}</figcaption></figure>
+        <p class="np-deck">{{ c_case.crop }}・{{ c_case.diagnosis | replace: '、', '・' }}</p>
       </a>
-      <a class="cover-tile photo" href="{{ '/visits/' | relative_url }}" style="--i:1">
-        <img src="{{ c_visit.cover | relative_url }}" alt="" loading="eager">
-        <span class="tile-no">II</span><strong>參訪筆記</strong><em>{{ site.visits.size }} 篇觀摩與參訪</em>
-      </a>
-      <a class="cover-tile ink-tile" href="#field-map" data-close style="--i:2">
-        <span class="tile-art tile-map">{% include taiwan-map.svg %}</span>
-        <span class="tile-no">III</span><strong>田野地圖</strong><em>走過 {{ c_towns }} 個地方</em>
-      </a>
-      <a class="cover-tile photo" href="{{ '/gallery/' | relative_url }}" style="--i:3">
-        <img src="{{ '/assets/cases/2026-07-24-wufeng-kumquat/17.jpg' | relative_url }}" alt="" loading="eager">
-        <span class="tile-no">IV</span><strong>病徵照片牆</strong><em>依病蟲害看田間實拍</em>
-      </a>
-      <a class="cover-tile ink-tile" href="{{ '/calendar/' | relative_url }}" style="--i:4">
-        <span class="tile-art">{% include icon.html name='sprig' %}</span>
-        <span class="tile-no">V</span><strong>田間月曆</strong><em>這個月該注意什麼</em>
-      </a>
-      <a class="cover-tile ink-tile" href="{{ '/pests/' | relative_url }}" style="--i:5">
-        <span class="tile-art">{% include icon.html name='beetle' %}</span>
-        <span class="tile-no">VI</span><strong>病蟲害知識</strong><em>病害、蟲害整理</em>
-      </a>
-      <a class="cover-tile ink-tile" href="{{ '/charts/' | relative_url }}" style="--i:6">
-        <span class="tile-art">{% include icon.html name='flask' %}</span>
-        <span class="tile-no">VII</span><strong>用藥圖表</strong><em>{{ site.data.charts.size }} 張作物用藥一覽圖</em>
-      </a>
-      {%- if site.data.global_weekly %}
-      <a class="cover-tile ink-tile" href="{{ site.data.global_weekly.url }}" target="_blank" rel="noopener" style="--i:7">
-        <span class="tile-art">{% include icon.html name='plate' %}</span>
-        <span class="tile-no">VIII</span><strong>全球疫情週報</strong><em>{{ site.data.global_weekly.issue }}・{{ site.data.global_weekly.date }}</em>
-      </a>
-      {%- endif %}
-      <a class="cover-tile ink-tile" href="{{ '/contact/' | relative_url }}" style="--i:8">
-        <span class="tile-art">{% include icon.html name='leaf' %}</span>
-        <span class="tile-no">IX</span><strong>聯絡我</strong><em>田間診斷・問題諮詢</em>
-      </a>
-    </nav>
-    <button type="button" class="cover-enter" data-close>翻開今日頭版 ↓</button>
+
+      <div class="np-back">
+        <p class="np-kicker">前期回顧</p>
+        <ol>
+          {%- for r in c_cases offset: 1 limit: 6 %}
+          <li><a href="{{ r.url | relative_url }}" data-go><b>{{ r.title }}</b><span>{{ r.date | date: '%Y.%-m' }}・{{ r.location | slice: 3, 20 | split: '、' | first }}</span></a></li>
+          {%- endfor %}
+        </ol>
+      </div>
+      </div>
+      <div class="np-col" style="--i:1">
+        <a class="np-story" href="{{ c_visit.url | relative_url }}" data-go>
+          <p class="np-kicker">乙版・參訪筆記</p>
+          <h3>{{ c_visit.title }}</h3>
+          <img src="{{ c_visit.cover | relative_url }}" alt="">
+          <p>{{ c_visit.topics | replace: '、', '・' }}</p>
+        </a>
+        <div class="np-story np-quiz" id="np-quiz">
+          <p class="np-kicker">本報有獎徵答</p>
+          <h3>猜猜看，這是什麼病蟲害？</h3>
+          <figure class="np-quiz-img"><img alt="徵答照片"></figure>
+          <div class="np-quiz-opts"></div>
+          <p class="np-quiz-msg" aria-live="polite"></p>
+          <p class="np-quiz-score"></p>
+        </div>
+        {%- if gw %}
+        <a class="np-story wire" href="{{ gw.url }}" target="_blank" rel="noopener">
+          <p class="np-kicker">外電・全球疫情週報 {{ gw.issue }}</p>
+          <h3>{{ gw.items[0].title }}</h3>
+          <p>{{ gw.items[0].region }}・<em>{{ gw.items[0].sci }}</em></p>
+        </a>
+        {%- endif %}
+      </div>
+
+      <nav class="np-index" aria-label="本報目錄" style="--i:2">
+        <p class="np-index-h">本報目錄</p>
+        <ol>
+          <li><a href="{{ '/cases/' | relative_url }}" data-go><span class="pg">甲</span>診斷案件<i></i><span class="n">{{ site.cases.size }} 篇</span></a></li>
+          <li><a href="{{ '/visits/' | relative_url }}" data-go><span class="pg">乙</span>參訪筆記<i></i><span class="n">{{ site.visits.size }} 篇</span></a></li>
+          <li><a href="#field-map" data-close><span class="pg">丙</span>田野地圖<i></i><span class="n">全臺</span></a></li>
+          <li><a href="{{ '/gallery/' | relative_url }}" data-go><span class="pg">丁</span>病徵照片牆<i></i><span class="n">圖版</span></a></li>
+          <li><a href="{{ '/calendar/' | relative_url }}" data-go><span class="pg">戊</span>田間月曆<i></i><span class="n">十二月</span></a></li>
+          <li><a href="{{ '/pests/' | relative_url }}" data-go><span class="pg">己</span>病蟲害知識<i></i><span class="n">{{ site.pests.size }} 篇</span></a></li>
+          <li><a href="{{ '/charts/' | relative_url }}" data-go><span class="pg">庚</span>用藥圖表<i></i><span class="n">{{ site.data.charts.size }} 張</span></a></li>
+          {%- if gw %}<li><a href="{{ gw.url }}" target="_blank" rel="noopener"><span class="pg">辛</span>全球疫情週報<i></i><span class="n">每週一</span></a></li>{% endif %}
+          <li><a href="{{ '/contact/' | relative_url }}" data-go><span class="pg">壬</span>聯絡本報<i></i><span class="n">來函</span></a></li>
+        </ol>
+        <div class="np-notice"><b>告讀者</b>本報所載用藥資訊，請以農藥資訊服務網公告為準。</div>
+      </nav>
+    </div>
+
+    <button type="button" class="np-enter" data-close>翻開今日頭版 ▸</button>
   </div>
 </div>
 <script>
@@ -66,20 +99,75 @@
   var seen = false;
   try { seen = sessionStorage.getItem('coverSeen') === '1'; } catch (e) {}
   if (seen && location.search.indexOf('cover') < 0) return;
-  var d = new Date(); document.getElementById('cover-date').textContent = d.getFullYear() + '年' + (d.getMonth() + 1) + '月' + d.getDate() + '日';
+  var d = new Date(), wk = '日一二三四五六'.charAt(d.getDay());
+  document.getElementById('np-date').textContent = d.getFullYear() + '年' + (d.getMonth() + 1) + '月' + d.getDate() + '日・星期' + wk;
+  // 二十四節氣（公曆近似日期，誤差約一天）
+  var T = [[1,5,'小寒'],[1,20,'大寒'],[2,4,'立春'],[2,19,'雨水'],[3,5,'驚蟄'],[3,20,'春分'],[4,4,'清明'],[4,20,'穀雨'],[5,5,'立夏'],[5,21,'小滿'],[6,5,'芒種'],[6,21,'夏至'],[7,7,'小暑'],[7,22,'大暑'],[8,7,'立秋'],[8,23,'處暑'],[9,7,'白露'],[9,23,'秋分'],[10,8,'寒露'],[10,23,'霜降'],[11,7,'立冬'],[11,22,'小雪'],[12,7,'大雪'],[12,21,'冬至']];
+  var md = (d.getMonth() + 1) * 100 + d.getDate(), cur = T[T.length - 1], next = T[0];
+  for (var i = 0; i < T.length; i++) { if (T[i][0] * 100 + T[i][1] <= md) { cur = T[i]; next = T[i + 1] || T[0]; } }
+  document.getElementById('np-term').textContent = cur[2];
+  document.getElementById('np-term-sub').textContent = '下一節氣 ' + next[2] + '（' + next[0] + '/' + next[1] + '）';
+
+  // 會動的照片：頭條圖在同案多張照片間交替，緩慢推鏡
+  var PH = null;
+  function photos() { return PH || (PH = fetch('{{ "/assets/photos.json" | relative_url }}').then(function (r) { return r.json(); }).catch(function () { return []; })); }
+  var live = c.querySelector('.np-live');
+  photos().then(function (list) {
+    var mine = list.filter(function (p) { return p.url === live.getAttribute('data-url'); }).slice(0, 5);
+    if (mine.length < 2) return;
+    var cap = live.querySelector('figcaption'), k = 0;
+    mine.forEach(function (p) { var im = new Image(); im.src = p.src; im.alt = ''; live.insertBefore(im, cap); });
+    var imgs = live.querySelectorAll('img'); imgs[0].remove(); imgs = live.querySelectorAll('img'); imgs[0].classList.add('on');
+    setInterval(function () { imgs[k].classList.remove('on'); k = (k + 1) % imgs.length; imgs[k].classList.add('on');
+      cap.innerHTML = mine[k].cap.replace(/<(?!\/?em>)[^>]*>/g, '') + '・{{ c_case.location }}'; }, 5200);
+  });
+  // 有獎徵答：從照片圖說取出病蟲害名稱，四選一
+  var qz = document.getElementById('np-quiz'), score = 0, tries = 0;
+  function nameOf(cap) {
+    var t = cap.replace(/<[^>]*>/g, '').replace(/（[^）]*）|\([^)]*\)/g, '').split(/[，。、：；\s]/)[0].trim();
+    return /^[一-鿿]{2,8}$/.test(t) && /(病|蟲|蝨|蛾|蟎|椿象|蠅|蚜|螟)$/.test(t) ? t : '';
+  }
+  photos().then(function (list) {
+    var pool = list.map(function (p) { return { p: p, n: nameOf(p.cap) }; }).filter(function (x) { return x.n; });
+    var names = pool.map(function (x) { return x.n; }).filter(function (n, i, a) { return a.indexOf(n) === i; });
+    if (pool.length < 4 || names.length < 4) { qz.hidden = true; return; }
+    function ask() {
+      var q = pool[Math.floor(Math.random() * pool.length)], opts = [q.n];
+      while (opts.length < 4) { var n = names[Math.floor(Math.random() * names.length)]; if (opts.indexOf(n) < 0) opts.push(n); }
+      opts.sort(function () { return Math.random() - .5; });
+      qz.querySelector('img').src = q.p.src;
+      qz.querySelector('.np-quiz-msg').textContent = '';
+      var box = qz.querySelector('.np-quiz-opts'); box.innerHTML = '';
+      opts.forEach(function (o) {
+        var b = document.createElement('button'); b.type = 'button'; b.textContent = o;
+        b.onclick = function () {
+          tries++; if (o === q.n) score++;
+          box.querySelectorAll('button').forEach(function (x) { x.disabled = true; if (x.textContent === q.n) x.className = 'ok'; else if (x === b) x.className = 'no'; });
+          var m = qz.querySelector('.np-quiz-msg'); m.innerHTML = (o === q.n ? '答對了！' : '可惜，答案是「' + q.n + '」。') + ' <a href="' + q.p.url + '" data-go>看案件</a>・<button type="button" class="np-next">下一題 ▸</button>';
+          m.querySelector('.np-next').onclick = ask;
+          qz.querySelector('.np-quiz-score').textContent = '本次成績：' + score + ' / ' + tries;
+        };
+        box.appendChild(b);
+      });
+    }
+    ask();
+  });
+  // 紙張毛邊
+  var np = c.querySelector('.np'), pts = [], j;
+  for (j = 0; j <= 40; j++) pts.push((j * 2.5) + '% ' + (Math.random() * 5).toFixed(1) + 'px');
+  for (j = 0; j <= 40; j++) pts.push('calc(100% - ' + (Math.random() * 5).toFixed(1) + 'px) ' + (j * 2.5) + '%');
+  for (j = 40; j >= 0; j--) pts.push((j * 2.5) + '% calc(100% - ' + (Math.random() * 5).toFixed(1) + 'px)');
+  for (j = 40; j >= 0; j--) pts.push((Math.random() * 5).toFixed(1) + 'px ' + (j * 2.5) + '%');
+  np.style.clipPath = 'polygon(' + pts.join(',') + ')';
   c.hidden = false; document.documentElement.classList.add('cover-open');
   requestAnimationFrame(function () { requestAnimationFrame(function () { c.classList.add('in'); }); });
+  function remember() { try { sessionStorage.setItem('coverSeen', '1'); } catch (e) {} }
   function close(hash) {
-    try { sessionStorage.setItem('coverSeen', '1'); } catch (e) {}
-    c.classList.add('out'); document.documentElement.classList.remove('cover-open');
-    setTimeout(function () { c.hidden = true; if (hash) { var t = document.querySelector(hash); if (t) t.scrollIntoView({ behavior: 'smooth' }); } }, 600);
+    remember(); c.classList.add('out'); document.documentElement.classList.remove('cover-open');
+    setTimeout(function () { c.hidden = true; if (hash && hash.charAt(0) === '#') { var t = document.querySelector(hash); if (t) t.scrollIntoView({ behavior: 'smooth' }); } }, 650);
   }
-  c.querySelectorAll('[data-close]').forEach(function (el) {
-    el.addEventListener('click', function (e) { e.preventDefault(); close(el.getAttribute('href')); });
-  });
-  c.querySelectorAll('a:not([data-close])').forEach(function (el) {
-    el.addEventListener('click', function () { try { sessionStorage.setItem('coverSeen', '1'); } catch (e) {} });
-  });
+  c.querySelectorAll('[data-close]').forEach(function (el) { el.addEventListener('click', function (e) { e.preventDefault(); close(el.getAttribute('href')); }); });
+  c.addEventListener('click', function (e) { if (e.target.closest('a:not([data-close])')) remember(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !c.hidden) close(); });
 })();
 </script>
