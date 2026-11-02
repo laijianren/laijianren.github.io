@@ -712,3 +712,9 @@ button.bdg { font: inherit; background: none; border: 0; padding: 0; cursor: poi
 .ny-card img { object-fit: cover; aspect-ratio: 4 / 3; }
 .ny .ny-lead > * { transition-delay: .3s !important; }
 @media (prefers-reduced-motion: reduce) { .ny-frame img.on { animation: none; } }
+/* 精緻版徽章：銅版畫插圖 */
+.quiz-sec .bdg { width: 84px; }
+.quiz-sec .bdg svg { width: 74px; height: 74px; }
+.quiz-sec .bdg small { font-size: .68rem; }
+.np-book-detail .big .bdg { width: 150px; } .np-book-detail .big .bdg svg { width: 144px; height: 144px; }
+.bdg .spark { transform-origin: 32px 11px; }
