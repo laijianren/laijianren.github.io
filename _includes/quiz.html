@@ -125,31 +125,51 @@
   function ribbon(t, col) {
     return '<path d="M14 84 H86 L82 90.5 L86 97 H14 L18 90.5 Z" fill="' + col + '" stroke="#1d150b" stroke-width=".6"/><text x="50" y="93.6" text-anchor="middle" font-size="8.2" font-weight="700" fill="#fdf8ea" letter-spacing="1.5" font-family="Noto Serif TC, serif">' + t + '</text>';
   }
-  // 特別成就徽章
-  var ACH = [
-    ['first', '初次診斷', '答對第一題'], ['s5', '五連勝', '連續答對 5 題'], ['s10', '十全十美', '連續答對 10 題'],
-    ['c10', '小小藏家', '收集 10 種'], ['dis', '病害通', '收集全部病害徽章'], ['bug', '昆蟲通', '收集全部蟲害徽章'],
-    ['leg', '傳說的運氣', '抽到一枚傳說徽章'], ['owl', '夜貓子', '晚上 10 點到清晨 5 點答對'], ['sun', '早起的鳥兒', '清晨 5 點到 8 點答對'],
-    ['ret', '老讀者', '在 3 個不同的日子回來答題']
-  ];
-  var ACH_IC = { first: 'M20 11 v18 M14 17 l6 -6 6 6', s5: 'M12 26 l5 -12 3 8 3 -8 5 12', s10: 'M11 20 l6 6 12 -12', c10: 'M12 14 h16 v14 h-16 Z M12 18 h16 M18 14 v-3 h4 v3', dis: LEAF, bug: BUG, leg: 'M20 10 l3 7 7 .5 -5.5 4.5 2 7 -6.5 -4 -6.5 4 2 -7 -5.5 -4.5 7 -.5 Z', owl: 'M13 14 l3 3 M27 14 l-3 3 M13 22 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M19 22 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M18 28 l2 2 2 -2', sun: 'M20 14 a6 6 0 1 0 0.01 0 M20 8 v-3 M20 35 v-3 M8 20 h-3 M35 20 h-3 M11 11 l-2 -2 M29 29 l2 2 M29 11 l2 -2 M11 29 l-2 2', ret: 'M12 20 a8 8 0 1 0 3 -6 M12 10 v5 h5' };
-  function achBadge(a, on) {
-    var ic = ACH_IC[a[0]], g = ic.charAt(0) === '<' ? ic : '<path d="' + ic + '"/>';
-    return '<span class="ach' + (on ? ' on' : '') + '" title="' + a[1] + '：' + a[2] + (on ? '（' + on + ' 取得）' : '') + '"><svg viewBox="0 0 40 44" aria-hidden="true"><path d="M20 1 L37 8 V22 C37 33 29 40 20 43 C11 40 3 33 3 22 V8 Z" class="sh"/><g transform="translate(0 1)">' + g + '</g></svg><small>' + (on ? a[1] : '？？') + '</small><em>' + a[2] + '</em></span>';
+  // 特別成就：掛在緞帶上的勳章，多數分銅、銀、金三級。Lai 還在考慮內容，先不顯示（SHOW_MEDALS = false），進度照常記錄
+  var SHOW_MEDALS = false;
+  me.crop = me.crop || {}; me.county = me.county || []; me.total = me.total || 0; me.med = me.med || {};
+  var CROPS = [], TIERN = ['', '銅', '銀', '金'], TCOL = ['#cfc4a8', '#b07a42', '#a9b3bd', '#d4a72c'], TDK = ['#a3977c', '#6e4520', '#5f6b76', '#8a6410'];
+  var MI = { cor: 'M-7 0 l5 5 9 -10', crop: 'M0 8 V-2 M0 2 C-8 0 -9 -7 -3 -9 C1 -10 2 -5 0 2 M0 -2 C6 -3 9 -8 5 -10 C1 -11 0 -6 0 -2', grp: 'M-7 -8 h14 v16 h-14 Z M-7 -3 h14 M-3 -8 v16', map: 'M-8 -6 l5 -2 6 2 5 -2 v14 l-5 2 -6 -2 -5 2 Z M-3 -8 v14 M3 -6 v14', s5: 'M-8 6 l4 -12 4 8 4 -8 4 12', s10: 'M-7 0 l5 5 9 -10 M-7 -6 l5 5', leg: 'M0 -9 l2.6 6 6.4 .5 -5 4.2 1.6 6.4 -5.6 -3.5 -5.6 3.5 1.6 -6.4 -5 -4.2 6.4 -.5 Z', owl: 'M-6 -5 l2 2 M6 -5 l-2 2 M-7 1 a3.5 3.5 0 1 0 7 0 a3.5 3.5 0 1 0 -7 0 M0 1 a3.5 3.5 0 1 0 7 0 a3.5 3.5 0 1 0 -7 0 M-1.5 7 l1.5 1.5 1.5 -1.5', sun: 'M-4 0 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M0 -9 v3 M0 6 v3 M-9 0 h3 M6 0 h3 M-6.4 -6.4 l2 2 M4.4 4.4 l2 2 M6.4 -6.4 l-2 2 M-4.4 4.4 l-2 2', ret: 'M-6 0 a6 6 0 1 0 2 -4.5 M-6 -8 v4 h4' };
+  function medals() {
+    var L = [], g, i;
+    L.push({ k: 'cor', n: '田間出診', d: '累計答對', v: me.total, th: [5, 20, 50], ic: MI.cor });
+    CROPS.forEach(function (c) { L.push({ k: 'crop:' + c, n: c + '專科', d: '答對' + c + '的題目', v: me.crop[c] || 0, th: [5, 15, 30], ic: MI.crop }); });
+    var gs = []; ALL.forEach(function (x) { var gg = grp(x).g; if (gs.indexOf(gg) < 0) gs.push(gg); });
+    gs.forEach(function (gg) { var xs = ALL.filter(function (x) { return grp(x).g === gg; }), have = xs.filter(function (x) { return book[x]; }).length;
+      L.push({ k: 'grp:' + gg, n: gg + '圖鑑', d: '收集' + gg + '徽章', v: have, th: [Math.ceil(xs.length / 2), xs.length, -1], gold: xs.length && xs.every(function (x) { return book[x] && book[x].t >= 2; }), ic: MI.grp }); });
+    L.push({ k: 'map', n: '走遍臺灣', d: '答對來自不同縣市的案件', v: me.county.length, th: [3, 5, 8], ic: MI.map });
+    L.push({ k: 's5', n: '五連勝', d: '連續答對 5 題', one: true, ic: MI.s5 }, { k: 's10', n: '十全十美', d: '連續答對 10 題', one: true, ic: MI.s10 }, { k: 'leg', n: '傳說的運氣', d: '抽到傳說徽章', one: true, ic: MI.leg },
+      { k: 'owl', n: '夜貓子', d: '晚上 10 點到清晨 5 點答對', one: true, ic: MI.owl }, { k: 'sun', n: '早起的鳥兒', d: '清晨 5 點到 8 點答對', one: true, ic: MI.sun }, { k: 'ret', n: '老讀者', d: '在 3 個不同的日子回來答題', one: true, ic: MI.ret });
+    L.forEach(function (m) {
+      var t = 0;
+      if (m.one) t = me.med[m.k] ? 3 : 0;
+      else { for (i = 0; i < 3; i++) if (m.th[i] > 0 && m.v >= m.th[i]) t = i + 1; if (m.gold) t = 3; }
+      m.t = t; m.next = m.one ? '' : (t < 3 ? (m.th[t] > 0 ? m.v + ' / ' + m.th[t] : '全部珍藏以上') : '已滿級');
+    });
+    return L;
   }
-  function earn(k) { if (!me.ach[k]) { me.ach[k] = today(); return k; } return ''; }
-  function checkAch(rare) {
-    var got = Object.keys(book), h = new Date().getHours(), out = [];
-    out.push(earn('first'));
-    if (streak >= 5) out.push(earn('s5')); if (streak >= 10) out.push(earn('s10'));
-    if (got.length >= 10) out.push(earn('c10'));
-    var dis = ALL.filter(function (n) { return !isBug(n); }), bug = ALL.filter(isBug);
-    if (dis.length && dis.every(function (n) { return book[n]; })) out.push(earn('dis'));
-    if (bug.length && bug.every(function (n) { return book[n]; })) out.push(earn('bug'));
-    if (rare === 3) out.push(earn('leg'));
-    if (h >= 22 || h < 5) out.push(earn('owl')); if (h >= 5 && h < 8) out.push(earn('sun'));
-    if (me.days.length >= 3) out.push(earn('ret'));
-    return out.filter(Boolean).map(function (k) { return ACH.filter(function (a) { return a[0] === k; })[0][1]; });
+  function medal(m) {
+    var c = TCOL[m.t], dk = TDK[m.t], on = m.t > 0, sc = '';
+    for (var i = 0; i < 12; i++) { var a = i * Math.PI / 6; sc += '<circle cx="' + f1(50 + 27 * Math.cos(a)) + '" cy="' + f1(62 + 27 * Math.sin(a)) + '" r="5.5"/>'; }
+    var rib = on ? (m.one ? ['#7a2018', '#1d150b'] : ['#1f5a5a', '#7a2018']) : ['#d8ceb6', '#c4b99e'];
+    return '<span class="mdl t' + m.t + (on ? ' on' : '') + '" title="' + m.n + '：' + m.d + (m.next ? '（' + m.next + '）' : '') + '"><svg viewBox="0 0 100 100" aria-hidden="true">' +
+      '<path d="M30 0 H46 L56 34 H40 Z" fill="' + rib[0] + '"/><path d="M70 0 H54 L44 34 H60 Z" fill="' + rib[1] + '"/><path d="M36 0 H40 L50 34 H46 Z M64 0 H60 L50 34 H54 Z" fill="#f4e7c0" opacity=".7"/>' +
+      '<rect x="38" y="30" width="24" height="7" rx="1.5" fill="' + dk + '"/>' +
+      '<g fill="' + c + '" stroke="' + dk + '" stroke-width="1.2">' + sc + '</g><circle cx="50" cy="62" r="27" fill="' + c + '" stroke="' + dk + '" stroke-width="1.5"/>' +
+      '<circle cx="50" cy="62" r="20" fill="none" stroke="' + dk + '" stroke-width="1" stroke-dasharray="1.5 2"/>' +
+      (on ? '<path d="M33 52 A20 20 0 0 1 56 43" stroke="#fff" stroke-width="2.5" fill="none" opacity=".55" stroke-linecap="round"/>' : '') +
+      '<g transform="translate(50 62) scale(1.15)" fill="none" stroke="' + dk + '" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="' + m.ic + '"/></g>' +
+      '</svg><small>' + m.n + (on && !m.one ? '・' + TIERN[m.t] : '') + '</small><em>' + (m.next ? m.d + ' ' + m.next : m.d) + '</em></span>';
+  }
+  function checkAch(rare, p) {
+    var before = {}; medals().forEach(function (m) { before[m.k] = m.t; });
+    var h = new Date().getHours();
+    me.total++;
+    if (p) { var cr = (p.crop || '').split('、')[0]; if (cr) me.crop[cr] = (me.crop[cr] || 0) + 1; var ct = (p.loc || '').slice(0, 3); if (ct && me.county.indexOf(ct) < 0) me.county.push(ct); }
+    function one(k) { if (!me.med[k]) me.med[k] = today(); }
+    if (streak >= 5) one('s5'); if (streak >= 10) one('s10'); if (rare === 3) one('leg');
+    if (h >= 22 || h < 5) one('owl'); if (h >= 5 && h < 8) one('sun'); if (me.days.length >= 3) one('ret');
+    return medals().filter(function (m) { return m.t > (before[m.k] || 0); }).map(function (m) { return m.n + (m.one ? '' : '（' + TIERN[m.t] + '）'); });
   }
   function drawBook(fresh) {
     var el = document.getElementById('np-book'), names = Object.keys(book), n = names.length, rank = RANKS[0][1];
@@ -165,7 +185,7 @@
         var gs = []; ALL.forEach(function (x) { var g = grp(x); if (g.type === ty && gs.indexOf(g.g) < 0) gs.push(g.g); });
         return '<p class="np-book-sec">' + (ty === 'dis' ? '病害' : '蟲害') + '</p>' + gs.map(function (g) { var xs = ALL.filter(function (x) { return grp(x).g === g; }); return '<p class="np-book-sub">' + g + '<span>' + xs.filter(function (x) { return book[x]; }).length + ' / ' + xs.length + '</span></p><div class="bdg-grid">' + xs.map(function (x) { return badge(x, book[x]); }).join('') + '</div>'; }).join('');
       }).join('') +
-      '<p class="np-book-sec">特別成就（' + Object.keys(me.ach).length + ' / ' + ACH.length + '）</p><div class="bdg-grid">' + ACH.map(function (a) { return achBadge(a, me.ach[a[0]]); }).join('') + '</div>';
+      (SHOW_MEDALS ? (function () { var ms = medals(); return '<p class="np-book-sec">特別成就（' + ms.filter(function (m) { return m.t; }).length + ' / ' + ms.length + '）</p><div class="bdg-grid mdl-grid">' + ms.map(medal).join('') + '</div>'; })() : '');
   }
   document.getElementById('np-book').addEventListener('click', function (e) {
     var t = e.target.closest('.bdg[data-n]'); if (!t) return;
@@ -178,12 +198,12 @@
     this.textContent = all.hidden ? '翻開標本冊 ▸' : '闔上標本冊 ▴'; drawBook(false);
   };
   // 答對時呼叫：新徽章抽稀有度；已有的徽章有機會升級
-  function collect(n) {
+  function collect(n, p) {
     var msg = '', b = book[n], r = roll(n);
     if (!b) { r.at = Date.now(); book[n] = r; msg = '獲得新徽章「' + n + '」<span class="rar t' + r.t + '">' + RAR[r.t][0] + '</span>'; }
     else { b.c++; b.at = Date.now(); if (r.t > b.t) { b.t = r.t; b.s = r.s; msg = '徽章「' + n + '」升級為<span class="rar t' + r.t + '">' + RAR[r.t][0] + '</span>！'; } }
-    var ach = checkAch(book[n].t); save(); drawBook(true);
-    if (ach.length) msg += (msg ? '<br>' : '') + '解鎖特別成就：' + ach.map(function (x) { return '「' + x + '」'; }).join('');
+    var ach = checkAch(book[n].t, p); save(); drawBook(true);
+    if (SHOW_MEDALS && ach.length) msg += (msg ? '<br>' : '') + '獲得勳章：' + ach.map(function (x) { return '「' + x + '」'; }).join('');
     return msg;
   }
   drawBook(false);
@@ -195,6 +215,7 @@
     var pool = list.map(function (p) { return { p: p, n: nameOf(p.cap) }; }).filter(function (x) { return x.n; });
     var names = pool.map(function (x) { return x.n; }).filter(function (n, i, a) { return a.indexOf(n) === i; });
     if (pool.length < 4 || names.length < 4) { qz.hidden = true; return; }
+    CROPS = pool.map(function (x) { return (x.p.crop || '').split('、')[0]; }).filter(function (c, i, a) { return c && a.indexOf(c) === i; });
     ALL = names.slice().sort(function (x, y) { return grp(x).i - grp(y).i || x.localeCompare(y, 'zh-Hant'); }); drawBook(false);
     function ask() {
       var q = pool[Math.floor(Math.random() * pool.length)], opts = [q.n];
@@ -206,7 +227,7 @@
       opts.forEach(function (o) {
         var b = document.createElement('button'); b.type = 'button'; b.textContent = o;
         b.onclick = function () {
-          tries++; var prize = ''; if (o === q.n) { score++; streak++; var before = Math.floor(grown / PER); grown++; try { localStorage.setItem('pdjPlant', grown); } catch (e) {} drawPlant(Math.floor(grown / PER) > before); prize = collect(q.n); } else streak = 0;
+          tries++; var prize = ''; if (o === q.n) { score++; streak++; var before = Math.floor(grown / PER); grown++; try { localStorage.setItem('pdjPlant', grown); } catch (e) {} drawPlant(Math.floor(grown / PER) > before); prize = collect(q.n, q.p); } else streak = 0;
           box.querySelectorAll('button').forEach(function (x) { x.disabled = true; if (x.textContent === q.n) x.className = 'ok'; else if (x === b) x.className = 'no'; });
           var m = qz.querySelector('.np-quiz-msg'); m.innerHTML = (o === q.n ? '答對了！' + (prize ? '<span class="np-prize-msg">' + prize + '</span>' : '') : '可惜，答案是「' + q.n + '」。') + ' <a href="' + q.p.url + '" data-go>看案件</a>・<button type="button" class="np-next">下一題 ▸</button>';
           m.querySelector('.np-next').onclick = ask;
