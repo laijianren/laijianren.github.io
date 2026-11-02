@@ -640,3 +640,65 @@ button.bdg { font: inherit; background: none; border: 0; padding: 0; cursor: poi
 .quiz-sec .np-book-rank b { letter-spacing: .1em; }
 .quiz-sec .np-prize { grid-template-columns: 190px minmax(0, 1fr); }
 @media (max-width: 820px) { .quiz-sec .np-prize { grid-template-columns: minmax(0, 1fr); } }
+/* ===== 開頭畫面 v4：雜誌風（白底、細線、斜體導言、手繪封面） ===== */
+.cover.cv2.ny { background: #fcfbf7; background-image: none; }
+.ny .cv { text-align: left; max-width: 1180px; padding: 0 24px 70px; }
+.ny-top { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 26px; padding: 14px 0 12px; border-bottom: 1px solid #1d150b; font-family: var(--serif); font-size: .82rem; letter-spacing: .14em; }
+.ny-top a:hover { color: var(--red); }
+.ny-mast { text-align: center; padding: 34px 0 18px; border-bottom: 1px solid #1d150b; }
+.ny .cv-title { font-size: clamp(2.4rem, 6.6vw, 5.4rem) !important; }
+.ny-date { margin: 10px 0 0; font-family: var(--serif); font-size: .8rem; letter-spacing: .22em; color: #5c5246; }
+.ny-hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 48px; align-items: center; padding: 44px 0 48px; border-bottom: 1px solid #1d150b; }
+.ny-art svg { display: block; width: 100%; height: auto; }
+.ny-sky { fill: #f3ead6; }
+.ny-sun { fill: #e9c46a; opacity: .55; }
+.ny .ln { fill: none; stroke: #1d150b; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.ny-spots circle, .ny-zoom circle, .ny-bug .dot { fill: #b0241b; }
+.ny-zoom circle { fill: #8a3a12; opacity: .85; }
+.ny-lens .glass { fill: #fffdf5; opacity: .75; }
+.ny-k { font-family: var(--serif); font-size: .76rem; font-weight: 700; letter-spacing: .3em; color: var(--red); margin: 0 0 8px; }
+.ny-lead h2 { font-family: var(--serif); font-weight: 900; font-size: clamp(1.9rem, 3.6vw, 3rem); line-height: 1.22; margin: 0 0 14px; padding: 0; border: 0; }
+.ny-lead h2::after { display: none; }
+.ny-lead h2 a:hover { color: var(--red); }
+.ny-dek { font-style: italic; font-size: 1.08rem; line-height: 1.75; color: #3a332a; margin: 0 0 14px; }
+.ny-by { font-family: var(--serif); font-size: .78rem; letter-spacing: .2em; color: #5c5246; margin: 0; }
+.ny .cv-btns { justify-content: flex-start; margin-top: 26px; }
+.ny-more { padding-top: 30px; }
+.ny-sec { font-family: var(--serif); font-weight: 900; letter-spacing: .5em; font-size: .9rem; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 3px solid #1d150b; display: inline-block; }
+.ny-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ny-grid { margin: 0 -22px; }
+.ny-card { display: block; padding: 0 22px; }
+.ny-card + .ny-card { border-left: 1px solid #cfc6b4; }
+.ny-card img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; margin-bottom: 12px; }
+.ny-card h3 { font-family: var(--serif); font-weight: 900; font-size: 1.22rem; line-height: 1.35; margin: 0 0 6px; }
+.ny-card .ny-dek { font-size: .92rem; margin-bottom: 8px; }
+.ny-card:hover h3 { color: var(--red); }
+/* 動態：插畫線條一筆一筆畫出來，放大鏡輕輕晃動，甲蟲慢慢爬 */
+.ny .ln path, .ny .ln circle { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.ny.in .ln path, .ny.in .ln circle { stroke-dashoffset: 0; transition: stroke-dashoffset 2.2s ease .2s; }
+.ny-spots, .ny-zoom, .ny-bug .dot, .ny-sun { opacity: 0; transition: opacity 1s ease 1.8s; }
+.ny.in .ny-spots, .ny.in .ny-bug .dot { opacity: 1; } .ny.in .ny-zoom { opacity: .85; } .ny.in .ny-sun { opacity: .55; }
+.ny-lens { transform-origin: 300px 166px; animation: ny-lens 7s ease-in-out 2.4s infinite; }
+@keyframes ny-lens { 0%, 100% { transform: none; } 50% { transform: translate(-18px, 10px) rotate(-3deg); } }
+.ny-bug { animation: ny-bug 14s ease-in-out 2.4s infinite alternate; }
+@keyframes ny-bug { to { transform: translate(-46px, -8px) rotate(-8deg); } }
+.ny-art:hover .ny-lens { animation-play-state: paused; }
+.ny .ny-lead > * { opacity: 0; transform: translateY(12px); }
+.ny.in .ny-lead > * { opacity: 1; transform: none; transition: opacity .8s ease 1s, transform .8s ease 1s; }
+.ny .ny-more { opacity: 0; transform: translateY(30px); transition: opacity 1s, transform 1s; }
+.ny .ny-more.seen { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .ny .ln path, .ny .ln circle { stroke-dashoffset: 0; } .ny-lens, .ny-bug { animation: none; } .ny .ny-lead > *, .ny .ny-more { opacity: 1; transform: none; } }
+@media (max-width: 820px) {
+  .ny-grid { margin: 0; }
+  .ny .cv { padding: 0 16px 50px; }
+  .ny-top { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; gap: 18px; white-space: nowrap; scrollbar-width: none; }
+  .ny-mast { padding: 22px 0 14px; }
+  .ny-date { font-size: .7rem; letter-spacing: .08em; }
+  .ny-hero { grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 24px 0 30px; }
+  .ny-grid { grid-template-columns: minmax(0, 1fr); }
+  .ny-card { padding: 16px 0 !important; border-left: 0; border-top: 1px solid #cfc6b4; }
+  .ny-card:first-child { border-top: 0; padding-top: 0 !important; }
+}
+.ny .ln .lf { fill: #d5e0b5; fill-opacity: 0; transition: fill-opacity 1.2s ease 1.6s; }
+.ny .ln .fr { fill: #ecc35a; fill-opacity: 0; transition: fill-opacity 1.2s ease 1.6s; }
+.ny.in .ln .lf, .ny.in .ln .fr { fill-opacity: 1; transition: stroke-dashoffset 2.2s ease .2s, fill-opacity 1.2s ease 1.6s; }
