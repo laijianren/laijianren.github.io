@@ -79,6 +79,7 @@
   function render() {
     var groups = drawPins();
     var shown = records.filter(matches).filter(function (r) { return !state.town || r.places.indexOf(state.town) >= 0; });
+    root.classList.toggle('picked', !!state.town);
     var nTowns = Object.keys(groups).length;
     root.querySelector('.map-stats').textContent = nTowns + ' 個鄉鎮・' + records.filter(matches).length + ' 篇紀錄';
     place.innerHTML = '';
@@ -86,7 +87,7 @@
       place.textContent = label(state.town) + '　';
       var back = document.createElement('button'); back.type = 'button'; back.textContent = '顯示全部 ×';
       back.addEventListener('click', function () { select(''); }); place.appendChild(back);
-    } else place.textContent = '點選地圖上的圖釘，查看當地的紀錄。';
+    } else place.textContent = window.matchMedia('(max-width: 820px)').matches ? '點選地圖上的圖釘，查看當地的紀錄；全部案件列在下方。' : '點選地圖上的圖釘，查看當地的紀錄。';
     list.innerHTML = '';
     shown.forEach(function (r) {
       var li = document.createElement('li'), a = document.createElement('a');
