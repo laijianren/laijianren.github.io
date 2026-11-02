@@ -1,0 +1,109 @@
+{%- comment -%} 首頁：本報有獎徵答＋小盆栽＋病蟲害徽章標本冊（紀錄只存在讀者自己的瀏覽器） {%- endcomment -%}
+<section class="quiz-sec" aria-label="本報有獎徵答">
+  <div class="np-quiz" id="np-quiz">
+        <p class="np-kicker">本報有獎徵答</p>
+        <h3>猜猜看，這是什麼病蟲害？</h3>
+        <div class="np-quiz-q">
+        <figure class="np-quiz-img"><img alt="徵答照片"></figure>
+        <div class="np-quiz-side">
+        <div class="np-quiz-opts"></div>
+        <p class="np-quiz-msg" aria-live="polite"></p>
+        </div></div>
+        <div class="np-prize">
+        <div class="np-plant" id="np-plant" data-stage="0">
+          <svg viewBox="0 0 80 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 78 H58 L54 96 H26 Z M20 74 H60 V78 H20 Z" fill="#b5703c" stroke="#3a2412"/>
+            <path d="M24 74 Q40 69 56 74" stroke="#3a2412"/>
+            <ellipse class="seed" cx="40" cy="71.5" rx="3.2" ry="2" fill="#6b4a22"/>
+            <g class="st1" stroke="#2f5d2a"><path d="M40 72 V58"/><path d="M40 60 q-8 -6 -12 -2 q6 5 12 2 M40 60 q8 -6 12 -2 q-6 5 -12 2" fill="#7fae5a"/></g>
+            <g class="st2" stroke="#2f5d2a"><path d="M40 58 V42"/><path d="M40 48 q-14 -6 -18 2 q10 4 18 -2" fill="#6c9c4a"/></g>
+            <g class="st3" stroke="#2f5d2a"><path d="M40 42 V28"/><path d="M40 38 q14 -6 18 2 q-10 4 -18 -2 M40 32 q-10 -6 -14 0 q8 3 14 0" fill="#5e8f40"/></g>
+            <g class="st4"><path d="M40 28 q-5 -4 0 -10 q5 6 0 10" fill="#c64a3e" stroke="#7a2018"/><path d="M37 27 q3 2 6 0" stroke="#2f5d2a"/></g>
+            <g class="st5" stroke="#7a2018"><g fill="#d8584a"><ellipse cx="40" cy="12" rx="5" ry="8"/><ellipse cx="40" cy="12" rx="5" ry="8" transform="rotate(72 40 20)"/><ellipse cx="40" cy="12" rx="5" ry="8" transform="rotate(144 40 20)"/><ellipse cx="40" cy="12" rx="5" ry="8" transform="rotate(216 40 20)"/><ellipse cx="40" cy="12" rx="5" ry="8" transform="rotate(288 40 20)"/></g><circle cx="40" cy="20" r="3.5" fill="#e8b840" stroke="#8a5a10"/></g>
+          </g></svg>
+          <div><b>我的小盆栽</b><span class="np-plant-stage"></span><span class="np-plant-bar"><i></i></span><span class="np-plant-tip"></span></div>
+        </div>
+        <div class="np-book" id="np-book">
+          <div class="np-book-head"><b>我的標本冊</b><span class="np-book-count"></span></div>
+          <p class="np-book-rank"></p>
+          <div class="np-book-recent"></div>
+          <button type="button" class="np-book-open">翻開標本冊 ▸</button>
+          <div class="np-book-all" hidden></div>
+        </div>
+        </div>
+        <p class="np-quiz-score"></p>
+      </div>
+</section>
+<script>
+(function () {
+  // 有獎徵答：從照片圖說取出病蟲害名稱，四選一
+  var qz = document.getElementById('np-quiz'), score = 0, tries = 0;
+  // 我的小盆栽：累計答對存在讀者自己的瀏覽器，每答對 3 題長大一階，第 5 階開花
+  var STAGES = ['種子', '發芽', '長出新葉', '枝葉茂盛', '結花苞', '開花了！'], PER = 3, grown = 0;
+  try { grown = parseInt(localStorage.getItem('pdjPlant') || '0', 10) || 0; } catch (e) {}
+  function drawPlant(up) {
+    var el = document.getElementById('np-plant'), st = Math.min(5, Math.floor(grown / PER));
+    el.setAttribute('data-stage', st);
+    el.querySelector('.np-plant-stage').textContent = '第 ' + st + ' 階・' + STAGES[st];
+    el.querySelector('.np-plant-bar i').style.width = (st >= 5 ? 100 : (grown % PER) / PER * 100) + '%';
+    el.querySelector('.np-plant-tip').textContent = st >= 5 ? '累計答對 ' + grown + ' 題，花開了！' : '再答對 ' + (PER - grown % PER) + ' 題就會長大';
+    if (up) { el.classList.remove('grow'); void el.offsetWidth; el.classList.add('grow'); }
+  }
+  drawPlant(false);
+  // 病蟲害徽章標本冊：每答對一種病蟲害就收集一枚，存在讀者自己的瀏覽器
+  var got = [], ALL = [];
+  try { got = JSON.parse(localStorage.getItem('pdjBadges') || '[]'); } catch (e) {}
+  var RANKS = [[0, '尚未入門'], [1, '見習生'], [5, '田間助手'], [10, '診療師學徒'], [20, '植物診療師'], [30, '病蟲害博士']];
+  var BUG = '<path d="M20 13 c-5 0 -7 5 -7 9 s3 8 7 8 7 -4 7 -8 -2 -9 -7 -9 Z M20 13 V30 M16 11 q4 -4 8 0 M13 18 l-5 -2 M13 23 h-5 M14 27 l-4 3 M27 18 l5 -2 M27 23 h5 M26 27 l4 3 M18 9 l-2 -4 M22 9 l2 -4"/>';
+  var LEAF = '<path d="M11 29 C11 17 19 10 30 10 C30 22 23 29 11 29 Z M11 29 L24 16 M16 24 l-1 -4 M20 20 l-1 -4 M18 25 l4 0"/><circle cx="23" cy="22" r="1.6" fill="currentColor"/><circle cx="17" cy="19" r="1.2" fill="currentColor"/>';
+  function isBug(n) { return /(蟲|蝨|蛾|蟎|椿象|蠅|蚜|螟)$/.test(n); }
+  function badge(n, on) {
+    return '<span class="bdg ' + (on ? (isBug(n) ? 'bug' : 'dis') : 'off') + '" title="' + (on ? n : '尚未收集') + '"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5"/><circle cx="20" cy="20" r="15.5" stroke-dasharray="1.5 2"/><g transform="translate(0 -1) scale(.82) translate(4.4 4.4)">' + (on ? (isBug(n) ? BUG : LEAF) : '<text x="20" y="27" text-anchor="middle" font-size="18" stroke="none" fill="currentColor">？</text>') + '</g></svg><small>' + (on ? n : '？？') + '</small></span>';
+  }
+  function drawBook(fresh) {
+    var el = document.getElementById('np-book'), n = got.length, rank = RANKS[0][1];
+    RANKS.forEach(function (r) { if (n >= r[0]) rank = r[1]; });
+    el.querySelector('.np-book-count').textContent = '收集 ' + n + (ALL.length ? ' / ' + ALL.length : '') + ' 種';
+    el.querySelector('.np-book-rank').textContent = '稱號：' + rank;
+    el.querySelector('.np-book-recent').innerHTML = got.length ? got.slice(-4).reverse().map(function (x) { return badge(x, true); }).join('') : '<em>答對第一題，就能收集第一枚徽章。</em>';
+    if (fresh) { var f = el.querySelector('.np-book-recent .bdg'); if (f) f.classList.add('new'); }
+    var all = el.querySelector('.np-book-all');
+    if (!all.hidden) all.innerHTML = ALL.map(function (x) { return badge(x, got.indexOf(x) >= 0); }).join('');
+  }
+  document.querySelector('.np-book-open').onclick = function () {
+    var all = document.querySelector('.np-book-all'); all.hidden = !all.hidden;
+    this.textContent = all.hidden ? '翻開標本冊 ▸' : '闔上標本冊 ▴'; drawBook(false);
+  };
+  drawBook(false);
+  function nameOf(cap) {
+    var t = cap.replace(/<[^>]*>/g, '').replace(/（[^）]*）|\([^)]*\)/g, '').split(/[，。、：；\s]/)[0].trim();
+    return /^[一-鿿]{2,8}$/.test(t) && !/[的上之]|表面|症狀|危害/.test(t) && /(病|蟲|蝨|蛾|蟎|椿象|蠅|蚜|螟)$/.test(t) ? t : '';
+  }
+  fetch('{{ "/assets/photos.json" | relative_url }}').then(function (r) { return r.json(); }).then(function (list) {
+    var pool = list.map(function (p) { return { p: p, n: nameOf(p.cap) }; }).filter(function (x) { return x.n; });
+    var names = pool.map(function (x) { return x.n; }).filter(function (n, i, a) { return a.indexOf(n) === i; });
+    if (pool.length < 4 || names.length < 4) { qz.hidden = true; return; }
+    ALL = names.slice().sort(function (x, y) { return isBug(x) - isBug(y) || x.localeCompare(y, 'zh-Hant'); }); drawBook(false);
+    function ask() {
+      var q = pool[Math.floor(Math.random() * pool.length)], opts = [q.n];
+      while (opts.length < 4) { var n = names[Math.floor(Math.random() * names.length)]; if (opts.indexOf(n) < 0) opts.push(n); }
+      opts.sort(function () { return Math.random() - .5; });
+      qz.querySelector('img').src = q.p.src;
+      qz.querySelector('.np-quiz-msg').textContent = '';
+      var box = qz.querySelector('.np-quiz-opts'); box.innerHTML = '';
+      opts.forEach(function (o) {
+        var b = document.createElement('button'); b.type = 'button'; b.textContent = o;
+        b.onclick = function () {
+          tries++; var isNew = false; if (o === q.n) { score++; var before = Math.floor(grown / PER); grown++; try { localStorage.setItem('pdjPlant', grown); } catch (e) {} drawPlant(Math.floor(grown / PER) > before); if (got.indexOf(q.n) < 0) { got.push(q.n); isNew = true; try { localStorage.setItem('pdjBadges', JSON.stringify(got)); } catch (e) {} drawBook(true); } }
+          box.querySelectorAll('button').forEach(function (x) { x.disabled = true; if (x.textContent === q.n) x.className = 'ok'; else if (x === b) x.className = 'no'; });
+          var m = qz.querySelector('.np-quiz-msg'); m.innerHTML = (o === q.n ? (isNew ? '答對了！獲得新徽章「' + q.n + '」。' : '答對了！') : '可惜，答案是「' + q.n + '」。') + ' <a href="' + q.p.url + '" data-go>看案件</a>・<button type="button" class="np-next">下一題 ▸</button>';
+          m.querySelector('.np-next').onclick = ask;
+          qz.querySelector('.np-quiz-score').textContent = '本次成績：' + score + ' / ' + tries;
+        };
+        box.appendChild(b);
+      });
+    }
+    ask();
+  });
+})();
+</script>

@@ -115,6 +115,9 @@ title: 頭版
   <script src="{{ '/assets/field-map.js' | relative_url }}" defer></script>
 </section>
 
+<h2 class="section-label wide" id="quiz">本報有獎徵答</h2>
+{% include quiz.html %}
+
 <h2 class="section-label wide">本報導覽</h2>
 <div class="cards index-cards">
   <a class="card icon-card" href="{{ '/cases/' | relative_url }}">{% include icon.html name='leaf' %}<h3>診斷案件</h3><p>{{ site.cases.size }} 筆田間診斷紀錄</p></a>
