@@ -1,17 +1,17 @@
 # 全球植物病蟲害週報（賴建任另一個專案）最新一期重點，每期更新這裡即可
 url: https://claude.ai/artifact/F4giETFJzRxQeqP952t59R
-issue: 第 3 期
-date: 2026/10/26
+issue: 第 4 期
+date: 2026/11/02
 items:
   - region: 日本
-    title: 廣島縣首次確認中國梨木蝨危害日本梨，發布特殊報
-    sci: Cacopsylla jukyungi
-  - region: 南韓
-    title: 松材線蟲萎凋病進入「第三次大流行」，今年受害松樹逾 177 萬棵
-    sci: Bursaphelenchus xylophilus
-  - region: 日本
-    title: 山東廣翅蠟蟬北上新潟，已有 32 個都府縣發布特殊報
-    sci: Pochazia shantungensis
-  - region: 盧森堡
-    title: 木質部難養菌首度現蹤摩塞爾葡萄產區，2.35 公頃葡萄園將剷除
+    title: 一度瀕臨絕跡的稻椿象捲土重來，長野縣首次確認並發布特殊報
+    sci: Niphe elongata
+  - region: 臺灣
+    title: 薔琵颱風農損逾 3.4 億元，臺東農改場籲防柑橘潰瘍病、番荔枝炭疽病
+    sci: Xanthomonas citri
+  - region: 臺灣
+    title: 中部二期稻抽穗，臺中農改場籲防褐飛蝨、白背飛蝨與瘤野螟
+    sci: Nilaparvata lugens
+  - region: 義大利
+    title: 木質部難養菌首度攻進卡拉布里亞，緩衝區橄欖須脫葉、只能送本鎮油坊
     sci: Xylella fastidiosa
