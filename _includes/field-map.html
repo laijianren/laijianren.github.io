@@ -24,7 +24,7 @@
   <script type="application/json" id="map-records">[
 {%- assign recs = site.cases | concat: site.visits | sort: 'date' | reverse -%}
 {%- for r in recs -%}
-{"title":{{ r.title | jsonify }},"url":{{ r.url | relative_url | jsonify }},"date":{{ r.date | date: '%Y-%m-%d' | jsonify }},"crop":{{ r.crop | jsonify }},"location":{{ r.location | jsonify }},"cover":{{ r.cover | relative_url | jsonify }},"kind":"{% if r.collection == 'visits' %}visit{% else %}case{% endif %}"}{% unless forloop.last %},{% endunless %}
+{"title":{{ r.title | jsonify }},"url":{{ r.url | relative_url | jsonify }},"date":{{ r.date | date: '%Y-%m-%d' | jsonify }},"crop":{{ r.crop | jsonify }},"location":{{ r.location | jsonify }},"cover":{{ r.cover | replace_first: '/assets/', '/assets/thumbs/' | replace: '.jpg', '.webp' | relative_url | jsonify }},"kind":"{% if r.collection == 'visits' %}visit{% else %}case{% endif %}"}{% unless forloop.last %},{% endunless %}
 {%- endfor -%}
 ]</script>
   <script type="application/json" id="map-towns">{{ site.data.towns | jsonify }}</script>

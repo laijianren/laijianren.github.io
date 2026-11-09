@@ -8,23 +8,23 @@ cover: /assets/cases/2023-06-02-nanzhou-wax-apple/05.jpg
 cover_caption: 蓮霧果實腐爛並長出菌絲
 ---
 
-<figure class="photo wide"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/01.jpg" alt="蓮霧園區現場"><figcaption>圖一、園區照</figcaption></figure>
+<figure class="photo wide"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/01.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/01.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/01.jpg 1600w" sizes="(max-width: 820px) 100vw, 760px" loading="lazy" decoding="async" alt="蓮霧園區現場"><figcaption>圖一、園區照</figcaption></figure>
 
 ## 果腐病
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/02.jpg" alt="套袋內腐爛的蓮霧果實"><figcaption>果腐病（<em>Pestalotiopsis</em> sp.）</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/05.jpg" alt="蓮霧果實腐爛並長出菌絲"><figcaption>果腐病果實</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/06.jpg" alt="果實病斑上的菌絲與孢子堆"><figcaption>果腐病近照</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/02.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/02.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/02.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="套袋內腐爛的蓮霧果實"><figcaption>果腐病（<em>Pestalotiopsis</em> sp.）</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/05.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/05.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/05.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="蓮霧果實腐爛並長出菌絲"><figcaption>果腐病果實</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/06.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/06.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/06.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="果實病斑上的菌絲與孢子堆"><figcaption>果腐病近照</figcaption></figure>
 </div>
 
 ### 病原鑑定
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/07.jpg" alt="顯微鏡下的分生孢子"><figcaption><em>Pestalotiopsis</em> sp. 分生孢子</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/08.jpg" alt="培養皿上的白色菌落"><figcaption><em>Pestalotiopsis</em> sp. 於 PDA 上生長（正面）</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/09.jpg" alt="培養皿上的白色菌落"><figcaption><em>Pestalotiopsis</em> sp. 於 PDA 上生長（背面）</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/10.jpg" alt="PCA 培養基上產生黑色孢子堆"><figcaption><em>Pestalotiopsis</em> sp. 於 PCA 上生長（正面）</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/07.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/07.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/07.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="顯微鏡下的分生孢子"><figcaption><em>Pestalotiopsis</em> sp. 分生孢子</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/08.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/08.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/08.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="培養皿上的白色菌落"><figcaption><em>Pestalotiopsis</em> sp. 於 PDA 上生長（正面）</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/09.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/09.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/09.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="培養皿上的白色菌落"><figcaption><em>Pestalotiopsis</em> sp. 於 PDA 上生長（背面）</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/10.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/10.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/10.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="PCA 培養基上產生黑色孢子堆"><figcaption><em>Pestalotiopsis</em> sp. 於 PCA 上生長（正面）</figcaption></figure>
 </div>
 
 分離鑑定為蓮霧果腐病 *Pestalotiopsis* sp.。
@@ -32,16 +32,16 @@ cover_caption: 蓮霧果實腐爛並長出菌絲
 ## 黑腐病
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/12.jpg" alt="黑褐色腐爛的蓮霧果實"><figcaption>黑腐病果實</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/12.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/12.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/12.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="黑褐色腐爛的蓮霧果實"><figcaption>黑腐病果實</figcaption></figure>
 </div>
 
 ### 病原鑑定
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/13.jpg" alt="顯微鏡下的孢子"><figcaption>分生孢子</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/14.jpg" alt="顯微鏡下的孢子"><figcaption>分生孢子</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/15.jpg" alt="培養皿上的灰色菌落"><figcaption><em>Lasiodiplodia</em> sp. 於 PDA 上生長（正面）</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/16.jpg" alt="培養皿上的灰色菌落"><figcaption><em>Lasiodiplodia</em> sp. 於 PDA 上生長（背面）</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/13.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/13.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/13.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="顯微鏡下的孢子"><figcaption>分生孢子</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/14.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/14.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/14.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="顯微鏡下的孢子"><figcaption>分生孢子</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/15.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/15.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/15.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="培養皿上的灰色菌落"><figcaption><em>Lasiodiplodia</em> sp. 於 PDA 上生長（正面）</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/16.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/16.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/16.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="培養皿上的灰色菌落"><figcaption><em>Lasiodiplodia</em> sp. 於 PDA 上生長（背面）</figcaption></figure>
 </div>
 
 分離鑑定為黑腐病菌 *Lasiodiplodia* sp.。
@@ -49,9 +49,9 @@ cover_caption: 蓮霧果實腐爛並長出菌絲
 ## 蓮霧細蛾
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/03.jpg" alt="葉片上的褐色潛食痕"><figcaption>蓮霧細蛾危害</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/18.jpg" alt="蓮霧細蛾危害新芽"><figcaption>蓮霧細蛾危害新芽</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/19.jpg" alt="葉片上的蓮霧細蛾危害與幼蟲"><figcaption>蓮霧細蛾</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/03.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/03.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/03.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="葉片上的褐色潛食痕"><figcaption>蓮霧細蛾危害</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/18.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/18.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/18.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="蓮霧細蛾危害新芽"><figcaption>蓮霧細蛾危害新芽</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2023-06-02-nanzhou-wax-apple/19.jpg" srcset="/assets/thumbs/cases/2023-06-02-nanzhou-wax-apple/19.webp 640w, /assets/cases/2023-06-02-nanzhou-wax-apple/19.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="葉片上的蓮霧細蛾危害與幼蟲"><figcaption>蓮霧細蛾</figcaption></figure>
 </div>
 
 ## 診斷結果

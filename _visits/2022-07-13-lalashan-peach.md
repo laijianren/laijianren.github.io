@@ -13,10 +13,10 @@ cover_caption: 吸果夜蛾危害果實
 ## 吸果夜蛾
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/visits/2022-07-13-lalashan-peach/01.jpg" alt="吸果夜蛾標本"><figcaption>吸果夜蛾標本</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2022-07-13-lalashan-peach/03.jpg" alt="吸果夜蛾危害果實"><figcaption>吸果夜蛾危害果實</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2022-07-13-lalashan-peach/04.jpg" alt="吸果夜蛾危害果實"><figcaption>吸果夜蛾危害果實</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2022-07-13-lalashan-peach/07.jpg" alt="綠斑枯葉裳蛾幼蟲"><figcaption>綠斑枯葉裳蛾幼蟲</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2022-07-13-lalashan-peach/01.jpg" srcset="/assets/thumbs/visits/2022-07-13-lalashan-peach/01.webp 640w, /assets/visits/2022-07-13-lalashan-peach/01.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="吸果夜蛾標本"><figcaption>吸果夜蛾標本</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2022-07-13-lalashan-peach/03.jpg" srcset="/assets/thumbs/visits/2022-07-13-lalashan-peach/03.webp 640w, /assets/visits/2022-07-13-lalashan-peach/03.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="吸果夜蛾危害果實"><figcaption>吸果夜蛾危害果實</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2022-07-13-lalashan-peach/04.jpg" srcset="/assets/thumbs/visits/2022-07-13-lalashan-peach/04.webp 640w, /assets/visits/2022-07-13-lalashan-peach/04.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="吸果夜蛾危害果實"><figcaption>吸果夜蛾危害果實</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2022-07-13-lalashan-peach/07.jpg" srcset="/assets/thumbs/visits/2022-07-13-lalashan-peach/07.webp 640w, /assets/visits/2022-07-13-lalashan-peach/07.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="綠斑枯葉裳蛾幼蟲"><figcaption>綠斑枯葉裳蛾幼蟲</figcaption></figure>
 </div>
 
 - 吸果夜蛾是總稱，口器為堅硬的棘狀口喙，可以刺破套袋。
@@ -27,7 +27,7 @@ cover_caption: 吸果夜蛾危害果實
 ## 防治方法
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/visits/2022-07-13-lalashan-peach/05.jpg" alt="旋轉式避蛾燈"><figcaption>旋轉式避蛾燈</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2022-07-13-lalashan-peach/05.jpg" srcset="/assets/thumbs/visits/2022-07-13-lalashan-peach/05.webp 640w, /assets/visits/2022-07-13-lalashan-peach/05.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="旋轉式避蛾燈"><figcaption>旋轉式避蛾燈</figcaption></figure>
 </div>
 
 **食餌誘引**：用次級熟果誘引，再以蒼蠅拍撲打。

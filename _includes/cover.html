@@ -34,7 +34,7 @@
       <div class="ny-grid">
         {%- for r in c_all offset: 1 limit: 3 %}
         <a class="ny-card" href="{{ r.url | relative_url }}" data-go>
-          {%- if r.cover %}<span class="ny-thumb"><img src="{{ r.cover | relative_url }}" alt="" loading="lazy"></span>{% endif %}
+          {%- if r.cover %}<span class="ny-thumb"><img src="{{ r.cover | replace_first: '/assets/', '/assets/thumbs/' | replace: '.jpg', '.webp' | relative_url }}" alt="" loading="lazy"></span>{% endif %}
           <p class="ny-k">{% if r.collection == 'visits' %}參訪筆記{% else %}診斷案件{% endif %}</p>
           <h3>{{ r.title }}</h3>
           <p class="ny-dek">{% if r.diagnosis %}{{ r.diagnosis }}{% else %}{{ r.topics }}{% endif %}</p>

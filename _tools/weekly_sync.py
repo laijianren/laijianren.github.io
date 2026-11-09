@@ -80,8 +80,14 @@ for part in re.split(r'<div class="issue" id="', s)[1:]:
             if sci:
                 it['sci'] = sci
             src = os.path.join(IMG, date, f'{no:02d}.webp')
+            dst = f'{OUT}/{date}/{no:02d}.webp'
+            img = still = None
             if os.path.exists(src):
                 img, still = convert(src, date, no)
+            elif os.path.exists(dst):  # 這次沒下載、但之前已轉好的插圖
+                img = dst
+                still = dst[:-5] + '.jpg' if os.path.exists(dst[:-5] + '.jpg') else None
+            if img:
                 it['img'] = '/' + img
                 if still:
                     it['still'] = '/' + still

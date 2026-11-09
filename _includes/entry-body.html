@@ -1,0 +1,5 @@
+{%- comment -%} 文章內文。_config.yml 的 hide_pending: true 時，只寫「（待補充）」的段落（例如還沒填的建議處理、後續追蹤）先不顯示，填上內容後會自動出現 {%- endcomment -%}
+{%- if site.hide_pending -%}
+{%- assign parts = include.html | split: '<h2' -%}
+{{ parts[0] }}{%- for part in parts offset: 1 -%}{%- assign body = part | split: '</h2>' | last | strip -%}{%- unless body == '<p>（待補充）</p>' -%}<h2{{ part }}{%- endunless -%}{%- endfor -%}
+{%- else -%}{{ include.html }}{%- endif -%}

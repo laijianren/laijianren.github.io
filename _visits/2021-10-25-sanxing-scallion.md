@@ -8,12 +8,12 @@ cover: /assets/visits/2021-10-25-sanxing-scallion/03.jpg
 cover_caption: 甜菜夜蛾危害狀
 ---
 
-<figure class="photo wide"><img src="/assets/visits/2021-10-25-sanxing-scallion/01.jpg" alt="三星青蔥田"><figcaption>圖一、青蔥田</figcaption></figure>
+<figure class="photo wide"><img src="/assets/visits/2021-10-25-sanxing-scallion/01.jpg" srcset="/assets/thumbs/visits/2021-10-25-sanxing-scallion/01.webp 640w, /assets/visits/2021-10-25-sanxing-scallion/01.jpg 1600w" sizes="(max-width: 820px) 100vw, 760px" loading="lazy" decoding="async" alt="三星青蔥田"><figcaption>圖一、青蔥田</figcaption></figure>
 
 ## 種植方式
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/07.jpg" alt="分株種植"><figcaption>分株種法：用器具鑽孔，放入一根母株</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/07.jpg" srcset="/assets/thumbs/visits/2021-10-25-sanxing-scallion/07.webp 640w, /assets/visits/2021-10-25-sanxing-scallion/07.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="分株種植"><figcaption>分株種法：用器具鑽孔，放入一根母株</figcaption></figure>
 </div>
 
 - 品種以 19 號為主，另有小綠。蔥白長約 15–20 公分。
@@ -27,8 +27,8 @@ cover_caption: 甜菜夜蛾危害狀
 ## 甜菜夜蛾
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/03.jpg" alt="甜菜夜蛾危害青蔥"><figcaption>甜菜夜蛾危害狀</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/06.jpg" alt="甜菜夜蛾危害青蔥"><figcaption>甜菜夜蛾危害狀</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/03.jpg" srcset="/assets/thumbs/visits/2021-10-25-sanxing-scallion/03.webp 640w, /assets/visits/2021-10-25-sanxing-scallion/03.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="甜菜夜蛾危害青蔥"><figcaption>甜菜夜蛾危害狀</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2021-10-25-sanxing-scallion/06.jpg" srcset="/assets/thumbs/visits/2021-10-25-sanxing-scallion/06.webp 640w, /assets/visits/2021-10-25-sanxing-scallion/06.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="甜菜夜蛾危害青蔥"><figcaption>甜菜夜蛾危害狀</figcaption></figure>
 </div>
 
 下雨時蟲會變少，清明過後蟲變多。

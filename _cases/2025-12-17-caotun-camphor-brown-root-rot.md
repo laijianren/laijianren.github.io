@@ -8,16 +8,16 @@ cover: /assets/cases/2025-12-17-caotun-camphor/05.jpg
 cover_caption: 罹病樟樹（左）樹冠稀疏，右為健康樹
 ---
 
-<figure class="photo wide"><img src="/assets/cases/2025-12-17-caotun-camphor/05.jpg" alt="樟樹現場，樹冠稀疏"><figcaption>圖一　現場</figcaption></figure>
+<figure class="photo wide"><img src="/assets/cases/2025-12-17-caotun-camphor/05.jpg" srcset="/assets/thumbs/cases/2025-12-17-caotun-camphor/05.webp 640w, /assets/cases/2025-12-17-caotun-camphor/05.jpg 1600w" sizes="(max-width: 820px) 100vw, 760px" loading="lazy" decoding="async" alt="樟樹現場，樹冠稀疏"><figcaption>圖一　現場</figcaption></figure>
 
 ## 現場病徵
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/02.jpg" alt="樟樹樹冠稀疏、落葉"><figcaption>樹冠稀疏</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/03.jpg" alt="樹基部土壤與根部"><figcaption>樹基部</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/04.jpg" alt="根部表面的褐色菌絲面"><figcaption>根部褐色菌絲面</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/06.jpg" alt="於PDA分離培養"><figcaption>於 PDA 分離培養</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/07.jpg" alt="分離培養的菌落，菌絲轉為褐色"><figcaption>菌落轉褐色</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/02.jpg" srcset="/assets/thumbs/cases/2025-12-17-caotun-camphor/02.webp 640w, /assets/cases/2025-12-17-caotun-camphor/02.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="樟樹樹冠稀疏、落葉"><figcaption>樹冠稀疏</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/03.jpg" srcset="/assets/thumbs/cases/2025-12-17-caotun-camphor/03.webp 640w, /assets/cases/2025-12-17-caotun-camphor/03.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="樹基部土壤與根部"><figcaption>樹基部</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/04.jpg" srcset="/assets/thumbs/cases/2025-12-17-caotun-camphor/04.webp 640w, /assets/cases/2025-12-17-caotun-camphor/04.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="根部表面的褐色菌絲面"><figcaption>根部褐色菌絲面</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/06.jpg" srcset="/assets/thumbs/cases/2025-12-17-caotun-camphor/06.webp 640w, /assets/cases/2025-12-17-caotun-camphor/06.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="於PDA分離培養"><figcaption>於 PDA 分離培養</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/07.jpg" srcset="/assets/thumbs/cases/2025-12-17-caotun-camphor/07.webp 640w, /assets/cases/2025-12-17-caotun-camphor/07.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="分離培養的菌落，菌絲轉為褐色"><figcaption>菌落轉褐色</figcaption></figure>
 </div>
 
 ## 病原鑑定
@@ -25,11 +25,11 @@ cover_caption: 罹病樟樹（左）樹冠稀疏，右為健康樹
 褐根病菌的菌絲初期為白色，之後轉為褐色，顯微鏡下可見鹿角狀菌絲。以下是參考照片。
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p2.jpg" alt="於PDA培養基上培養，菌絲後期會由白色轉為褐色，且形成不規則褐色塊（菌落背面照）"><figcaption>於 PDA 培養基上培養，菌絲後期會由白色轉為褐色，且形成不規則褐色塊（菌落背面照）</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p3.jpg" alt="褐根病菌的鹿角菌絲（顯微鏡）"><figcaption>鹿角菌絲（參考）</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p4.jpg" alt="褐根病菌的鹿角菌絲（顯微鏡）"><figcaption>鹿角菌絲（參考）</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p5.jpg" alt="褐根病菌的鹿角菌絲（顯微鏡）"><figcaption>鹿角菌絲（參考）</figcaption></figure>
-<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p6.jpg" alt="褐根病菌的鹿角菌絲（顯微鏡）"><figcaption>鹿角菌絲（參考）</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p2.jpg" srcset="/assets/thumbs/cases/2025-12-17-caotun-camphor/p2.webp 640w, /assets/cases/2025-12-17-caotun-camphor/p2.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="於PDA培養基上培養，菌絲後期會由白色轉為褐色，且形成不規則褐色塊（菌落背面照）"><figcaption>於 PDA 培養基上培養，菌絲後期會由白色轉為褐色，且形成不規則褐色塊（菌落背面照）</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p3.jpg" srcset="/assets/thumbs/cases/2025-12-17-caotun-camphor/p3.webp 640w, /assets/cases/2025-12-17-caotun-camphor/p3.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="褐根病菌的鹿角菌絲（顯微鏡）"><figcaption>鹿角菌絲（參考）</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p4.jpg" srcset="/assets/thumbs/cases/2025-12-17-caotun-camphor/p4.webp 640w, /assets/cases/2025-12-17-caotun-camphor/p4.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="褐根病菌的鹿角菌絲（顯微鏡）"><figcaption>鹿角菌絲（參考）</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p5.jpg" srcset="/assets/thumbs/cases/2025-12-17-caotun-camphor/p5.webp 640w, /assets/cases/2025-12-17-caotun-camphor/p5.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="褐根病菌的鹿角菌絲（顯微鏡）"><figcaption>鹿角菌絲（參考）</figcaption></figure>
+<figure class="photo"><img src="/assets/cases/2025-12-17-caotun-camphor/p6.jpg" srcset="/assets/thumbs/cases/2025-12-17-caotun-camphor/p6.webp 640w, /assets/cases/2025-12-17-caotun-camphor/p6.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="褐根病菌的鹿角菌絲（顯微鏡）"><figcaption>鹿角菌絲（參考）</figcaption></figure>
 </div>
 
 ## 診斷結果

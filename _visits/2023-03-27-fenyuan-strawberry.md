@@ -13,9 +13,9 @@ cover_caption: 薊馬危害草莓
 ### 薊馬
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/05.jpg" alt="薊馬警戒費洛蒙"><figcaption>薊馬警戒費洛蒙（標示效期半年，農友約 4 個月更換一次）</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/06.jpg" alt="薊馬危害草莓"><figcaption>薊馬危害葉片狀。葉片會有明顯拉鍊狀暗褐色食痕</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/07.jpg" alt="薊馬危害草莓"><figcaption>薊馬危害葉片狀</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/05.jpg" srcset="/assets/thumbs/visits/2023-03-27-fenyuan-strawberry/05.webp 640w, /assets/visits/2023-03-27-fenyuan-strawberry/05.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="薊馬警戒費洛蒙"><figcaption>薊馬警戒費洛蒙（標示效期半年，農友約 4 個月更換一次）</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/06.jpg" srcset="/assets/thumbs/visits/2023-03-27-fenyuan-strawberry/06.webp 640w, /assets/visits/2023-03-27-fenyuan-strawberry/06.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="薊馬危害草莓"><figcaption>薊馬危害葉片狀。葉片會有明顯拉鍊狀暗褐色食痕</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/07.jpg" srcset="/assets/thumbs/visits/2023-03-27-fenyuan-strawberry/07.webp 640w, /assets/visits/2023-03-27-fenyuan-strawberry/07.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="薊馬危害草莓"><figcaption>薊馬危害葉片狀</figcaption></figure>
 </div>
 
 ### 其他害蟲
@@ -25,7 +25,7 @@ cover_caption: 薊馬危害草莓
 ### 葉枯病與炭疽病
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/09.jpg" alt="草莓葉枯病"><figcaption>草莓葉枯病（<em>Neopestalotiopsis rosae</em>）</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/09.jpg" srcset="/assets/thumbs/visits/2023-03-27-fenyuan-strawberry/09.webp 640w, /assets/visits/2023-03-27-fenyuan-strawberry/09.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="草莓葉枯病"><figcaption>草莓葉枯病（<em>Neopestalotiopsis rosae</em>）</figcaption></figure>
 </div>
 
 豐香品種炭疽病嚴重，現在多改種香水或美姬。農友會使用亞磷酸，葉面至少噴一次；噴藥時利用風把葉片吹起，更容易噴到葉背。
@@ -39,7 +39,7 @@ cover_caption: 薊馬危害草莓
 園區生產水洗豆。
 
 <div class="photo-grid">
-<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/13.jpg" alt="咖啡果實"><figcaption>咖啡需要人工採收，很費工，而且果實不會同時轉色</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/15.jpg" alt="自製誘引器"><figcaption>使用甲醇＋乙醇 1:1 混合配成誘引劑，誘引咖啡果小蠹雌成蟲</figcaption></figure>
-<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/17.jpg" alt="咖啡園"><figcaption>咖啡樹</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/13.jpg" srcset="/assets/thumbs/visits/2023-03-27-fenyuan-strawberry/13.webp 640w, /assets/visits/2023-03-27-fenyuan-strawberry/13.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="咖啡果實"><figcaption>咖啡需要人工採收，很費工，而且果實不會同時轉色</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/15.jpg" srcset="/assets/thumbs/visits/2023-03-27-fenyuan-strawberry/15.webp 640w, /assets/visits/2023-03-27-fenyuan-strawberry/15.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="自製誘引器"><figcaption>使用甲醇＋乙醇 1:1 混合配成誘引劑，誘引咖啡果小蠹雌成蟲</figcaption></figure>
+<figure class="photo"><img src="/assets/visits/2023-03-27-fenyuan-strawberry/17.jpg" srcset="/assets/thumbs/visits/2023-03-27-fenyuan-strawberry/17.webp 640w, /assets/visits/2023-03-27-fenyuan-strawberry/17.jpg 1600w" sizes="(max-width: 600px) 46vw, 260px" loading="lazy" decoding="async" alt="咖啡園"><figcaption>咖啡樹</figcaption></figure>
 </div>

@@ -808,3 +808,9 @@ main a.wk-card, main a.wk-art { text-decoration: none !important; }
   .wk-count { width: 100%; margin: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .wk-art img { transition: none; } .wk-card:hover .wk-art img { transform: none; } }
+
+/* 404 頁 */
+.np-404 { text-align: center; padding: 3rem 0 4rem; }
+.np-404 h1 { font-size: clamp(2rem, 6vw, 3.4rem); margin: .2rem 0 1rem; }
+.np-404 p { color: var(--muted); }
+.np-404-links { list-style: none; padding: 0; margin: 1.6rem 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 1.4rem; font-family: var(--serif); font-weight: 600; }

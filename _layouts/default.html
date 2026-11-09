@@ -4,7 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title and page.url != '/' %}{{ page.title }}｜{% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
+  {%- if page.description -%}{%- assign pdesc = page.description -%}
+  {%- elsif page.collection == 'cases' -%}{%- capture pdesc -%}{{ page.location }}的{{ page.crop }}田間診斷紀錄：{{ page.diagnosis | strip_html }}。{%- endcapture -%}
+  {%- elsif page.collection == 'visits' -%}{%- capture pdesc -%}{{ page.location }}參訪筆記：{{ page.topics | strip_html }}。{%- endcapture -%}
+  {%- else -%}{%- assign pdesc = site.description -%}{%- endif -%}
+  {%- assign latest = site.cases | sort: 'date' | last -%}
+  {%- assign pimg = page.cover | default: latest.cover -%}
+  <meta name="description" content="{{ pdesc | strip_newlines | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:type" content="{% if page.collection %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{% if page.title and page.url != '/' %}{{ page.title }}｜{% endif %}{{ site.title }}">
+  <meta property="og:description" content="{{ pdesc | strip_newlines | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ pimg | absolute_url }}">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#f1ede2">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&family=Cactus+Classical+Serif&family=Iansui&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=UnifrakturMaguntia&display=swap">

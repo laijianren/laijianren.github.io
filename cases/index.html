@@ -1,5 +1,6 @@
 ---
 title: 診斷案件
+description: 植物診療師 Lai 的田間診斷案件紀錄，含病徵照片、鑑定結果與臺灣鄉鎮分布地圖。
 ---
 <h1>診斷案件</h1>
 {% include field-map.html kind="case" %}
@@ -10,7 +11,7 @@ title: 診斷案件
 <div class="case-cards">
 {% for c in items %}
   <a class="case-card" href="{{ c.url | relative_url }}" data-crop="{{ c.crop | escape }}">
-    {% if c.cover %}<div class="case-thumb"><img src="{{ c.cover | relative_url }}" alt="{{ c.cover_caption | default: c.title }}"></div>{% endif %}
+    {% if c.cover %}<div class="case-thumb"><img src="{{ c.cover | replace_first: '/assets/', '/assets/thumbs/' | replace: '.jpg', '.webp' | relative_url }}" loading="lazy" decoding="async" alt="{{ c.cover_caption | default: c.title }}"></div>{% endif %}
     <div class="case-body">
       <p class="case-meta">{% if c.crop %}<span class="tag">{{ c.crop }}</span>{% endif %}{{ c.date | date: '%Y.%m.%d' }}</p>
       <h3>{{ c.title }}</h3>
