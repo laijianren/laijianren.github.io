@@ -67,10 +67,12 @@ title: 頭版
     <section class="side-block global-weekly">
       <h2 class="section-label">全球疫情週報</h2>
       <p class="kicker">{{ gw.issue }}・{{ gw.date }}</p>
+      {%- assign wk1 = site.data.weekly_issues.issues | first -%}{%- assign wkimg = wk1.items | first -%}
+      {%- if wkimg.img and wk1.issue == gw.issue %}<a class="wk-art" href="{{ '/weekly/' | relative_url }}" aria-label="全球疫情週報">{% if wkimg.still %}<picture><source media="(prefers-reduced-motion: reduce)" srcset="{{ wkimg.still | relative_url }}">{% endif %}<img src="{{ wkimg.img | relative_url }}" alt="{{ wkimg.title | strip_html | escape }}（示意插圖）" loading="lazy" decoding="async" width="800" height="400">{% if wkimg.still %}</picture>{% endif %}</a>{% endif %}
       <ul class="dispatch wire">
-        {% for it in gw.items %}<li><a href="{{ gw.url }}" target="_blank" rel="noopener"><b>{{ it.region }}</b>　{{ it.title }}{% if it.sci %}（<em>{{ it.sci }}</em>）{% endif %}</a></li>{% endfor %}
+        {% for it in gw.items %}<li><a href="{{ '/weekly/' | relative_url }}"><b>{{ it.region }}</b>　{{ it.title }}{% if it.sci %}（<em>{{ it.sci }}</em>）{% endif %}</a></li>{% endfor %}
       </ul>
-      <p class="more"><a href="{{ gw.url }}" target="_blank" rel="noopener">閱讀全球植物病蟲害週報 →</a></p>
+      <p class="more"><a href="{{ '/weekly/' | relative_url }}">全部週報與往期 →</a></p>
     </section>
     {% endif %}
     <section class="side-block">

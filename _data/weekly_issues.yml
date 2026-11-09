@@ -1,0 +1,522 @@
+# 全球植物病蟲害週報各期重點（新到舊），由 _tools/weekly_sync.py 產生。全文在 url 的週報頁，網址加 #期別 id 可直接開該期
+url: https://claude.ai/artifact/F4giETFJzRxQeqP952t59R
+issues:
+- issue: 第 5 期
+  date: 2026/11/09
+  id: i2026-11-09
+  highlights:
+  - 原本只在八角金盤上發現的病毒 FjRSaV，首度在日本茨城縣的甜椒上確認，疑由薊馬傳播，茨城縣已發布特殊報。
+  - 澳洲疫蝗的蝗蝻即將長翅，南澳政府改口出動飛機，在墨累河馬利地區七處噴藥，搶在創紀錄的小麥收成前防治。
+  - 波多黎各的秋行軍蟲對賜諾殺抗性逾 200 倍，對賜諾特也有 63 倍；臺灣目前賜諾特仍有效，更需要輪替用藥來保住它。
+  items:
+  - 'no': 1
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 日本
+    title: 八角金盤上的病毒跳到甜椒：茨城縣首次在日本甜椒確認 FjRSaV，疑由薊馬傳播，發布特殊報
+    sci: Orthotospovirus fatsiae
+    img: /assets/weekly/2026-11-09/01.webp
+    still: /assets/weekly/2026-11-09/01.jpg
+  - 'no': 2
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 日本
+    title: 白桃身上的灰黑「煤斑」：秋田縣首次確認桃煤黴病，病菌在枝條越冬、幼果期就已感染，發布特殊報
+    sci: Stenella persicae
+    img: /assets/weekly/2026-11-09/02.webp
+    still: /assets/weekly/2026-11-09/02.jpg
+  - 'no': 3
+    cat: 病蟲害疫情
+    cont:
+    - 大洋洲
+    region: 澳洲
+    title: 創紀錄的麥田等著收割，蝗蝻卻要長出翅膀：南澳政府改口，在墨累河馬利地區出動飛機噴藥防治澳洲疫蝗
+    sci: Chortoicetes terminifera
+    img: /assets/weekly/2026-11-09/03.webp
+    still: /assets/weekly/2026-11-09/03.jpg
+  - 'no': 4
+    cat: 病蟲害疫情
+    cont:
+    - 美洲
+    region: 墨西哥
+    title: 切開酪梨，種子裡躲著幼蟲：墨西哥出口查驗攔下「種子象鼻蟲」，果農焚埋最多 52 公噸酪梨
+    sci: Heilipus lauri
+    img: /assets/weekly/2026-11-09/04.webp
+    still: /assets/weekly/2026-11-09/04.jpg
+  - 'no': 5
+    cat: 病蟲害疫情
+    cont:
+    - 歐洲
+    region: 西班牙
+    title: 橄欖葉上冒出一顆顆灰褐色小圓盾：歐洲首見的南美盾介殼蟲 <em>Acutaspis paulista</em>，在西班牙加泰隆尼亞已擴及 15 個市鎮
+    sci: Acutaspis paulista
+    img: /assets/weekly/2026-11-09/05.webp
+    still: /assets/weekly/2026-11-09/05.jpg
+  - 'no': 6
+    cat: 檢疫與政策
+    cont:
+    - 美洲
+    region: 智利
+    title: 三個世代沒再抓到一隻：智利解除北部皮卡綠洲馬蒂亞的地中海果實蠅檢疫，不孕蟲、摘果與冷處理撐過七個月
+    sci: Ceratitis capitata
+    img: /assets/weekly/2026-11-09/06.webp
+    still: /assets/weekly/2026-11-09/06.jpg
+  - 'no': 7
+    cat: 檢疫與政策
+    cont:
+    - 美洲
+    region: 美國
+    title: 不再一發現就剷除：美國 11 月 9 日起把菊花白銹病移出檢疫病害，切花鬆綁、20 國菊花插穗可依系統性方法輸入（追蹤）
+    sci: Puccinia horiana
+    img: /assets/weekly/2026-11-09/07.webp
+    still: /assets/weekly/2026-11-09/07.jpg
+  - 'no': 8
+    cat: 農藥與防治資材
+    cont:
+    - 亞洲
+    region: 日本
+    title: 冷凍秋葵驗出最高 24 倍超標：日本首度對中國產秋葵下達「檢查命令」，每批都要驗植物生長調節劑甲哌鎓
+    sci: Abelmoschus esculentus
+    img: /assets/weekly/2026-11-09/08.webp
+    still: /assets/weekly/2026-11-09/08.jpg
+  - 'no': 9
+    cat: 研究進展
+    cont:
+    - 美洲
+    region: 波多黎各（美國）
+    title: 玉米種子重鎮的警訊：波多黎各秋行軍蟲對賜諾殺抗性逾 200 倍，臺灣目前仍有效的賜諾特也要省著用
+    sci: Spodoptera frugiperda
+    img: /assets/weekly/2026-11-09/09.webp
+    still: /assets/weekly/2026-11-09/09.jpg
+  - 'no': 10
+    cat: 研究進展
+    cont:
+    - 美洲
+    region: 美國（加州）
+    title: 麥田裡噴不死的小白花：加州首度確認繁縷對五種 ALS 抑制型除草劑同時抗藥，元凶是一個顯性突變 Trp574Leu
+    sci: Stellaria media
+    img: /assets/weekly/2026-11-09/10.webp
+    still: /assets/weekly/2026-11-09/10.jpg
+- issue: 第 4 期
+  date: 2026/11/02
+  id: i2026-11-02
+  highlights:
+  - 木質部難養菌（<em>Xylella fastidiosa</em>）首度攻進義大利卡拉布里亞，已砍除 287 棵橄欖樹；採收季緩衝區的橄欖必須先脫葉、只能送本鎮油坊。
+  - 丹麥撤銷 33 項會分解成 TFA（永久化學物質）的含氟農藥，禁令前的囤藥潮讓 2025 年農藥負荷指標暴增 33%，遠超減量目標。
+  - 曾一度瀕臨絕跡的稻椿象在暖化下捲土重來，長野縣首次確認發生，日本已有 37 個都府縣出現；臺灣中部二期稻也正面臨飛蝨威脅。
+  items:
+  - 'no': 1
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 日本
+    title: 曾一度瀕臨絕跡的水稻害蟲捲土重來：長野縣首次確認稻椿象，發布特殊報
+    sci: Niphe elongata
+    img: /assets/weekly/2026-11-02/01.webp
+  - 'no': 2
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 臺灣
+    title: 颱風走了，病菌才要進門：薔琵颱風農損逾 3.4 億元，臺東農改場籲防柑橘潰瘍病、番荔枝炭疽病
+    sci: Xanthomonas citri pv. citri
+    img: /assets/weekly/2026-11-02/02.webp
+  - 'no': 3
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 臺灣
+    title: 颱風過後，稻叢基部的「吸汁大軍」：中部二期稻抽穗，臺中農改場籲防褐飛蝨、白背飛蝨與瘤野螟
+    sci: Nilaparvata lugens
+    img: /assets/weekly/2026-11-02/03.webp
+  - 'no': 4
+    cat: 病蟲害疫情
+    cont:
+    - 歐洲
+    region: 義大利
+    title: 橄欖得先「脫葉」才能出園：木質部難養菌首度攻進義大利卡拉布里亞，採收季緩衝區橄欖禁止跨鎮送油坊
+    sci: Xylella fastidiosa
+    img: /assets/weekly/2026-11-02/04.webp
+  - 'no': 5
+    cat: 病蟲害疫情
+    cont:
+    - 美洲
+    region: 阿根廷
+    title: 兩年前吃掉近兩成玉米的小葉蟬退潮了：阿根廷監測網顯示玉米葉蟬五大產區全面下降，專家籲播種季別鬆懈
+    sci: Dalbulus maidis
+    img: /assets/weekly/2026-11-02/05.webp
+  - 'no': 6
+    cat: 病蟲害疫情
+    cont:
+    - 亞洲
+    region: 南韓
+    title: 松材線蟲萎凋病攻進首爾：今年 74 棵受害、擴及 7 個區，南山松林改為兩年預防注射一次（追蹤）
+    sci: Monochamus alternatus
+    img: /assets/weekly/2026-11-02/06.webp
+  - 'no': 7
+    cat: 病蟲害疫情
+    cont:
+    - 歐洲
+    region: 西班牙
+    title: 整片「塑膠海」的甜椒都中招：小刺薊馬侵襲西班牙阿美利亞 1.24 萬公頃溫室，生物防治業界籲全年聯防
+    sci: Thrips parvispinus
+    img: /assets/weekly/2026-11-02/07.webp
+  - 'no': 8
+    cat: 檢疫與政策
+    cont:
+    - 美洲
+    region: 厄瓜多
+    title: 洪水漫過圍堵牆：厄瓜多香蕉黃葉病 TR4 疫區淹水，監測半徑由 5 公里擴大到 8 公里（追蹤）
+    sci: Fusarium oxysporum f. sp. cubense TR4
+    img: /assets/weekly/2026-11-02/08.webp
+  - 'no': 9
+    cat: 檢疫與政策
+    cont:
+    - 亞洲
+    region: 南韓
+    title: 要研發國產藥劑，得先能合法「留住」病菌：南韓修正《植物防疫法》，准許以火傷病菌等防治對象病蟲害做研究與製藥
+    sci: Erwinia amylovora
+    img: /assets/weekly/2026-11-02/09.webp
+  - 'no': 10
+    cat: 檢疫與政策
+    cont:
+    - 非洲
+    - 亞洲
+    region: 波札那／中國
+    title: 柑橘要先在冷櫃裡待滿 16 天：中國開放波札那鮮食柑橘輸入，地中海果實蠅等 6 種非洲害蟲列管
+    sci: Ceratitis capitata
+    img: /assets/weekly/2026-11-02/10.webp
+  - 'no': 11
+    cat: 農藥與防治資材
+    cont:
+    - 大洋洲
+    region: 澳洲
+    title: 種子裡的抗藥性偷渡客：澳洲研究發現，大麥種子可把殺菌劑敏感性下降的網斑病菌帶進下一季
+    sci: Pyrenophora teres
+    img: /assets/weekly/2026-11-02/11.webp
+  - 'no': 12
+    cat: 農藥與防治資材
+    cont:
+    - 亞洲
+    region: 印度
+    title: 印度第一個自主發現的殺蟲劑成分將上市：pioxaniliprole 登記用於水稻、辣椒等作物，但它屬於抗藥性案例已多的二醯胺類（IRAC 28）
+    sci: Spodoptera frugiperda
+    img: /assets/weekly/2026-11-02/12.webp
+  - 'no': 13
+    cat: 農藥與防治資材
+    cont:
+    - 歐洲
+    region: 丹麥
+    title: 禁令生效前的囤藥潮：丹麥撤銷 33 項會分解成 TFA 的含氟農藥，2025 年農藥負荷指標暴增 33%、遠超減量目標
+    img: /assets/weekly/2026-11-02/13.webp
+    still: /assets/weekly/2026-11-02/13.jpg
+  - 'no': 14
+    cat: 研究進展
+    cont:
+    - 亞洲
+    region: 中國
+    title: 真菌換了偽裝也躲不掉：水稻一對「幾丁聚醣受體」登上 Science，轉入小麥、玉米同樣提升抗病力
+    sci: Pyricularia oryzae
+    img: /assets/weekly/2026-11-02/14.webp
+  - 'no': 15
+    cat: 研究進展
+    cont:
+    - 亞洲
+    region: 中國
+    title: 被吸過的稻子變「甜」，害蟲更會生也更耐藥：eLife 研究揭示斑飛蝨改寫水稻糖分分配，讓益達胺致死濃度升高約 2.6 倍
+    sci: Laodelphax striatellus
+    img: /assets/weekly/2026-11-02/15.webp
+- issue: 第 3 期
+  date: 2026/10/26
+  id: i2026-10-26
+  highlights:
+  - 南韓松材線蟲萎凋病進入「第三次大流行」，今年受害松樹逾 177 萬棵，是 2022 年的 4.7 倍。
+  - 斑衣蠟蟬已在加拿大安大略省建立族群，溫莎一帶劃為管制區；日本則有 32 個都府縣對山東廣翅蠟蟬發布特殊報。
+  - 澳洲有機農場停藥 14 個月後紅火蟻捲土重來，政府緊急核准以肉桂醛處理蟻巢。
+  items:
+  - 'no': 1
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 日本
+    title: 廣島縣首次確認中國梨木蝨危害日本梨，發布特殊報
+    sci: Cacopsylla jukyungi
+    img: /assets/weekly/2026-10-26/01.webp
+  - 'no': 2
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 南韓
+    title: 南韓松材線蟲萎凋病進入「第三次大流行」，今年受害松樹逾 177 萬棵
+    sci: Bursaphelenchus xylophilus
+    img: /assets/weekly/2026-10-26/02.webp
+  - 'no': 3
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 日本
+    title: 中國原產的山東廣翅蠟蟬北上新潟，日本已有 32 個都府縣發布特殊報
+    sci: Pochazia shantungensis
+    img: /assets/weekly/2026-10-26/03.webp
+  - 'no': 4
+    cat: 病蟲害疫情
+    cont:
+    - 歐洲
+    region: 盧森堡
+    title: 木質部難養菌首度現蹤盧森堡摩塞爾葡萄產區，2.35 公頃葡萄園將剷除
+    sci: Xylella fastidiosa
+    img: /assets/weekly/2026-10-26/04.webp
+  - 'no': 5
+    cat: 病蟲害疫情
+    cont:
+    - 大洋洲
+    region: 澳洲
+    title: 有機農場停藥 14 個月，紅火蟻捲土重來：澳洲緊急核准肉桂醛蟻巢處理
+    sci: Solenopsis invicta
+    img: /assets/weekly/2026-10-26/05.webp
+  - 'no': 6
+    cat: 病蟲害疫情
+    cont:
+    - 美洲
+    region: 加拿大
+    title: 加拿大新伯倫瑞克省首次發現馬鈴薯金線蟲，種薯田遭管制
+    sci: Globodera rostochiensis
+    img: /assets/weekly/2026-10-26/06.webp
+  - 'no': 7
+    cat: 病蟲害疫情
+    cont:
+    - 美洲
+    region: 美國
+    title: 土裡的紅色殺手北上：大豆紅冠腐病擴散到伊利諾州 51 郡，明尼蘇達也首次確認
+    sci: Calonectria ilicicola
+    img: /assets/weekly/2026-10-26/07.webp
+  - 'no': 8
+    cat: 檢疫與政策
+    cont:
+    - 美洲
+    region: 阿根廷
+    title: 阿根廷整併船舶檢疫規定，防堵亞洲型與日本型舞毒蛾搭船入境
+    sci: Lymantria dispar
+    img: /assets/weekly/2026-10-26/08.webp
+  - 'no': 9
+    cat: 檢疫與政策
+    cont:
+    - 亞洲
+    region: 菲律賓
+    title: 甘蔗介殼蟲蔓延逾萬公頃，菲律賓伊洛伊洛省劃四色疫區並禁止無人機噴化學藥劑
+    sci: Pulvinaria tenuivalvata
+    img: /assets/weekly/2026-10-26/09.webp
+  - 'no': 10
+    cat: 檢疫與政策
+    cont:
+    - 美洲
+    region: 加拿大
+    title: 斑衣蠟蟬在加拿大安大略省建立族群，溫莎一帶劃為管制區
+    sci: Lycorma delicatula
+    img: /assets/weekly/2026-10-26/10.webp
+  - 'no': 11
+    cat: 農藥與防治資材
+    cont:
+    - 美洲
+    region: 巴拉圭
+    title: 能對付 QoI 抗藥病菌的新殺菌劑 metyltetraprole，首度在日本以外上市
+    sci: Corynespora cassiicola
+    img: /assets/weekly/2026-10-26/11.webp
+  - 'no': 12
+    cat: 農藥與防治資材
+    cont:
+    - 亞洲
+    region: 印度
+    title: 印度擬首度訂定茶葉中亞滅培與益達胺的殘留上限
+    sci: Camellia sinensis
+    img: /assets/weekly/2026-10-26/12.webp
+  - 'no': 13
+    cat: 農藥與防治資材
+    cont:
+    - 歐洲
+    - 美洲
+    region: 歐盟／巴西
+    title: 歐盟禁用卻照樣出口：樂施會報告揭露 2024 年外銷禁用農藥近 12.2 萬噸，巴西是第二大買家
+    img: /assets/weekly/2026-10-26/13.webp
+  - 'no': 14
+    cat: 研究進展
+    cont:
+    - 亞洲
+    region: 中國
+    title: 同時改寫「鎖」與「開關」：基因編輯讓水稻、小麥耐受四倍劑量的 HPPD 抑制型除草劑
+    sci: Oryza sativa
+    img: /assets/weekly/2026-10-26/14.webp
+  - 'no': 15
+    cat: 研究進展
+    cont:
+    - 美洲
+    region: 美國
+    title: 加州園藝店盆花暗藏入侵薊馬，研究建議以零售店採樣作為早期偵測
+    sci: Thrips parvispinus
+    img: /assets/weekly/2026-10-26/15.webp
+- issue: 第 2 期
+  date: 2026/10/19
+  id: i2026-10-19
+  highlights:
+  - 日本政府啟動「桃紅頸天牛」全國通報地圖，並加強處理所有人不明土地上的受害樹木。
+  - 棉花新興害蟲棉葉蟬一路西進，今年已在奧克拉荷馬與德州確認。
+  - 美國宣布麻州 Shrewsbury 根除光肩星天牛，解除檢疫；德州則因西印度果實蠅新設檢疫區。
+  items:
+  - 'no': 1
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 日本
+    title: 日本啟動桃紅頸天牛全國通報地圖，加強所有人不明土地的防治
+    sci: Aromia bungii
+    img: /assets/weekly/2026-10-19/01.webp
+  - 'no': 2
+    cat: 病蟲害疫情
+    cont:
+    - 亞洲
+    region: 尼泊爾
+    title: 尼泊爾稻田爆發稻熱病等病害，疑因種植未登記品種
+    sci: Magnaporthe oryzae
+    img: /assets/weekly/2026-10-19/02.webp
+  - 'no': 3
+    cat: 病蟲害疫情
+    cont:
+    - 美洲
+    region: 美國
+    title: 棉葉蟬一路西進，奧克拉荷馬與德州首次確認
+    sci: Amrasca biguttula
+    img: /assets/weekly/2026-10-19/03.webp
+  - 'no': 4
+    cat: 檢疫與政策
+    cont:
+    - 美洲
+    region: 美國
+    title: 德州 Port Isabel 發現西印度果實蠅，美國設立聯邦檢疫區
+    sci: Anastrepha obliqua
+    img: /assets/weekly/2026-10-19/04.webp
+  - 'no': 5
+    cat: 檢疫與政策
+    cont:
+    - 美洲
+    region: 美國
+    title: 麻州 Shrewsbury 宣布根除光肩星天牛，解除檢疫
+    sci: Anoplophora glabripennis
+    img: /assets/weekly/2026-10-19/05.webp
+  - 'no': 6
+    cat: 檢疫與政策
+    cont:
+    - 美洲
+    region: 美國
+    title: 黃楊木螟檢疫擴大到紐澤西州兩郡（上期追蹤）
+    sci: Cydalima perspectalis
+    img: /assets/weekly/2026-10-19/06.webp
+  - 'no': 7
+    cat: 農藥與防治資材
+    cont:
+    - 非洲
+    region: 奈及利亞
+    title: 奈及利亞警告：巴拉刈等禁用農藥仍在市場流通
+    img: /assets/weekly/2026-10-19/07.webp
+  - 'no': 8
+    cat: 農藥與防治資材
+    cont:
+    - 美洲
+    region: 美國
+    title: 美國環保署農藥登記規費調漲 5%
+    img: /assets/weekly/2026-10-19/08.webp
+  - 'no': 9
+    cat: 研究進展
+    cont:
+    - 美洲
+    region: 美國
+    title: 洋菇細菌性斑點病百年難解，原來是 17 種以上細菌共同造成
+    sci: Agaricus bisporus
+    img: /assets/weekly/2026-10-19/09.webp
+  - 'no': 10
+    cat: 研究進展
+    cont:
+    - 美洲
+    region: 美國
+    title: 用麥克風「偷聽」植物裡的害蟲：AI 聲學偵測進入田間測試
+    sci: Dectes texanus
+    img: /assets/weekly/2026-10-19/10.webp
+- issue: 第 1 期
+  date: 2026/10/17
+  id: i2026-10-17
+  highlights:
+  - 日本靜岡果樹椿象達平年 20 倍以上，發布 28 年來首次病蟲害警報。
+  - 英日團隊改造植物免疫受體，可同時辨識兩種稻熱病菌效應蛋白。
+  - 美國華盛頓州首次確認光蠟瘦吉丁蟲建立族群；厄瓜多擴大香蕉 TR4 疫區隔離。
+  items:
+  - 'no': 1
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 日本
+    title: 靜岡果樹椿象大爆發，28 年來首發警報
+    sci: Plautia stali
+  - 'no': 2
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 日本
+    title: 日本考慮開放美國生鮮馬鈴薯，農界反彈
+    sci: Globodera rostochiensis
+  - 'no': 3
+    cat: 病蟲害疫情
+    cont:
+    - 美洲
+    region: 美國
+    title: 華盛頓州首次確認光蠟瘦吉丁蟲在樹上建立族群
+    sci: Agrilus planipennis
+  - 'no': 4
+    cat: 病蟲害疫情
+    cont:
+    - 美洲
+    region: 美國
+    title: 牧草粉介殼蟲讓路易斯安那甘蔗轉褐
+    sci: Heliococcus summervillei
+  - 'no': 5
+    cat: 病蟲害疫情
+    cont:
+    - 美洲
+    region: 厄瓜多
+    title: 厄瓜多擴大香蕉黃葉病 TR4 疫區隔離
+    sci: Fusarium oxysporum f. sp. cubense
+  - 'no': 6
+    cat: 檢疫與政策
+    cont:
+    - 美洲
+    region: 美國
+    title: 美國擴大馬里蘭州黃楊木螟檢疫區
+    sci: Cydalima perspectalis
+  - 'no': 7
+    cat: 檢疫與政策
+    cont:
+    - 美洲
+    region: 哥倫比亞
+    title: 哥倫比亞菊花輸美檢疫放寬
+    sci: Puccinia horiana
+  - 'no': 8
+    cat: 農藥與防治資材
+    cont:
+    - 美洲
+    region: 阿根廷
+    title: 阿根廷門多薩 9 萬公頃葡萄園空中噴藥防治歐洲葡萄蛾
+    sci: Lobesia botrana
+  - 'no': 9
+    cat: 農藥與防治資材
+    cont:
+    - 美洲
+    region: 巴西
+    title: 巴西殺蟲劑 Engeo Pleno S 依法院裁定暫時恢復登記
+  - 'no': 10
+    cat: 研究進展
+    cont:
+    - 歐洲
+    - 亞洲
+    region: 英國／日本
+    title: 改造免疫受體，同時辨識兩種稻熱病菌效應蛋白
+    sci: Magnaporthe oryzae

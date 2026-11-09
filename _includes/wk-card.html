@@ -1,0 +1,10 @@
+{%- assign it = include.it -%}
+{%- assign tw = '' -%}{%- if it.region contains '臺灣' -%}{%- assign tw = '臺灣' -%}{%- endif -%}
+<a class="wk-card{% if include.lead %} wk-lead{% endif %}" href="{{ include.url }}#{{ include.iid }}" target="_blank" rel="noopener" data-cont="{{ it.cont | join: ' ' }} {{ tw }}">
+  {%- if it.img %}<span class="wk-art">{% if it.still %}<picture><source media="(prefers-reduced-motion: reduce)" srcset="{{ it.still | relative_url }}">{% endif %}<img src="{{ it.img | relative_url }}" alt="{{ it.title | strip_html | escape }}（示意插圖）" loading="lazy" decoding="async" width="800" height="400">{% if it.still %}</picture>{% endif %}</span>{% endif %}
+  <span class="wk-body">
+    <span class="wk-kick"><span class="wk-cat">{{ it.cat }}</span>{{ it.region }}</span>
+    <strong>{{ it.title }}</strong>
+    {%- if it.sci %}<em>{{ it.sci }}</em>{% endif %}
+  </span>
+</a>

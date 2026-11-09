@@ -1,0 +1,78 @@
+---
+title: 全球疫情週報
+---
+{%- assign wk = site.data.weekly_issues -%}
+{%- assign cur = wk.issues | first -%}
+<header class="wk-head">
+  <p class="wk-eyebrow">Global Plant Pest &amp; Disease Weekly</p>
+  <h1>全球疫情週報</h1>
+  <p class="wk-intro">每週一整理全球植物病蟲害疫情、檢疫政策與用藥新聞，臺灣與東亞優先。點選任一則，可到週報閱讀背景、事件經過、因應方式與參考文獻。</p>
+</header>
+
+<div class="wk-filter" role="group" aria-label="依地區篩選">
+  <span class="wk-filter-l">地區</span>
+  {%- assign conts = '臺灣,亞洲,歐洲,美洲,大洋洲,非洲' | split: ',' %}
+  <button type="button" data-cont="" aria-pressed="true">全部</button>
+  {%- for c in conts %}<button type="button" data-cont="{{ c }}" aria-pressed="false">{{ c }}</button>{% endfor %}
+  <span class="wk-count" aria-live="polite"></span>
+</div>
+
+<section class="wk-issue wk-current" id="{{ cur.id }}" aria-label="本期 {{ cur.issue }}">
+  <h2 class="section-label wide">本期・{{ cur.issue }}・{{ cur.date }}</h2>
+  {%- if cur.highlights %}
+  <div class="wk-hl"><p class="wk-hl-k">本週重點</p><ol>{% for h in cur.highlights %}<li>{{ h }}</li>{% endfor %}</ol></div>
+  {%- endif %}
+  <div class="wk-grid">
+    {%- for it in cur.items %}
+    {% include wk-card.html it=it url=wk.url iid=cur.id lead=forloop.first %}
+    {%- endfor %}
+  </div>
+  <p class="more"><a href="{{ wk.url }}#{{ cur.id }}" target="_blank" rel="noopener">閱讀本期全文 →</a></p>
+</section>
+
+<h2 class="section-label wide">往期週報</h2>
+<div class="wk-back">
+{%- for is in wk.issues offset: 1 %}
+  <details class="wk-issue" id="{{ is.id }}">
+    <summary>
+      <span class="wk-no">{{ is.issue }}</span><span class="wk-date">{{ is.date }}・{{ is.items.size }} 則</span>
+      {%- assign pics = is.items | where_exp: 'x', 'x.img' -%}
+      {%- if pics.size > 0 %}<span class="wk-strip" aria-hidden="true">{% for it in pics limit: 4 %}<img src="{{ it.img | relative_url }}" alt="" loading="lazy" decoding="async">{% endfor %}</span>{% endif %}
+      <span class="wk-sum">{% if is.highlights %}{{ is.highlights | first }}{% endif %}</span>
+    </summary>
+    {%- if is.highlights.size > 1 %}<div class="wk-hl"><p class="wk-hl-k">本週重點</p><ol>{% for h in is.highlights %}<li>{{ h }}</li>{% endfor %}</ol></div>{% endif %}
+    <div class="wk-grid wk-grid-sm">
+      {%- for it in is.items %}
+      {% include wk-card.html it=it url=wk.url iid=is.id %}
+      {%- endfor %}
+    </div>
+    <p class="more"><a href="{{ wk.url }}#{{ is.id }}" target="_blank" rel="noopener">閱讀{{ is.issue }}全文 →</a></p>
+  </details>
+{%- endfor %}
+</div>
+<p class="wk-empty" hidden>這個地區目前沒有報導。</p>
+<p class="source">內容與插圖出自植物診療師 Lai 的「全球植物病蟲害週報」。插圖依報導內容繪製，是示意圖，不是現場照片；用藥請以農藥資訊服務網公告為準。</p>
+
+<script>
+(function () {
+  var bar = document.querySelector('.wk-filter'); if (!bar) return;
+  var cards = [].slice.call(document.querySelectorAll('.wk-card'));
+  var back = [].slice.call(document.querySelectorAll('.wk-back details'));
+  var cur = document.querySelector('.wk-current'), count = bar.querySelector('.wk-count');
+  var empty = document.querySelector('.wk-empty');
+  function apply(v) {
+    var n = 0;
+    cards.forEach(function (c) { var ok = !v || (' ' + c.getAttribute('data-cont') + ' ').indexOf(' ' + v + ' ') >= 0; c.hidden = !ok; if (ok) n++; });
+    var curHas = cur.querySelector('.wk-card:not([hidden])');
+    cur.hidden = !curHas;
+    back.forEach(function (d) { var has = d.querySelector('.wk-card:not([hidden])'); d.hidden = !has; d.open = !!(v && has); });
+    count.textContent = v ? '共 ' + n + ' 則' : '';
+    empty.hidden = n > 0;
+    bar.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-cont') === v); });
+  }
+  bar.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) apply(b.getAttribute('data-cont')); });
+  // 從頭版連到 #期別 時自動展開那一期
+  var h = location.hash.slice(1), d = h && document.getElementById(h);
+  if (d && d.tagName === 'DETAILS') { d.open = true; d.scrollIntoView(); }
+})();
+</script>
