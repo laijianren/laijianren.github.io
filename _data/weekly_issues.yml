@@ -1,6 +1,104 @@
 # 全球植物病蟲害週報各期重點（新到舊），由 _tools/weekly_sync.py 產生。全文在 url 的週報頁，網址加 #期別 id 可直接開該期
 url: https://claude.ai/artifact/F4giETFJzRxQeqP952t59R
 issues:
+- issue: 第 6 期
+  date: 2026/11/16
+  id: i2026-11-16
+  highlights:
+  - 南韓首次確認番茄褐色皺果病毒，已有 39 戶農家確診；政府啟動公共防治，整棟溫室植株封袋焚燒，並追蹤 3 年。
+  - 臺大四年調查發現臺灣馬鈴薯田近半樣本帶 Y 病毒，重組株當道，其中一株讓塊莖減產約五成；健康種薯與蚜蟲管理是關鍵。
+  - 雙 11 前防檢署提醒：跨境網購的植物、種子、種子紙明信片和未處理原木裝飾品都要先申請檢疫，原木違規已占植物違規案件一半。
+  items:
+  - 'no': 1
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 臺灣
+    title: 葉子像撒了一層麵粉：入秋最強冷空氣帶來涼濕凝露，臺南農改場籲防白粉病，發病前噴亞磷酸、初期改用油劑
+    sci: Podosphaera xanthii
+    img: /assets/weekly/2026-11-16/01.webp
+    still: /assets/weekly/2026-11-16/01.jpg
+  - 'no': 2
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 臺灣
+    title: 種芋還沒發芽就爛在土裡：原民主食小芋頭 20 多年減少九成，高雄場以石灰硫磺合劑浸種芋防白絹病、軟腐病，再用可分解紙膜取代塑膠布除草
+    sci: Agroathelia rolfsii
+    img: /assets/weekly/2026-11-16/02.webp
+    still: /assets/weekly/2026-11-16/02.jpg
+  - 'no': 3
+    cat: 病蟲害疫情
+    cont:
+    - 歐洲
+    region: 荷蘭
+    title: 放了十倍天敵仍少收三成：荷蘭溫室甜椒蚜蟲大爆發，可用藥劑越來越少，萵苣育苗業者只好跨國處理
+    sci: Myzus persicae
+    img: /assets/weekly/2026-11-16/03.webp
+    still: /assets/weekly/2026-11-16/03.jpg
+  - 'no': 4
+    cat: 病蟲害疫情
+    cont:
+    - 美洲
+    region: 阿根廷
+    title: 葉片上冒出一抹就沾手的肉桂色粉點：阿根廷聖塔菲省向日葵田發現黑銹病，INTA 提醒開花前是決勝期，病勢過門檻再噴藥
+    sci: Puccinia helianthi
+    img: /assets/weekly/2026-11-16/04.webp
+    still: /assets/weekly/2026-11-16/04.jpg
+  - 'no': 5
+    cat: 病蟲害疫情
+    cont:
+    - 美洲
+    region: 巴西
+    title: 萊姆果皮上冒出木栓化的「火山口」：巴西亞馬遜邊陲阿克里州首次確認柑橘潰瘍病，疑由聖保羅非法種苗帶入
+    sci: Xanthomonas citri subsp. citri
+    img: /assets/weekly/2026-11-16/05.webp
+    still: /assets/weekly/2026-11-16/05.jpg
+  - 'no': 6
+    cat: 檢疫與政策
+    cont:
+    - 亞洲
+    region: 臺灣
+    title: 能種出花的明信片、帶著真樹幹的仿真樹也算檢疫物：雙 11 前防檢署提醒，跨境網購植物、種子與未處理原木製品要先申請檢疫，原木違規已占植物違規案件一半
+    sci: Anoplophora glabripennis
+    img: /assets/weekly/2026-11-16/06.webp
+    still: /assets/weekly/2026-11-16/06.jpg
+  - 'no': 7
+    cat: 檢疫與政策
+    cont:
+    - 亞洲
+    region: 南韓
+    title: 摸一下就傳開的番茄病毒：南韓首次確認番茄褐色皺果病毒，39 戶農家確診，農村振興廳啟動公共防治，整棟溫室植株封袋焚燒、追蹤 3 年
+    sci: Tobamovirus fructirugosum
+    img: /assets/weekly/2026-11-16/07.webp
+    still: /assets/weekly/2026-11-16/07.jpg
+  - 'no': 8
+    cat: 農藥與防治資材
+    cont:
+    - 美洲
+    region: 巴西
+    title: 把活的真菌裝瓶放一年：巴西 UPL 推出白殭菌生物殺蟲劑 NeoTackler，新劑型號稱免冷藏保存 12 個月，鎖定玉米葉蟬、粉蝨與咖啡果小蠹
+    sci: Beauveria bassiana
+    img: /assets/weekly/2026-11-16/08.webp
+    still: /assets/weekly/2026-11-16/08.jpg
+  - 'no': 9
+    cat: 研究進展
+    cont:
+    - 亞洲
+    region: 臺灣
+    title: 臺灣馬鈴薯田近半樣本帶 Y 病毒：臺大四年調查發現重組株當道，一株與美國譜系相近的 PVY 讓塊莖減產約五成
+    sci: Potyvirus yituberosi
+    img: /assets/weekly/2026-11-16/09.webp
+    still: /assets/weekly/2026-11-16/09.jpg
+  - 'no': 10
+    cat: 研究進展
+    cont:
+    - 美洲
+    region: 加拿大
+    title: 找出病原菌「不敢丟掉」的那把鑰匙：加拿大團隊盤點 188 個鎌刀菌基因體，4,057 個效應蛋白家族中有 235 個幾乎人人都有，剔除實驗證實多個影響小麥赤黴病病勢
+    sci: Fusarium graminearum
+    img: /assets/weekly/2026-11-16/10.webp
+    still: /assets/weekly/2026-11-16/10.jpg
 - issue: 第 5 期
   date: 2026/11/09
   id: i2026-11-09
