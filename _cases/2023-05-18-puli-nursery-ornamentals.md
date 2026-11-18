@@ -6,6 +6,7 @@ location: 南投縣埔里鎮
 diagnosis: 粉介殼蟲、葉蟎、非洲菊紫斑病、營養障礙、蜀葵病毒病害
 cover: /assets/cases/2023-05-18-puli-nursery/01.jpg
 cover_caption: 變葉木上的粉介殼蟲
+published: false   # 等 Lai 看過草圖再公開
 ---
 
 本次到種苗場檢查五種觀賞植物，危害集中在部分區域。

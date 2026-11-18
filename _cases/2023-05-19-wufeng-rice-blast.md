@@ -6,6 +6,7 @@ location: 臺中市霧峰區、彰化縣芬園鄉
 diagnosis: 稻熱病（<i>Pyricularia oryzae</i>）
 cover: /assets/cases/2023-05-19-wufeng-rice/05.jpg
 cover_caption: 葉片上的紡錘狀病斑
+published: false   # 等 Lai 看過草圖再公開
 ---
 
 本案追蹤兩塊稻田的稻熱病，5 月 19 日複診，5 月 29 日再追蹤一次。

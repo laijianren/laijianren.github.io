@@ -6,6 +6,7 @@ location: 臺東縣關山鎮
 diagnosis: 水稻黑椿象（<i>Scotinophara lurida</i>）、水稻胡麻葉枯病（<i>Bipolaris oryzae</i>）
 cover: /assets/cases/2023-06-13-guanshan-rice/02.jpg
 cover_caption: 稻莖上的水稻黑椿象
+published: false   # 等 Lai 看過草圖再公開
 ---
 
 <figure class="photo wide"><img src="/assets/cases/2023-06-13-guanshan-rice/01.jpg" srcset="/assets/thumbs/cases/2023-06-13-guanshan-rice/01.webp 640w, /assets/cases/2023-06-13-guanshan-rice/01.jpg 1600w" sizes="(max-width: 820px) 100vw, 760px" loading="lazy" decoding="async" alt="關山的稻田"><figcaption>圖一、關山的稻田</figcaption></figure>

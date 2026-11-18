@@ -6,6 +6,7 @@ location: 雲林縣林內鄉
 diagnosis: 二點葉蟎（<i>Tetranychus urticae</i>）、木瓜褐斑病、木瓜秀粉介殼蟲（<i>Paracoccus marginatus</i>）
 cover: /assets/cases/2021-04-28-linnei-papaya/09.jpg
 cover_caption: 果實表面的木瓜秀粉介殼蟲
+published: false   # 等 Lai 看過草圖再公開
 ---
 
 <figure class="photo wide"><img src="/assets/cases/2021-04-28-linnei-papaya/01.jpg" srcset="/assets/thumbs/cases/2021-04-28-linnei-papaya/01.webp 640w, /assets/cases/2021-04-28-linnei-papaya/01.jpg 1600w" sizes="(max-width: 820px) 100vw, 760px" loading="lazy" decoding="async" alt="葉面褪綠斑駁"><figcaption>圖一、葉面褪綠斑駁</figcaption></figure>

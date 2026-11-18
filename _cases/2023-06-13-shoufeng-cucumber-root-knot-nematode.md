@@ -6,6 +6,7 @@ location: 花蓮縣壽豐鄉
 diagnosis: 根瘤線蟲（<i>Meloidogyne</i> spp.）、連作障礙
 cover: /assets/cases/2023-06-13-shoufeng-cucumber/03.jpg
 cover_caption: 根部的根瘤
+published: false   # 等 Lai 看過草圖再公開
 ---
 
 ## 現場狀況

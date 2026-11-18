@@ -6,6 +6,7 @@ location: 南投縣埔里鎮
 diagnosis: 九層塔露菌病（<i>Peronospora belbahrii</i>）、玉簪葉斑（<i>Stemphylium</i> sp.、<i>Colletotrichum</i> sp.）、日日春炭疽病（<i>Colletotrichum</i> sp.）、大花麒麟葉斑（<i>Phomopsis</i> sp.）
 cover: /assets/cases/2023-06-05-puli-nursery/14.jpg
 cover_caption: 日日春葉片上的黑色病斑
+published: false   # 等 Lai 看過草圖再公開
 ---
 
 這次到種苗場檢查葉菜類和觀賞植物，把病葉帶回實驗室分離培養、鏡檢，確認病原菌。

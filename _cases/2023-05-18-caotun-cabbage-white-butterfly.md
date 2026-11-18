@@ -6,6 +6,7 @@ location: 南投縣草屯鎮
 diagnosis: 紋白蝶（<i>Pieris rapae</i>）
 cover: /assets/cases/2023-05-18-caotun-cabbage/01.jpg
 cover_caption: 高麗菜葉上的紋白蝶幼蟲
+published: false   # 等 Lai 看過草圖再公開
 ---
 
 ## 現場狀況

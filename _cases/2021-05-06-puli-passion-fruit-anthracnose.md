@@ -6,6 +6,7 @@ location: 南投縣埔里鎮
 diagnosis: 百香果炭疽病、薊馬
 cover: /assets/cases/2021-05-06-puli-passion-fruit/01.jpg
 cover_caption: 葉片炭疽病病斑
+published: false   # 等 Lai 看過草圖再公開
 ---
 
 ## 現場狀況

@@ -6,6 +6,7 @@ location: 南投縣埔里鎮
 diagnosis: 百香果熱潛蠅（<i>Tropicomyia passiflorella</i>）、百香果炭疽病、低溫生理障礙、百香果病毒病害、物理性磨擦傷害
 cover: /assets/cases/2021-04-20-puli-passion-fruit/04.jpg
 cover_caption: 百香果葉片炭疽病
+published: false   # 等 Lai 看過草圖再公開
 ---
 
 <figure class="photo wide"><img src="/assets/cases/2021-04-20-puli-passion-fruit/01.jpg" srcset="/assets/thumbs/cases/2021-04-20-puli-passion-fruit/01.webp 640w, /assets/cases/2021-04-20-puli-passion-fruit/01.jpg 1600w" sizes="(max-width: 820px) 100vw, 760px" loading="lazy" decoding="async" alt="露天栽培的百香果園"><figcaption>圖一、露天栽培的百香果園</figcaption></figure>
