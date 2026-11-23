@@ -1,6 +1,102 @@
 # 全球植物病蟲害週報各期重點（新到舊），由 _tools/weekly_sync.py 產生。全文在 url 的週報頁，網址加 #期別 id 可直接開該期
 url: https://claude.ai/artifact/F4giETFJzRxQeqP952t59R
 issues:
+- issue: 第 7 期
+  date: 2026/11/23
+  id: i2026-11-23
+  highlights:
+  - 青森縣首次在洋香瓜確認蚜蟲傳播的瓜類蚜傳黃化病毒（CABYV），日本 2024 年京都首見後兩年擴及 8 府縣以上；症狀像缺肥，管好蚜蟲與雜草是關鍵。
+  - 底特律港一艘從韓國出發的鋼鐵貨輪船殼上查獲飛行型舞毒蛾卵塊，五大湖區首見；母蛾會飛、能把卵產在船上，是各國港口嚴防的入侵害蟲。
+  - Nature 研究發現水稻蛋白 NIB1 能「聞到」椿象唾液切碎 RNA 留下的痕跡並啟動防禦，噴灑類似物也能讓水稻更抗蟲，為新型防治開路。
+  items:
+  - 'no': 1
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 日本
+    title: 葉片褪綠轉黃，乍看像缺肥：青森縣首次在洋香瓜確認蚜蟲傳播的瓜類蚜傳黃化病毒（CABYV），日本 2024 年京都首見，兩年內已擴及 8 府縣以上，發布特殊報
+    sci: Polerovirus CABYV
+    img: /assets/weekly/2026-11-23/01.webp
+    still: /assets/weekly/2026-11-23/01.jpg
+  - 'no': 2
+    cat: 臺灣與東亞重點
+    cont:
+    - 亞洲
+    region: 日本
+    title: 一旦落地就十年翻不了身的線蟲：北海道與地方農協等 19 個團體赴農林水產省緊急要求，美國生鮮馬鈴薯沒有萬全防疫就不能解禁，農相回應「日美雙方都接受才開放」（追蹤）
+    sci: Globodera pallida
+    img: /assets/weekly/2026-11-23/02.webp
+    still: /assets/weekly/2026-11-23/02.jpg
+  - 'no': 3
+    cat: 病蟲害疫情
+    cont:
+    - 歐洲
+    region: 西班牙
+    title: 四季少收 36 萬公噸甜椒：小刺薊馬讓西班牙阿美利亞損失上看 5.4 億歐元，農業部以「可能的內分泌干擾物」駁回例外用藥，產區評估 2027 年夏季停種（追蹤）
+    sci: Thrips parvispinus
+    img: /assets/weekly/2026-11-23/03.webp
+    still: /assets/weekly/2026-11-23/03.jpg
+  - 'no': 4
+    cat: 病蟲害疫情
+    cont:
+    - 非洲
+    region: 摩洛哥
+    title: 溫室空了一半：番茄褐色皺果病毒讓摩洛哥番茄重鎮舒圖卡—艾特巴哈面積由 8,000 公頃減為 4,000 公頃、單產少四成，農業部長警告三年內恐淪為進口國，產地苦等抗病圓形番茄種子
+    sci: Tobamovirus fructirugosum
+    img: /assets/weekly/2026-11-23/04.webp
+    still: /assets/weekly/2026-11-23/04.jpg
+  - 'no': 5
+    cat: 病蟲害疫情
+    cont:
+    - 大洋洲
+    region: 夏威夷（美國）
+    title: 嫩葉上被剪出一排 V 字形缺口：椰子犀角金龜首度現身夏威夷大島普納，這種棕櫚害蟲 2013 年登陸歐胡島，花了十年抵達大島，如今東西兩側都有足跡
+    sci: Oryctes rhinoceros
+    img: /assets/weekly/2026-11-23/05.webp
+    still: /assets/weekly/2026-11-23/05.jpg
+  - 'no': 6
+    cat: 檢疫與政策
+    cont: []
+    region: 美國（密西根州）
+    title: 船殼上的「鏽斑」裡藏著上千粒卵：從韓國出發、經加拿大漢米爾頓駛抵底特律的鋼鐵貨輪上查獲飛行型舞毒蛾卵塊，五大湖區首見，美國農業部確認分屬兩個亞種
+    sci: Lymantria dispar asiatica
+    img: /assets/weekly/2026-11-23/06.webp
+    still: /assets/weekly/2026-11-23/06.jpg
+  - 'no': 7
+    cat: 檢疫與政策
+    cont: []
+    region: 美國（加州）
+    title: 葉片半邊綠、半邊黃，界線歪向一側：加州河濱郡民宅柑橘驗出黃龍病菌，美國聯邦檢疫區再擴大 64 平方英里、涵蓋 16.8 英畝商業柑橘園，加州累計病樹已逾萬株
+    sci: Diaphorina citri
+    img: /assets/weekly/2026-11-23/07.webp
+    still: /assets/weekly/2026-11-23/07.jpg
+  - 'no': 8
+    cat: 農藥與防治資材
+    cont:
+    - 亞洲
+    region: 印度、孟加拉
+    title: 噴下去雜草很快焦枯，誤食卻沒有解毒劑：印度、孟加拉 9 月相繼禁用除草劑巴拉刈，WHO 11 月 12 日肯定這是預防自殺的關鍵一步，全球禁用國家已逾 70 個
+    sci: Paraquat dichloride
+    img: /assets/weekly/2026-11-23/08.webp
+    still: /assets/weekly/2026-11-23/08.jpg
+  - 'no': 9
+    cat: 農藥與防治資材
+    cont:
+    - 歐洲
+    region: 西班牙、義大利
+    title: 同一種藥，一年內效力大退：西班牙巴斯克葡萄露菌對殺菌劑 zoxamide 的抗性快速上升，一成族群在 100 mg/L 仍能產孢，研究團隊建議限制每季施用次數
+    sci: Plasmopara viticola
+    img: /assets/weekly/2026-11-23/09.webp
+    still: /assets/weekly/2026-11-23/09.jpg
+  - 'no': 10
+    cat: 研究進展
+    cont:
+    - 亞洲
+    region: 中國
+    title: 害蟲的「消化剪刀」反成植物警鈴：Nature 研究發現水稻蛋白 NIB1 能偵測椿象唾液切碎 RNA 留下的環核苷酸，進而啟動防禦，噴灑類似物也能提升抗蟲力
+    sci: Nezara viridula
+    img: /assets/weekly/2026-11-23/10.webp
+    still: /assets/weekly/2026-11-23/10.jpg
 - issue: 第 6 期
   date: 2026/11/16
   id: i2026-11-16
